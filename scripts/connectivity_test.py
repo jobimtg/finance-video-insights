@@ -45,7 +45,9 @@ for path, name in [("/exchangeReport/STOCK_DAY_ALL", "上市個股日成交"),
                    ("/opendata/t187ap05_L", "上市月營收"),
                    ("/exchangeReport/MI_INDEX", "大盤統計"),
                    ("/exchangeReport/FMSRFK_ALL", "上市個股月成交（月高低）"),
-                   ("/Announcement/BFZFZU_T", "投資理財節目異常推介個股")]:
+                   ("/Announcement/BFZFZU_T", "投資理財節目異常推介個股"),
+                   ("/announcement/notice", "上市注意股"),
+                   ("/announcement/punish", "上市處置股")]:
     probe("證交所 OpenAPI", name, T + path)
 
 # 2. 櫃買中心 OpenAPI
@@ -54,7 +56,9 @@ for path, name in [("/tpex_mainboard_daily_close_quotes", "上櫃行情"),
                    ("/tpex_mainboard_peratio_analysis", "上櫃本益比殖利率"),
                    ("/mopsfin_t187ap05_O", "上櫃月營收"),
                    ("/tpex_3insti_daily_trading", "上櫃三大法人個股"),
-                   ("/tpex_3insti_summary", "上櫃三大法人彙總")]:
+                   ("/tpex_3insti_summary", "上櫃三大法人彙總"),
+                   ("/tpex_trading_warning_information", "上櫃注意股"),
+                   ("/tpex_disposal_information", "上櫃處置股")]:
     probe("櫃買 OpenAPI", name, P + path)
 
 # 3. FRED（公開 CSV，不需金鑰）
@@ -125,5 +129,13 @@ ok = sum(r["ok"] for r in results)
 lines += ["", f"通過 {ok}／{len(results)} 項。"]
 text = "\n".join(lines)
 print(text)
+# 每個來源一則 notice 註記（方便用 API 讀取結果；不含任何金鑰或帳號資訊）
+if os.environ.get("GITHUB_ACTIONS"):
+    groups = {}
+    for r in results:
+        groups.setdefault(r["group"], []).append(r)
+    for g, rs in groups.items():
+        body = "%0A".join(f"{'OK' if r['ok'] else 'NG'}|{r['name']}|{r['status'] or ''}|{r['ms'] or ''}|{'' if r['records'] is None else r['records']}|{r['detail'][:90]}" for r in rs)
+        print(f"::notice title={g}::{body}")
 if os.environ.get("GITHUB_STEP_SUMMARY"):
     open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8").write(text + "\n")
