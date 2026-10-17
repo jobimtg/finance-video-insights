@@ -22,6 +22,7 @@ jobs:
           FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
           LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: python scripts/connectivity_test.py
       - name: Upload result
         uses: actions/upload-artifact@v6
