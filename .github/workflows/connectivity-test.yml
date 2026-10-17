@@ -1,0 +1,31 @@
+name: 直連測試（手動）
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  connectivity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install
+        run: pip install -r requirements.txt
+      - name: Run connectivity test
+        env:
+          FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
+          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+          LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
+        run: python scripts/connectivity_test.py
+      - name: Upload result
+        uses: actions/upload-artifact@v4
+        with:
+          name: connectivity-result
+          path: results/connectivity.json
+          retention-days: 14
