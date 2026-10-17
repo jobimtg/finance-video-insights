@@ -61,10 +61,29 @@ for path, name in [("/tpex_mainboard_daily_close_quotes", "上櫃行情"),
                    ("/tpex_disposal_information", "上櫃處置股")]:
     probe("櫃買 OpenAPI", name, P + path)
 
-# 3. FRED（公開 CSV，不需金鑰）
-for sid in ["DGS10", "DGS30", "DEXTAUS", "DCOILBRENTEU"]:
-    probe("FRED", sid, "https://fred.stlouisfed.org/graph/fredgraph.csv", params={"id": sid},
-          expect="text", count=lambda t: max(0, t.count("\n") - 1))
+# 3. FRED：公開 CSV（瀏覽器 UA、60 秒逾時）與官方 API 主機連線（不帶金鑰，只測能否連上）
+BROWSER_UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36"}
+def probe_long(group, name, url, **kw):
+    global requests
+    orig = requests.get
+    requests.get = lambda *a, **k: orig(*a, **{**k, "timeout": 60})
+    try:
+        return probe(group, name, url, **kw)
+    finally:
+        requests.get = orig
+for sid in ["DGS10", "DEXTAUS"]:
+    probe_long("FRED", f"{sid} 公開 CSV", "https://fred.stlouisfed.org/graph/fredgraph.csv", params={"id": sid},
+               headers=BROWSER_UA, expect="text", count=lambda t: max(0, t.count("\n") - 1))
+r = probe("FRED", "官方 API 主機（不帶金鑰）", "https://api.stlouisfed.org/fred/series/observations",
+          params={"series_id": "DGS10", "file_type": "json"}, expect="text")
+r["detail"] = ("主機可連線（未帶金鑰回應 HTTP %s）" % r["status"]) if r["status"] else r["detail"]
+r["ok"] = r["status"] is not None
+# 美國財政部公債殖利率（官方、公有領域），作為 FRED 美債的備援
+ym = dt.date.today().strftime("%Y%m")
+probe("美國財政部", "每日公債殖利率 CSV",
+      f"https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/all/{ym}",
+      params={"type": "daily_treasury_yield_curve", "field_tdr_date_value_month": ym},
+      headers=BROWSER_UA, expect="text", count=lambda t: max(0, t.count("\n") - 1))
 
 # 4. FinMind（有金鑰就帶，沒有就用匿名額度；只查 1 檔）
 fm_token = os.environ.get("FINMIND_TOKEN", "").strip()

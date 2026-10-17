@@ -8,11 +8,11 @@ permissions:
 
 jobs:
   connectivity:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
       - name: Install
@@ -24,7 +24,7 @@ jobs:
           LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
         run: python scripts/connectivity_test.py
       - name: Upload result
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: connectivity-result
           path: results/connectivity.json
