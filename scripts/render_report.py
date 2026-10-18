@@ -1,4 +1,4 @@
-"""財經影片統整 PDF 定版產生器（版面定案 2026-10-14；2026-10-17 經使用者同意加入主管機關名單標記；不得任意更改樣式）
+"""財經影片統整 PDF 定版產生器（版面定案 2026-10-14；2026-10-17 經使用者同意加入主管機關名單標記，2026-10-18 名單說明列納入附錄個股；不得任意更改樣式）
 用法：python render_report.py report.json 輸出.pdf
 需要：playwright（Chromium）、Noto Sans CJK TC 字型
 """
@@ -49,11 +49,11 @@ def alert_note(R, core):
     A = R.get("alerts")
     if not A or not A.get("checked_date"):
         return "主管機關名單比對：本集未比對。"
-    names = {s["code"]: s["name"] for s in core}
+    names = {s["code"]: s["name"] + ("（附錄）" if s["stance"] == "背景" else "") for s in R["stocks"]}
     parts = []
     for k in ("異常推介", "注意股", "處置股"):
         hit = [c for c in A["lists"].get(k, []) if c in names]
-        parts.append(f"{k} {len(hit)} 檔" + (f"（{'、'.join(names[c] + ' ' + c for c in hit)}）" if hit else ""))
+        parts.append(f"{k} {len(hit)} 檔" + (f"（{'、'.join(names[c].replace('（附錄）', '') + ' ' + c + ('（附錄）' if '（附錄）' in names[c] else '') for c in hit)}）" if hit else ""))
     return f"主管機關名單比對（截至 {A['checked_date']}，證交所、櫃買中心公告）：" + "；".join(parts) + "。"
 
 def row(s, d5, d20, A=None):
