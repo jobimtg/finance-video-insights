@@ -1,0 +1,17 @@
+name: 獨立重抓比對（Agent 4）
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "播出日 YYYYMMDD"
+        required: true
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - run: pip install requests==2.32.5
+      - run: cd scripts && python independent_check.py "${{ inputs.date }}" 15
