@@ -88,7 +88,7 @@ def main(ep_date):
         latest, ldate = cl.get("close"), cl.get("date")
         if latest is None and px:
             latest, ldate = px[-1]["close"], px[-1]["date"]; log.append(f"{c} 最新收盤改用 FinMind")
-        yr = [p for p in px if p["date"] > (ldate or latest_day) - dt.timedelta(days=365)]
+        yr = [p for p in px if p["date"] >= (ldate or latest_day) - dt.timedelta(days=365)]   # 含起日，與表格說明一致
         hi52 = max(p["high"] for p in yr) if yr else None
         lo52 = min(p["low"] for p in yr) if yr else None
         if latest and hi52 and latest > hi52:
