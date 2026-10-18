@@ -23,6 +23,21 @@ def main(ep):
             notes.append(f"{s['code']}{s['name']} 查無：{'、'.join(missing)}")
         if "同上" in s["view"]:
             issues.append(f"{s['code']} 觀點寫「同上」")
+    # 關鍵價位：節目價位與數據參考列（2026-10-18 定案）
+    for s in core:
+        ref = s.get("level_ref")
+        if not ref:
+            notes.append(f"{s['code']}{s['name']} 數據參考：查無（股價資料不足）")
+        elif not ref.startswith("數據參考：") or ref.count("｜") != 3:
+            issues.append(f"{s['code']} 數據參考列格式不符：{ref}")
+        for c in s["level_checks"]:
+            if c.startswith("節目：") and "查無" in c:
+                notes.append(f"{s['code']}{s['name']} 節目價位換算查無：{c}")
+    for s in R["stocks"]:
+        if s["stance"] == "背景" and s.get("level_ref"):
+            issues.append(f"附錄個股 {s['code']} 不應有數據參考列")
+    if "非節目觀點" not in R["table_note"]:
+        issues.append("表格說明沒有標示數據參考非節目觀點")
     seg_codes = [c for g in R["segments"] for c in g["codes"]]
     lost = [s["code"] for s in core if s["code"] not in seg_codes]
     if lost:

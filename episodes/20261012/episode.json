@@ -231,7 +231,13 @@
    "stance": "拉回布局",
    "view": "與大立光業務最相近，投信持續買超；看長線，大立光過前高後玉晶光突破前高不難。",
    "level_desc": "待大立光突破前高後可望跟進；開高不追",
-   "levels": []
+   "levels": [
+    {
+     "label": "前高",
+     "derive": "high60",
+     "kind": "resistance"
+    }
+   ]
   },
   {
    "code": "3441",
@@ -354,7 +360,13 @@
    "stance": "觀察",
    "view": "K線已突破7月高點。",
    "level_desc": "已過7月高點",
-   "levels": []
+   "levels": [
+    {
+     "label": "7月高點",
+     "derive": "month_high:2026-07",
+     "kind": "support"
+    }
+   ]
   },
   {
    "code": "4722",
@@ -371,6 +383,16 @@
      "label": "前高",
      "value": 313,
      "kind": "resistance"
+    },
+    {
+     "label": "10日線",
+     "derive": "ma10",
+     "kind": "support"
+    },
+    {
+     "label": "季線",
+     "derive": "ma60",
+     "kind": "support"
     }
    ]
   },
@@ -389,6 +411,11 @@
      "label": "高點",
      "value": 374,
      "kind": "resistance"
+    },
+    {
+     "label": "年線",
+     "derive": "ma240",
+     "kind": "support"
     }
    ]
   },
@@ -809,7 +836,13 @@
    "stance": "不追高",
    "view": "營收大增、當日漲停（盤中被鎖上去），通常一波到頂；隔日沖可能多，等回5日線。",
    "level_desc": "開高不追，等回測5日線",
-   "levels": []
+   "levels": [
+    {
+     "label": "5日線",
+     "derive": "ma5",
+     "kind": "support"
+    }
+   ]
   },
   {
    "code": "00927",

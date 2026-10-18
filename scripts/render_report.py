@@ -63,14 +63,15 @@ def row(s, d5, d20, A=None):
     rv = "不適用" if etf else (f'{s["rev_yoy"]:+.1f}%' if s["rev_yoy"] is not None else "查無")
     inst = f'{s["inst_total"]:+,.0f}' if s["inst_total"] is not None else "查無"
     tp = f'{e(s["target_src"])}<br>{s["target"]}<br>({pct(s["target_upside_pct"])})' if s["target"] else '<span class="mu">未提及</span>'
-    checks = "；".join(s["level_checks"])
+    checks = "；".join(c for c in s["level_checks"] if not (s.get("level_ref") and c == "價位驗證：查無"))
+    ref = s.get("level_ref")   # 數據參考列：灰色小字，與節目價位分開
     vt, vc = VS.get(s["verify"], (s["verify"], "na"))
     v5 = s.get("verify5_done") or f"待{d5}"
     v20 = s.get("verify20_done") or f"待{d20}"
     return f'''<tr>
 <td class="nm"><b>{e(s["name"])}</b><br><span class="cd">{s["code"]}</span><br><span class="tag">{e(s["stance"])}</span>{alert_tags(s["code"], A)}</td>
 <td class="tx">{e(s["view"])}</td>
-<td class="tx">{e(s["level_desc"])}{f'<div class="ck">{e(checks)}</div>' if checks else ''}</td>
+<td class="tx">{e(s["level_desc"])}{f'<div class="ck">{e(checks)}</div>' if checks else ''}{f'<div class="rf">{e(ref)}</div>' if ref else ''}</td>
 <td class="r">{n(s["video_close"])}<br>→ {n(s["latest"])}<br><b style="color:{colr(p)}">{pct(p)}</b></td>
 <td class="r">{pe}<br><span class="mu">{yl}</span></td>
 <td class="r">{rv}</td>
@@ -99,7 +100,7 @@ thead { display:table-header-group; } tr { break-inside:avoid; }
 .st td { border-bottom:1px solid #e3e1da; padding:1mm; vertical-align:top; }
 .nm b { font-size:8.2pt; } .cd { color:#777; font-size:6.6pt; }
 .tag { display:inline-block; margin-top:.4mm; font-size:6.5pt; padding:0 1mm; border-radius:1mm; background:#e8eef6; color:#1f3a5f; font-weight:700; white-space:nowrap; }
-.tx { font-size:6.9pt; } .ck { color:#7a5a00; margin-top:.5mm; } .mu { color:#888; font-size:6.6pt; }
+.tx { font-size:6.9pt; } .ck { color:#7a5a00; margin-top:.5mm; } .rf { color:#8a8a8a; font-size:6.3pt; margin-top:.4mm; } .mu { color:#888; font-size:6.6pt; }
 .vv { font-size:6.9pt; } .v-ok { color:#0b7a3b; } .v-bad { color:#b02a2a; } .v-warn { color:#a26a00; } .v-info,.v-na { color:#555; }
 .a-rec { background:#fbe3e3; color:#b02a2a; } .a-att { background:#fdf0d5; color:#a26a00; } .a-dis { background:#b02a2a; color:#fff; }
 .legend { font-size:7.2pt; color:#555; } .pb { break-before:page; }

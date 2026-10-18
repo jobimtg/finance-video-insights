@@ -43,19 +43,67 @@ def judge(stance, chg):
     return "待觀察"
 
 
-def level_checks(levels, latest):
+def fpx(x):
+    """價位顯示：千元以上取整數，百元以上 1 位小數，其餘 2 位小數（去尾零）。"""
+    s = f"{x:,.0f}" if x >= 1000 else (f"{x:,.1f}" if x >= 100 else f"{x:,.2f}")
+    return s.rstrip("0").rstrip(".") if "." in s else s
+
+
+def ma(closes, n):
+    return sum(closes[-n:]) / n if len(closes) >= n else None
+
+
+def derive_level(lv, px, air, latest_closes):
+    """節目有講但沒給數字的價位（第一種），依定案規則換算成數字。
+    前高／波段高點＝影片日（含）前近 60 個交易日最高價；前低＝同期間最低價；
+    「某月高點」＝該月最高價；N 日線／月線／季線／年線＝最新收盤日的均線。"""
+    d = lv.get("derive", "")
+    upto = [p for p in px if p["date"] <= air]
+    if d == "high60":
+        w = upto[-60:]; return max(p["high"] for p in w) if w else None
+    if d == "low60":
+        w = upto[-60:]; return min(p["low"] for p in w) if w else None
+    if d.startswith("month_high:"):
+        ym = d.split(":", 1)[1]; w = [p for p in upto if p["date"].isoformat()[:7] == ym]
+        return max(p["high"] for p in w) if w else None
+    if d.startswith("ma"):
+        return ma(latest_closes, int(d[2:]))
+    return None
+
+
+def level_checks(levels, latest, px=None, air=None, latest_closes=None):
     out = []
     for lv in levels:
-        v, k = lv.get("value"), lv.get("kind", "info")
+        k = lv.get("kind", "info")
+        derived = "derive" in lv
+        v = derive_level(lv, px or [], air, latest_closes or []) if derived else lv.get("value")
+        if derived and v is None:
+            out.append(f"節目：{lv['label']}：查無"); continue
+        lab = f"節目：{lv['label']} ≈ {fpx(v)}" if derived else f"{lv['label']} {v:g}"
         if isinstance(v, (int, float)) and latest:
             if k == "resistance":
-                out.append(f"{lv['label']} {v:g}：" + ("已站上" if latest >= v else f"未達（差 {(v / latest - 1) * 100:.1f}%）"))
+                out.append(f"{lab}：" + ("已站上" if latest >= v else f"未達（差 {(v / latest - 1) * 100:.1f}%）"))
                 continue
             if k == "support":
-                out.append(f"{lv['label']} {v:g}：" + ("目前在其下" if latest < v else f"目前高於 {(latest / v - 1) * 100:.1f}%"))
+                out.append(f"{lab}：" + ("目前在其下" if latest < v else f"目前高於 {(latest / v - 1) * 100:.1f}%"))
                 continue
-        out.append(f"{lv['label']} {v}")
+        out.append(lab if derived else f"{lv['label']} {v}")
     return out or ["價位驗證：查無"]   # 節目沒提到具體價位時標「查無」，不留白
+
+
+def ref_line(px, latest):
+    """第二種：數據參考列（非節目觀點）。5 日線、月線（20 日）、季線（60 日）以最新收盤判斷站上▲或跌破▼，
+    另列近 20 個交易日的最低價–最高價。資料不足的項目寫「查無」。"""
+    closes = [p["close"] for p in px]
+    if not closes or not latest:
+        return None
+    parts = []
+    for lab, n in (("5日", 5), ("月", 20), ("季", 60)):
+        m = ma(closes, n)
+        parts.append(f"{lab}查無" if m is None else f"{lab}{'▲' if latest >= m else '▼'}{fpx(m)}")
+    w = px[-20:]
+    parts.append(f"20日 {fpx(min(p['low'] for p in w))}–{fpx(max(p['high'] for p in w))}" if len(w) == 20 else "20日查無")
+    return "數據參考：" + "｜".join(parts)
 
 
 def main(ep_date):
@@ -104,6 +152,11 @@ def main(ep_date):
             if rev.get("month"): rev_months.add(rev["month"])
         if idate: inst_dates.add(idate)
         pct = round((latest / video_close - 1) * 100, 2) if latest and video_close else None
+        hist = [p for p in px if not ldate or p["date"] <= ldate]
+        if latest and ldate and (not hist or hist[-1]["date"] < ldate):
+            hist = hist + [{"date": ldate, "close": latest, "high": latest, "low": latest}]
+            log.append(f"{c} 均線計算補入最新收盤（FinMind 尚未更新 {ldate}）")
+        bg = s["stance"] == "背景"
 
         def chg_at(n):
             d = trading_days_after(air, n, holidays)
@@ -117,7 +170,9 @@ def main(ep_date):
             "code": c, "name": s["name"], "group": s["group"], "market": mk,
             "guest": s.get("guest", ""), "ts": s.get("ts", ""),
             "stance": s["stance"], "view": s["view"], "level_desc": s.get("level_desc", ""),
-            "level_checks": level_checks(s.get("levels", []), latest),
+            "level_checks": level_checks([l for l in s.get("levels", []) if not (bg and "derive" in l)],
+                                         latest, px, air, [p["close"] for p in hist]),   # 附錄個股不補換算價位
+            "level_ref": None if bg else ref_line(hist, latest),
             "video_close": video_close, "latest": latest, "latest_date": ldate.isoformat() if ldate else None,
             "since_video_pct": pct,
             "pe": None if etf else val.get("pe"), "yield": None if etf else val.get("yield"),
@@ -223,11 +278,11 @@ def main(ep_date):
         "macro": macro, "macro_note": note,
         "events": E.get("events", []),
         "verify_dates": {"d5": md(d5), "d20": md(d20)},
-        "table_note": f"本益比與殖利率為 {md(vd)}；法人為 {md(idt)}；營收為 {rm} 月年增；52 週為 {(lat - dt.timedelta(days=365)):%Y/%m/%d} 起。",
+        "table_note": f"本益比與殖利率為 {md(vd)}；法人為 {md(idt)}；營收為 {rm} 月年增；52 週為 {(lat - dt.timedelta(days=365)):%Y/%m/%d} 起；灰字「數據參考」為 {md(lat)} 收盤以公開股價計算，非節目觀點：▲站上、▼跌破均線，月＝20 日線、季＝60 日線，20 日為近 20 個交易日最低–最高價。",
         "segments": E["segments"],
         "sources_text": ("價格：臺灣證券交易所、證券櫃檯買賣中心 OpenAPI（政府資料開放授權條款－第1版）｜"
                          "估值與營收：證交所 BWIBBU、t187ap05_L，櫃買本益比與月營收｜"
-                         "法人：上市個股與大盤為 FinMind，上櫃為櫃買三大法人｜近一年高低與影片當日收盤：FinMind｜"
+                         "法人：上市個股與大盤為 FinMind，上櫃為櫃買三大法人｜近一年高低、影片當日收盤、均線與數據參考價位：FinMind｜"
                          "主管機關名單：證交所異常推介、注意、處置股，櫃買注意、處置股｜"
                          "總經：FRED（Federal Reserve Bank of St. Louis）DGS30、DGS10、DEXTAUS、DCOILBRENTEU。"
                          "This product uses the FRED® API but is not endorsed or certified by the Federal Reserve Bank of St. Louis."),
