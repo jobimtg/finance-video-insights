@@ -1,0 +1,38 @@
+name: 發布報告
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "播出日 YYYYMMDD"
+        required: true
+      send_line:
+        description: "推送 LINE Flex 卡片"
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: repo-write
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - run: pip install requests==2.32.5
+      - name: Publish
+        env:
+          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+          LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
+        run: cd scripts && python publish.py "${{ inputs.date }}" ${{ inputs.send_line && '--send-line' || '' }}
+      - name: Commit
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs data/push_log.json 2>/dev/null || git add docs
+          git commit -m "發布報告 ${{ inputs.date }}" || exit 0
+          git pull --rebase origin main && git push

@@ -1,0 +1,26 @@
+name: 新影片偵測
+on:
+  schedule:
+    - cron: "0 16-22 * * 1-5"   # 溫哥華 09:00–15:00（全年 UTC-7）
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: repo-write
+  cancel-in-progress: false
+jobs:
+  detect:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - run: pip install requests==2.32.5
+      - run: python scripts/detect_uploads.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/uploads.json
+          git commit -m "記錄影片上傳時間" || exit 0
+          git pull --rebase origin main && git push

@@ -1,0 +1,41 @@
+name: 產出報告草稿
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "播出日 YYYYMMDD"
+        required: true
+permissions:
+  contents: write
+concurrency:
+  group: repo-write
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - name: Install
+        run: |
+          sudo apt-get update -q && sudo apt-get install -y -q fonts-noto-cjk
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: Build
+        env:
+          FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: cd scripts && python build_report.py "${{ inputs.date }}"
+      - name: Check
+        continue-on-error: true
+        run: cd scripts && python check_report.py "${{ inputs.date }}"
+      - name: Commit draft
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add drafts/${{ inputs.date }}
+          git commit -m "報告草稿 ${{ inputs.date }}" || exit 0
+          git pull --rebase origin main && git push
