@@ -7,7 +7,13 @@ import requests
 ROOT = Path(__file__).resolve().parent.parent
 VAN = ZoneInfo("America/Vancouver")
 CH = "UC_ObC9O0ZQ2FhW6u9_iFlZA"
-r = requests.get(f"https://www.youtube.com/feeds/videos.xml?channel_id={CH}", headers={"User-Agent": "finance-video-insights upload log"}, timeout=30)
+import time
+for i in range(5):   # YouTube RSS 偶爾回 404／5xx，間隔重試
+    r = requests.get(f"https://www.youtube.com/feeds/videos.xml?channel_id={CH}",
+                     headers={"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) Chrome/128.0 Safari/537.36"}, timeout=30)
+    if r.status_code == 200 and "<entry>" in r.text:
+        break
+    time.sleep(20 * (i + 1))
 r.encoding = "utf-8"
 t = r.text
 p = ROOT / "data" / "uploads.json"

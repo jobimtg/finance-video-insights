@@ -139,7 +139,7 @@ def main(ep_date):
     try:
         rec, att_tw, dis_tw = S.twse_lists()
         att_tp, dis_tp = S.tpex_lists()
-        today_tw = dt.datetime.now(TPE).date()
+        today_tw = latest_day   # 名單以最新交易日的公告為準，與其他數據同日
         alerts = {"checked_date": md(today_tw), "lists": {
             "異常推介": sorted(set(rec)),
             "注意股": sorted(set(att_tw + att_tp)),
@@ -173,7 +173,12 @@ def main(ep_date):
             row["status"] = m.get("hit_label", "已站上") if hit else m.get("miss_label", "未達")
         macro.append(row)
     brent, bd = S.fred_latest("DCOILBRENTEU")
-    note = E.get("macro_note", "")
+    fred_dates = []
+    for m in E.get("macro", []):
+        if m.get("source", "").startswith("FRED:"):
+            v, d = S.fred_latest(m["source"][5:])
+            if d: fred_dates.append(f"{m['name']}至 {md(d)}")
+    note = (f"FRED 數據有發布時差（{'、'.join(fred_dates)}）；" if fred_dates else "") + E.get("macro_note", "")
     if brent is not None:
         note += f"FRED 布蘭特為 Dated 現貨（{md(bd)} 為 {brent:.2f}），與節目引用的期貨不同。"
     note = note or "美債與匯率來源 FRED，比台股晚 1–2 個交易日。"
