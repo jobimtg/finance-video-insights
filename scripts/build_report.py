@@ -79,7 +79,7 @@ def level_checks(levels, latest, px=None, air=None, latest_closes=None):
         v = derive_level(lv, px or [], air, latest_closes or []) if derived else lv.get("value")
         if derived and v is None:
             out.append(f"節目：{lv['label']}：查無"); continue
-        lab = f"節目：{lv['label']} ≈ {fpx(v)}" if derived else f"{lv['label']} {v:g}"
+        lab = f"節目：{lv['label']} ≈ {fpx(v)}" if derived else (f"{lv['label']} {v:g}" if isinstance(v, (int, float)) else f"{lv['label']} {v}")
         if isinstance(v, (int, float)) and latest:
             if k == "resistance":
                 out.append(f"{lab}：" + ("已站上" if latest >= v else f"未達（差 {(v / latest - 1) * 100:.1f}%）"))
