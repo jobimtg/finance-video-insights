@@ -1,0 +1,19 @@
+name: 名稱核對（手動）
+on:
+  workflow_dispatch:
+    inputs:
+      items:
+        description: "名稱:代號，空白分隔"
+        required: true
+jobs:
+  resolve:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - run: pip install requests==2.32.5
+      - env:
+          ITEMS: ${{ inputs.items }}
+        run: cd scripts && python resolve_names.py $ITEMS
