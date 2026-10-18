@@ -32,8 +32,8 @@ def trading_days_after(start, n, holidays):
 
 
 def judge(stance, chg):
-    if chg is None:
-        return "待觀察"
+    if chg is None or chg == 0:
+        return "待觀察"   # 持平：規則未定義上漲或下跌，暫列待觀察（待使用者確認）
     if stance == "偏多":
         return "方向一致" if chg > 0 else "方向相反"
     if stance in ("偏空", "不追高"):
@@ -218,7 +218,7 @@ def main(ep_date):
         "macro": macro, "macro_note": note,
         "events": E.get("events", []),
         "verify_dates": {"d5": md(d5), "d20": md(d20)},
-        "table_note": f"本益比與殖利率為 {md(vd)}；法人為 {md(idt)}；營收為 {rm} 月年增；52 週為 {md(lat - dt.timedelta(days=365))} 起。",
+        "table_note": f"本益比與殖利率為 {md(vd)}；法人為 {md(idt)}；營收為 {rm} 月年增；52 週為 {(lat - dt.timedelta(days=365)):%Y/%m/%d} 起。",
         "segments": E["segments"],
         "sources_text": ("價格：臺灣證券交易所、證券櫃檯買賣中心 OpenAPI（政府資料開放授權條款－第1版）｜"
                          "估值與營收：證交所 BWIBBU、t187ap05_L，櫃買本益比與月營收｜"
