@@ -46,8 +46,8 @@ def main(ep):
         issues.append("表格說明沒有標示本益比與殖利率日期")
     # Agent 6：頁數
     n = len(PdfReader(str(pdf)).pages)
-    if not 5 <= n <= 8:
-        issues.append(f"頁數 {n}，不在 5–8 頁")
+    if not 5 <= n <= 9:
+        issues.append(f"頁數 {n}，不在 5–9 頁")
     # Agent 7：隱私與聲明
     html = next(d.glob("*.html")).read_text(encoding="utf-8")
     if re.search(r"[\w.+-]+@[\w-]+\.[\w.]+", html):

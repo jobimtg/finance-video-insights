@@ -1,0 +1,57 @@
+name: 驗證自動更新
+# 週一至週五台灣 20:30（溫哥華 05:30）檢查：到第 5、第 20 個交易日的集數，自動重建、檢查、重新發布（不推送 LINE）
+on:
+  schedule:
+    - cron: "30 12 * * 1-5"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: repo-write
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - name: Find due episodes
+        id: due
+        run: |
+          EPS=$(cd scripts && python due_verify.py)
+          echo "eps=$EPS" >> "$GITHUB_OUTPUT"
+          echo "::notice title=驗證自動更新::到期集數：${EPS:-無}"
+      - name: Install
+        if: steps.due.outputs.eps != ''
+        run: |
+          sudo apt-get update -q && sudo apt-get install -y -q fonts-noto-cjk
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: Rebuild, check, publish
+        if: steps.due.outputs.eps != ''
+        env:
+          FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: |
+          cd scripts
+          FAIL=0
+          for EP in ${{ steps.due.outputs.eps }}; do
+            python build_report.py "$EP" || { FAIL=1; continue; }
+            if python check_report.py "$EP"; then
+              python publish.py "$EP"
+            else
+              echo "::error title=未發布 $EP::自動初檢未通過，保留舊版，需人工處理"; FAIL=1
+            fi
+          done
+          exit $FAIL
+      - name: Commit
+        if: always() && steps.due.outputs.eps != ''
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add drafts docs
+          git commit -m "驗證自動更新 ${{ steps.due.outputs.eps }}" || exit 0
+          git pull --rebase origin main && git push
