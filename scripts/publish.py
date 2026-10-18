@@ -1,5 +1,5 @@
 """發布：python scripts/publish.py 20261012 [--send-line]
-把 drafts/<日期> 的 PDF 複製到 docs/reports（GitHub Pages），更新 docs/index.html，
+把 drafts/<日期> 的 PDF 複製到 docs/reports（GitHub Pages），重建網站（build_site.py），
 需要時推送 LINE Flex 卡片給 LINE_USER_ID（同一集只推一次）。
 """
 import json, os, shutil, sys, datetime as dt, urllib.parse
@@ -7,6 +7,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 import requests
 import flex
+import build_site
 
 ROOT = Path(__file__).resolve().parent.parent
 BASE = "https://jobimtg.github.io/finance-video-insights"
@@ -21,12 +22,7 @@ def main(ep, send_line):
     name = f"錢線百分百_{ep}_統整報告.pdf"
     dst = ROOT / "docs" / "reports"; dst.mkdir(parents=True, exist_ok=True)
     shutil.copy(d / name, dst / name)
-    items = sorted((p.name for p in dst.glob("*.pdf")), reverse=True)
-    lis = "".join(f'<li><a href="reports/{urllib.parse.quote(n)}">{n.replace(".pdf", "")}</a></li>' for n in items)
-    (ROOT / "docs" / "index.html").write_text(
-        f'<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
-        f'<title>財經影片統整</title><style>body{{font-family:sans-serif;max-width:640px;margin:24px auto;padding:0 16px}}</style></head>'
-        f'<body><h1>財經影片統整</h1><p>節目觀點改寫摘要與公開市場數據，不構成投資建議。</p><ul>{lis}</ul></body></html>', encoding="utf-8")
+    build_site.build()   # 重建網站首頁、robots.txt、sitemap.xml
     (ROOT / "docs" / ".nojekyll").write_text("")
     url = f"{BASE}/reports/{urllib.parse.quote(name)}"
     print("published", url)
