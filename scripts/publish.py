@@ -22,7 +22,7 @@ def main(ep, send_line):
     name = f"錢線百分百_{ep}_統整報告.pdf"
     dst = ROOT / "docs" / "reports"; dst.mkdir(parents=True, exist_ok=True)
     shutil.copy(d / name, dst / name)
-    build_site.build()   # 重建網站首頁、robots.txt、sitemap.xml
+    build_site.build()   # 重建網站首頁與 robots.txt
     (ROOT / "docs" / ".nojekyll").write_text("")
     url = f"{BASE}/reports/{urllib.parse.quote(name)}"
     print("published", url)

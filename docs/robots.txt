@@ -1,3 +1,2 @@
 User-agent: *
-Allow: /
-Sitemap: https://jobimtg.github.io/finance-video-insights/sitemap.xml
+Disallow: /

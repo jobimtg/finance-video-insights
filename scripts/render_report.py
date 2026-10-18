@@ -1,4 +1,4 @@
-"""財經影片統整 PDF 定版產生器（版面定案 2026-10-14；2026-10-17 經使用者同意加入主管機關名單標記，2026-10-18 名單說明列納入附錄個股、加入灰字數據參考列；不得任意更改樣式）
+"""財經影片統整 PDF 定版產生器（版面定案 2026-10-14；2026-10-17 經使用者同意加入主管機關名單標記，2026-10-18 名單說明列納入附錄個股、加入灰字數據參考列，超過 9 頁時附錄改為每列 2 檔的精簡格式（compact_appendix）；不得任意更改樣式）
 用法：python render_report.py report.json 輸出.pdf
 需要：playwright（Chromium）、Noto Sans CJK TC 字型
 """
@@ -105,6 +105,7 @@ thead { display:table-header-group; } tr { break-inside:avoid; }
 .a-rec { background:#fbe3e3; color:#b02a2a; } .a-att { background:#fdf0d5; color:#a26a00; } .a-dis { background:#b02a2a; color:#fff; }
 .legend { font-size:7.2pt; color:#555; } .pb { break-before:page; }
 .two { display:grid; grid-template-columns:1fr 1fr; gap:3mm; }
+.cpt { font-size:6.6pt; } .cpt td,.cpt th { padding:.6mm .8mm; } .cpt .gap { width:3mm; background:none; border:0; }
 """
 COLS = ('<colgroup><col style="width:15mm"><col style="width:44mm"><col style="width:36mm"><col style="width:17mm">'
         '<col style="width:13mm"><col style="width:12mm"><col style="width:13mm"><col style="width:15mm"><col style="width:13mm"><col style="width:14mm"></colgroup>')
@@ -137,6 +138,15 @@ def build_html(R):
     events = "".join(f'<tr><td>{e(x["date"])}</td><td>{e(x["event"])}</td><td>{e(x["note"])}</td></tr>' for x in R["events"])
     bg_rows = "".join(f'<tr><td>{e(s["name"])} {s["code"]}</td><td>{e(s["view"])}</td><td class="r">{n(s["latest"])}</td>'
                       f'<td class="r" style="color:{colr(s["since_video_pct"])}">{pct(s["since_video_pct"])}</td></tr>' for s in bg)
+    hd = '<tr><th>個股</th><th>影片中角色</th><th class="r">最新</th><th class="r">播出後</th></tr>'
+    if R.get("compact_appendix"):
+        cell = lambda s: (f'<td>{e(s["name"])} {s["code"]}</td><td>{e(s["view"])}</td><td class="r">{n(s["latest"])}</td><td class="r" style="color:{colr(s["since_video_pct"])}">{pct(s["since_video_pct"])}</td>') if s else '<td></td><td></td><td></td><td></td>'
+        h = (len(bg) + 1) // 2
+        pairs = "".join(f'<tr>{cell(bg[i])}<td class="gap"></td>{cell(bg[i + h] if i + h < len(bg) else None)}</tr>' for i in range(h))
+        hd2 = '<thead><tr><th>個股</th><th>影片中角色</th><th class="r">最新</th><th class="r">播出後</th><th class="gap"></th><th>個股</th><th>影片中角色</th><th class="r">最新</th><th class="r">播出後</th></tr></thead>'
+        bg_block = f'<table class="cpt">{hd2}<tbody>{pairs}</tbody></table>'
+    else:
+        bg_block = f'<table>{hd}{bg_rows}</table>'
     return f'''<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><style>{CSS}</style></head><body>
 <h1>{e(ep["show"])} {e(vd)} 個股統整</h1>
 <div class="sub">{e(ep["air_line"])}<br>{e(ep["data_line"])}</div>
@@ -166,7 +176,7 @@ def build_html(R):
 <table class="st">{COLS}{head}<tbody>{body}</tbody></table>
 <div class="legend" style="margin-top:1.5mm">{e(alert_note(R, core))}</div>
 <h2>附錄：背景與比較用個股</h2>
-<table><tr><th>個股</th><th>影片中角色</th><th class="r">最新</th><th class="r">播出後</th></tr>{bg_rows}</table>
+{bg_block}
 <h2>資料來源</h2>
 <div class="legend">{e(R["sources_text"])}<br>觀點為節目內容改寫摘要，非逐字引用。本報告不構成投資建議，亦不含任何個人持股或個人資料。</div>
 </body></html>'''

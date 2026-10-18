@@ -1,7 +1,7 @@
 """報告網站產生器：python scripts/build_site.py
 從 docs/reports 已發布的 PDF，對應 drafts/<日期>/report.json，重建 GitHub Pages 首頁。
 版面（2026-10-18 定案）：最新一集儀表板＋往期報告卡片牆＋個股索引（搜尋＋族群／觀點／驗證篩選），
-配色採報紙風（米粉底、深棕字、藍綠強調），深色模式跟隨裝置設定自動切換，開放搜尋引擎索引。
+配色採報紙風（米粉底、深棕字、藍綠強調），深色模式跟隨裝置設定自動切換。不開放搜尋引擎索引（noindex＋robots.txt 全部禁止，2026-10-18 改）。
 只用報告中已公開的計算結果，不含任何個人資料。
 """
 import json, html, datetime as dt, urllib.parse
@@ -166,7 +166,7 @@ def build():
     data = json.dumps(E, ensure_ascii=False).replace("</", "<\\/")
     page = f'''<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>財經影片統整｜錢線百分百個股觀點與數據追蹤</title>
-<meta name="description" content="{e(DESC)}"><meta name="robots" content="index,follow"><link rel="canonical" href="{BASE}/">
+<meta name="description" content="{e(DESC)}"><meta name="robots" content="noindex,nofollow">
 <meta property="og:type" content="website"><meta property="og:title" content="財經影片統整｜錢線百分百個股觀點與數據追蹤">
 <meta property="og:description" content="{e(DESC)}"><meta property="og:url" content="{BASE}/"><meta name="theme-color" content="#33302e">
 <style>{CSS}</style></head><body>
@@ -193,10 +193,8 @@ def build():
 網站更新：{now}（溫哥華時間）</footer>
 <script type="application/json" id="d">{data}</script><script>{JS}</script></body></html>'''
     (docs / "index.html").write_text(page, encoding="utf-8")
-    (docs / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {BASE}/sitemap.xml\n", encoding="utf-8")
-    urls = [f"{BASE}/"] + [f"{BASE}/{x['pdf']}" for x in E]
-    (docs / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
-                                      + "".join(f"<url><loc>{u}</loc></url>" for u in urls) + "</urlset>\n", encoding="utf-8")
+    (docs / "robots.txt").write_text("User-agent: *\nDisallow: /\n", encoding="utf-8")   # 2026-10-18 定案：不開放搜尋引擎索引
+    (docs / "sitemap.xml").unlink(missing_ok=True)
     (docs / ".nojekyll").write_text("")
     print("site built:", len(E), "episodes")
 

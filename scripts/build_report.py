@@ -295,6 +295,12 @@ def main(ep_date):
     (out / "report.json").write_text(json.dumps(R, ensure_ascii=False, indent=1), encoding="utf-8")
     pdf = out / f"錢線百分百_{ep_date}_統整報告.pdf"
     render(str(out / "report.json"), str(pdf))
+    from pypdf import PdfReader
+    if len(PdfReader(str(pdf)).pages) > 9:   # 2026-10-18 定案：超過 9 頁時附錄改精簡格式（內容不刪）
+        R["compact_appendix"] = True
+        (out / "report.json").write_text(json.dumps(R, ensure_ascii=False, indent=1), encoding="utf-8")
+        render(str(out / "report.json"), str(pdf))
+        log.append(f"超過 9 頁，附錄改用精簡格式後為 {len(PdfReader(str(pdf)).pages)} 頁")
     (out / "build_log.json").write_text(json.dumps({"built_at_vancouver": dt.datetime.now(VAN).strftime("%Y-%m-%d %H:%M"),
                                                     "notes": log}, ensure_ascii=False, indent=1), encoding="utf-8")
     print("built", pdf, "notes:", log)
