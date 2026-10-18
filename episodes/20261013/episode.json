@@ -1,0 +1,1413 @@
+{
+ "show": "錢線百分百",
+ "air_date": "2026-10-13",
+ "guests": [
+  "蕙慈",
+  "奎國",
+  "志源",
+  "冠州"
+ ],
+ "macro": [
+  {
+   "name": "外資現貨／投信",
+   "source": "inst_total",
+   "alert": "影片當日外資賣超 1,653 億（今年第三大）"
+  },
+  {
+   "name": "加權指數",
+   "source": "taiex",
+   "alert": "冠州：10 月區間 46,000–49,000；奎國：年底看 52,000",
+   "threshold": 49000,
+   "hit_label": "已站上 49,000",
+   "miss_label": "區間內"
+  },
+  {
+   "name": "新台幣兌美元",
+   "source": "FRED:DEXTAUS",
+   "alert": "盤中貶破 32 元",
+   "threshold": 32,
+   "cmp": "above",
+   "hit_label": "已貶破",
+   "miss_label": "未破"
+  },
+  {
+   "name": "美國 30 年期公債殖利率",
+   "source": "FRED:DGS30",
+   "unit": "%",
+   "alert": "殖利率續創高，壓抑科技股估值",
+   "threshold": 6,
+   "cmp": "above",
+   "hit_label": "已突破 6%",
+   "miss_label": "未達 6%"
+  },
+  {
+   "name": "布蘭特近月期貨",
+   "source": "text",
+   "latest": "約 106（節目 10/12）",
+   "alert": "中東情勢推升油價",
+   "status": "節目口述"
+  },
+  {
+   "name": "聯準會 10 月會議",
+   "source": "text",
+   "latest": "10 月底",
+   "alert": "冠州：升息 1 碼機率高於不升或降息",
+   "status": "未納入數值"
+  }
+ ],
+ "macro_note": "",
+ "events": [
+  {
+   "date": "10/15",
+   "event": "台積電法說會",
+   "note": "資本支出可望上修；法說前可逢回慢慢買"
+  },
+  {
+   "date": "10/16",
+   "event": "奎國預估的落底轉折日",
+   "note": "若遇重大利空，延到 10/23"
+  },
+  {
+   "date": "10/23",
+   "event": "光復節前最後交易日",
+   "note": "奎國：10 月低點最晚出現"
+  },
+  {
+   "date": "10 月中下旬",
+   "event": "熱門 ETF 除息",
+   "note": "部位大者留意補充保費，加碼等除息後"
+  },
+  {
+   "date": "10 月底",
+   "event": "聯準會會議",
+   "note": "升息機率偏高"
+  },
+  {
+   "date": "11/10",
+   "event": "美中關稅協定到期",
+   "note": "若延長，總經風險較低"
+  }
+ ],
+ "segments": [
+  {
+   "title": "台積電與台股 ETF",
+   "codes": [
+    "2330",
+    "0052"
+   ]
+  },
+  {
+   "title": "記憶體",
+   "codes": [
+    "2408"
+   ]
+  },
+  {
+   "title": "光學與光通訊（2027 明星）",
+   "codes": [
+    "3008",
+    "3406",
+    "6933",
+    "6426",
+    "2340",
+    "3701",
+    "4903",
+    "6668"
+   ]
+  },
+  {
+   "title": "塑化與傳產",
+   "codes": [
+    "1312",
+    "6505",
+    "1301",
+    "1303",
+    "1326",
+    "1802",
+    "1101"
+   ]
+  },
+  {
+   "title": "航運",
+   "codes": [
+    "2603",
+    "2609"
+   ]
+  },
+  {
+   "title": "金融",
+   "codes": [
+    "2886",
+    "2891",
+    "2881",
+    "2882"
+   ]
+  },
+  {
+   "title": "汽車零組件與重電",
+   "codes": [
+    "1319",
+    "1522",
+    "6605",
+    "1519",
+    "1513"
+   ]
+  },
+  {
+   "title": "被動元件",
+   "codes": [
+    "2478",
+    "3090",
+    "3624",
+    "6127",
+    "3236",
+    "8042"
+   ]
+  },
+  {
+   "title": "半導體製造與設備",
+   "codes": [
+    "3711",
+    "2449",
+    "5347",
+    "6196",
+    "1560",
+    "2303",
+    "6182"
+   ]
+  },
+  {
+   "title": "IC 設計與化合物、封測",
+   "codes": [
+    "3661",
+    "3529",
+    "2454",
+    "3443",
+    "3105",
+    "8086",
+    "6147",
+    "3264"
+   ]
+  },
+  {
+   "title": "散熱導軌與權值股",
+   "codes": [
+    "2059",
+    "3017",
+    "3324",
+    "3653",
+    "2382",
+    "2317"
+   ]
+  },
+  {
+   "title": "CCL 與 PCB",
+   "codes": [
+    "2383",
+    "6274",
+    "2368",
+    "3037",
+    "6672",
+    "1815",
+    "5309"
+   ]
+  },
+  {
+   "title": "面板",
+   "codes": [
+    "2409",
+    "3481"
+   ]
+  },
+  {
+   "title": "美股 ETF",
+   "codes": [
+    "009807",
+    "00770",
+    "00886",
+    "00757",
+    "00988A",
+    "00409A",
+    "00411A"
+   ]
+  }
+ ],
+ "stocks": [
+  {
+   "code": "2330",
+   "name": "台積電",
+   "market": "TWSE",
+   "group": "半導體",
+   "guest": "奎國、冠州、志源",
+   "ts": "上 5:23／中 16:01、39:42／上 36:26",
+   "stance": "拉回布局",
+   "view": "奎國認為台積電每次創新高後慣性拉回 100–150 元，2,490–2,390 元是甜甜價；冠州認為法說前可逢回慢慢買，資本支出可望上修；志源指外資目標價最低也有 3,300 元。",
+   "level_desc": "甜甜價 2,390–2,490；前高 2,590",
+   "levels": [
+    {
+     "label": "甜甜價下緣",
+     "value": 2390,
+     "kind": "support"
+    },
+    {
+     "label": "甜甜價上緣",
+     "value": 2490,
+     "kind": "support"
+    },
+    {
+     "label": "前高",
+     "value": 2590,
+     "kind": "resistance"
+    }
+   ],
+   "target": {
+    "src": "外資最低",
+    "price": 3300
+   }
+  },
+  {
+   "code": "0052",
+   "name": "富邦科技",
+   "market": "TWSE",
+   "group": "ETF",
+   "guest": "志源",
+   "ts": "上 38:33",
+   "stance": "偏多",
+   "view": "台股 ETF 中台積電比重最高（約 64%），一張約 6.5 萬元可參與台積電與其他電子股成長，長期報酬勝過 0050；可用定期定額小額參與。",
+   "level_desc": "長期定期定額",
+   "levels": []
+  },
+  {
+   "code": "2408",
+   "name": "南亞科",
+   "market": "TWSE",
+   "group": "記憶體",
+   "guest": "蕙慈、冠州",
+   "ts": "上 6:28／中 4:12、41:54",
+   "stance": "保守",
+   "view": "法說數字亮眼但股價重挫，主因中國長鑫宣布新技術、記憶體供給可能增加；蕙慈建議照技術面操作、反彈可減碼、不適合大波段；冠州認為跌到季線可短線搶反彈。",
+   "level_desc": "反彈減碼；觀察季線支撐",
+   "levels": [
+    {
+     "label": "季線",
+     "derive": "ma60",
+     "kind": "support"
+    }
+   ]
+  },
+  {
+   "code": "3008",
+   "name": "大立光",
+   "market": "TWSE",
+   "group": "光學／光通訊",
+   "guest": "蕙慈",
+   "ts": "上 10:42",
+   "stance": "偏多",
+   "view": "2027 明星股方向是「光」：FA 試產獲客戶高度肯定，明年第二季新動能啟動，之後多排 FA、FAU 接續，外資目標價高並不過分。",
+   "level_desc": "中長期看光通訊新動能",
+   "levels": []
+  },
+  {
+   "code": "3406",
+   "name": "玉晶光",
+   "market": "TWSE",
+   "group": "光學／光通訊",
+   "guest": "蕙慈",
+   "ts": "上 13:55",
+   "stance": "偏多",
+   "view": "從手機鏡頭延伸到 FAU 相關的 V 槽、稜鏡、MT 插芯並已出貨；本業潛望鏡頭市占提升；今年 EPS 約 35–40 元，本益比不高，投信持續加碼。",
+   "level_desc": "依 EPS 35 元估本益比仍低",
+   "levels": []
+  },
+  {
+   "code": "6933",
+   "name": "AMAX-KY",
+   "market": "TWSE",
+   "group": "光學／光通訊",
+   "guest": "蕙慈",
+   "ts": "上 15:00",
+   "stance": "偏多",
+   "view": "矽谷老牌 AI 伺服器廠，從硬體升級到整櫃與液冷資料中心，鴻海間接持股；產能年底倍增，明年 EPS 有機會看 30 元，合約負債大增。",
+   "level_desc": "9 月才起漲，留意初升段",
+   "levels": []
+  },
+  {
+   "code": "6426",
+   "name": "統新",
+   "market": "TWSE",
+   "group": "光學／光通訊",
+   "guest": "蕙慈",
+   "ts": "上 17:09",
+   "stance": "偏多",
+   "view": "20 多年專注薄膜濾光片鍍膜，受惠 800G 到 1.6T、FAU 鍍膜，太空太陽能鍍膜已量產、星間雷射小量出貨，技術門檻高。",
+   "level_desc": "低價光通訊題材",
+   "levels": []
+  },
+  {
+   "code": "2340",
+   "name": "台亞",
+   "market": "TWSE",
+   "group": "光學／光通訊",
+   "guest": "蕙慈",
+   "ts": "中 21:29",
+   "stance": "偏多",
+   "view": "從老牌 LED 轉型三五族高階光電，VCSEL 已是產品線、磷化銦用於雷射與光偵測器，並取得相關專利；年線剛轉揚、突破後出量。",
+   "level_desc": "50 多元低價轉機股",
+   "levels": []
+  },
+  {
+   "code": "3701",
+   "name": "大眾控",
+   "market": "TWSE",
+   "group": "光學／光通訊",
+   "guest": "蕙慈",
+   "ts": "中 26:53",
+   "stance": "偏多",
+   "view": "光通訊已占近五成營收，800G 量產、1.6T 小量、3.2T 驗證中，馬來西亞與廣州擴產；法人估明年 EPS 有機會 8 元，均線剛突破。",
+   "level_desc": "逢低布局、長線追蹤",
+   "levels": []
+  },
+  {
+   "code": "4903",
+   "name": "聯光通",
+   "market": "TPEx",
+   "group": "光學／光通訊",
+   "guest": "蕙慈",
+   "ts": "中 30:06",
+   "stance": "拉回布局",
+   "view": "台鋼集團旗下，CPO 與 FAU 合作、MPO 年底投產，新廠自拉光纖往下整合；法人持續買，沿 5 日線上漲，今天創高不宜追。",
+   "level_desc": "等靠近 5 日線再布局",
+   "levels": [
+    {
+     "label": "5日線",
+     "derive": "ma5",
+     "kind": "support"
+    }
+   ]
+  },
+  {
+   "code": "6668",
+   "name": "中揚光",
+   "market": "TWSE",
+   "group": "光學／光通訊",
+   "guest": "蕙慈",
+   "ts": "中 31:10",
+   "stance": "偏多",
+   "view": "鴻海早期入股、雙鴻參與私募，以高精度模具與模造玻璃切入多通道光纖耦合鏡頭，新品已小量送樣，CPO 相關明年下半年量產。",
+   "level_desc": "60 元級轉機股",
+   "levels": []
+  },
+  {
+   "code": "1312",
+   "name": "國喬",
+   "market": "TWSE",
+   "group": "塑化",
+   "guest": "冠州、蕙慈",
+   "ts": "上 27:47／中 3:08",
+   "stance": "偏多",
+   "view": "大跌日逆勢漲停、外資連續買超；蕙慈認為短線一氣呵成可續抱，轉弱就先減碼。",
+   "level_desc": "防守在 10/13 紅 K 的二分之一",
+   "levels": [
+    {
+     "label": "防守點",
+     "value": "10/13 紅K 二分之一",
+     "kind": "info"
+    }
+   ]
+  },
+  {
+   "code": "6505",
+   "name": "台塑化",
+   "market": "TWSE",
+   "group": "塑化",
+   "guest": "冠州、蕙慈",
+   "ts": "上 27:47／中 6:20",
+   "stance": "偏多",
+   "view": "油價高檔加上煉油利差擴大，大跌日漲停、投信連日買超；多方趨勢可續抱，但乖離偏大，靠近 5 日線再布局。",
+   "level_desc": "5 日線附近布局",
+   "levels": [
+    {
+     "label": "5日線",
+     "derive": "ma5",
+     "kind": "support"
+    }
+   ]
+  },
+  {
+   "code": "1301",
+   "name": "台塑",
+   "market": "TWSE",
+   "group": "塑化",
+   "guest": "蕙慈、奎國",
+   "ts": "中 6:20／下 8:30",
+   "stance": "拉回布局",
+   "view": "有半導體材料題材、位置較低，被視為複製南亞；回到 5 日線可買，每次創新高是短線賣點。",
+   "level_desc": "回 5 日線買、創新高短線賣",
+   "levels": [
+    {
+     "label": "5日線",
+     "derive": "ma5",
+     "kind": "support"
+    }
+   ]
+  },
+  {
+   "code": "1303",
+   "name": "南亞",
+   "market": "TWSE",
+   "group": "塑化／CCL",
+   "guest": "冠州、奎國",
+   "ts": "上 27:47／下 13:56",
+   "stance": "拉回布局",
+   "view": "大跌日仍強，屬 CCL 指標股；奎國認為一層層走高，漲一段後等 10 日線或月線上來再買。",
+   "level_desc": "買方區域：月線 256.5 至 10 日線 284",
+   "levels": [
+    {
+     "label": "月線買方區",
+     "value": 256.5,
+     "kind": "support"
+    },
+    {
+     "label": "10日線買方區",
+     "value": 284,
+     "kind": "support"
+    }
+   ]
+  },
+  {
+   "code": "1326",
+   "name": "台化",
+   "market": "TWSE",
+   "group": "塑化",
+   "guest": "冠州",
+   "ts": "中 46:10",
+   "stance": "偏多",
+   "view": "煉油廠受戰事影響、供需偏緊，煉油利差持續走高，台化與二線塑化股有機會走出行情。",
+   "level_desc": "塑化上游受惠",
+   "levels": []
+  },
+  {
+   "code": "1802",
+   "name": "台玻",
+   "market": "TWSE",
+   "group": "塑化／傳產",
+   "guest": "奎國",
+   "ts": "下 6:24",
+   "stance": "觀察",
+   "view": "上市當沖熱門股之一，屬偏多走勢；只在支撐買、到壓力賣。",
+   "level_desc": "支撐買、壓力賣",
+   "levels": []
+  },
+  {
+   "code": "1101",
+   "name": "台泥",
+   "market": "TWSE",
+   "group": "塑化／傳產",
+   "guest": "奎國",
+   "ts": "下 6:24",
+   "stance": "觀察",
+   "view": "上市當沖熱門股之一；依支撐買、壓力賣的區間操作。",
+   "level_desc": "支撐買、壓力賣",
+   "levels": []
+  },
+  {
+   "code": "2603",
+   "name": "長榮",
+   "market": "TWSE",
+   "group": "航運",
+   "guest": "蕙慈、冠州、奎國",
+   "ts": "中 2:05、46:10／下 15:02",
+   "stance": "拉回布局",
+   "view": "突破頸線後量滾量上攻，量縮回測 5 日線較理想；冠州指今年 EPS 預估上調到 46 元以上、明年 50 元以上；奎國指翻多點與支撐附近可大膽買。",
+   "level_desc": "翻多點 241.5、支撐 248；漲五天後勿追",
+   "levels": [
+    {
+     "label": "翻多點",
+     "value": 241.5,
+     "kind": "support"
+    },
+    {
+     "label": "支撐",
+     "value": 248,
+     "kind": "support"
+    }
+   ]
+  },
+  {
+   "code": "2609",
+   "name": "陽明",
+   "market": "TWSE",
+   "group": "航運",
+   "guest": "蕙慈、奎國",
+   "ts": "中 1:02／下 6:24",
+   "stance": "觀察",
+   "view": "外資大賣日逆勢買超 2 萬多張；航運逐步進入旺季，屬當沖熱門股。",
+   "level_desc": "可搭配部分持有，不必全押",
+   "levels": []
+  },
+  {
+   "code": "2886",
+   "name": "兆豐金",
+   "market": "TWSE",
+   "group": "金融",
+   "guest": "冠州",
+   "ts": "上 32:05",
+   "stance": "偏多",
+   "view": "高利率與美元走強下，龍頭金融股利差擴大、海外企業金融需求旺，獲利維持高檔、本益比不高。",
+   "level_desc": "選龍頭",
+   "levels": []
+  },
+  {
+   "code": "2891",
+   "name": "中信金",
+   "market": "TWSE",
+   "group": "金融",
+   "guest": "冠州",
+   "ts": "上 32:05",
+   "stance": "偏多",
+   "view": "龍頭金融股受惠利差擴大與美元收入，外資大賣日仍逆勢買超。",
+   "level_desc": "選龍頭",
+   "levels": []
+  },
+  {
+   "code": "2881",
+   "name": "富邦金",
+   "market": "TWSE",
+   "group": "金融",
+   "guest": "冠州",
+   "ts": "上 32:05",
+   "stance": "偏多",
+   "view": "壽險在國際資金配置可享較高利息，受惠利率與美元走強。",
+   "level_desc": "選龍頭",
+   "levels": []
+  },
+  {
+   "code": "2882",
+   "name": "國泰金",
+   "market": "TWSE",
+   "group": "金融",
+   "guest": "冠州",
+   "ts": "上 32:05",
+   "stance": "偏多",
+   "view": "壽險海外配置受惠較高利息環境。",
+   "level_desc": "壽險受惠",
+   "levels": []
+  },
+  {
+   "code": "1319",
+   "name": "東陽",
+   "market": "TWSE",
+   "group": "汽車零組件",
+   "guest": "冠州",
+   "ts": "上 32:05",
+   "stance": "偏多",
+   "view": "第四季到明年第一季是歐美冬季售後市場旺季，美元走強使外銷收入增加。",
+   "level_desc": "AM 市場旺季",
+   "levels": []
+  },
+  {
+   "code": "1522",
+   "name": "堤維西",
+   "market": "TWSE",
+   "group": "汽車零組件",
+   "guest": "冠州",
+   "ts": "上 32:05",
+   "stance": "偏多",
+   "view": "歐美售後市場市占高，冬季旺季加上美元收入受惠。",
+   "level_desc": "AM 市場旺季",
+   "levels": []
+  },
+  {
+   "code": "6605",
+   "name": "帝寶",
+   "market": "TWSE",
+   "group": "汽車零組件",
+   "guest": "冠州",
+   "ts": "上 32:05",
+   "stance": "偏多",
+   "view": "歐美售後市場市占高，冬季旺季加上美元收入受惠。",
+   "level_desc": "AM 市場旺季",
+   "levels": []
+  },
+  {
+   "code": "1519",
+   "name": "華城",
+   "market": "TWSE",
+   "group": "重電",
+   "guest": "冠州",
+   "ts": "上 33:11",
+   "stance": "偏多",
+   "view": "外銷美國變壓器，受惠美國電網與 AI 投資增加。",
+   "level_desc": "重電受惠美國投資",
+   "levels": []
+  },
+  {
+   "code": "1513",
+   "name": "中興電",
+   "market": "TWSE",
+   "group": "重電",
+   "guest": "冠州",
+   "ts": "上 33:11",
+   "stance": "偏多",
+   "view": "外銷美國變壓器，受惠美國電網與 AI 投資增加。",
+   "level_desc": "重電受惠美國投資",
+   "levels": []
+  },
+  {
+   "code": "2478",
+   "name": "大毅",
+   "market": "TWSE",
+   "group": "被動元件",
+   "guest": "奎國",
+   "ts": "中 17:04",
+   "stance": "偏多",
+   "view": "上半年 EPS 2.91 元優於已上漲的同業，股價仍在低檔，若築底補量向上可望是下一波。",
+   "level_desc": "底部築底補量時留意",
+   "levels": []
+  },
+  {
+   "code": "3090",
+   "name": "日電貿",
+   "market": "TWSE",
+   "group": "被動元件",
+   "guest": "奎國",
+   "ts": "中 19:15",
+   "stance": "偏多",
+   "view": "上半年 EPS 4.91 元，股價仍在橫盤低點尚未發動。",
+   "level_desc": "底部築底補量時留意",
+   "levels": []
+  },
+  {
+   "code": "3624",
+   "name": "光頡",
+   "market": "TPEx",
+   "group": "被動元件",
+   "guest": "奎國",
+   "ts": "中 17:04／下 10:36",
+   "stance": "觀察",
+   "view": "沿上升軌道走，屬當沖熱門股；只在軌道支撐與壓力間進出，拉回量縮趨勢不變可順勢操作。",
+   "level_desc": "沿 5 日或 10 日線操作",
+   "levels": []
+  },
+  {
+   "code": "6127",
+   "name": "九豪",
+   "market": "TPEx",
+   "group": "被動元件",
+   "guest": "奎國",
+   "ts": "中 18:09／下 10:36",
+   "stance": "觀察",
+   "view": "底部整理後起漲，已漲一段；突破後拉回不破可作多。",
+   "level_desc": "拉回不破再作多",
+   "levels": []
+  },
+  {
+   "code": "3236",
+   "name": "千如",
+   "market": "TPEx",
+   "group": "被動元件",
+   "guest": "奎國",
+   "ts": "中 18:09",
+   "stance": "觀察",
+   "view": "橫盤打底後本月才起漲。",
+   "level_desc": "底部型態",
+   "levels": []
+  },
+  {
+   "code": "8042",
+   "name": "金山電",
+   "market": "TPEx",
+   "group": "被動元件",
+   "guest": "奎國",
+   "ts": "中 18:09",
+   "stance": "觀察",
+   "view": "底部突破後上漲，從 130 多元漲到 144 元，上半年 EPS 2.84 元。",
+   "level_desc": "已漲一段",
+   "levels": []
+  },
+  {
+   "code": "3711",
+   "name": "日月光投控",
+   "market": "TWSE",
+   "group": "半導體",
+   "guest": "冠州",
+   "ts": "中 39:42",
+   "stance": "偏多",
+   "view": "先進封裝受惠台積電外溢效應，屬 AI 半導體先進製造指標。",
+   "level_desc": "AI 半導體",
+   "levels": []
+  },
+  {
+   "code": "2449",
+   "name": "京元電子",
+   "market": "TWSE",
+   "group": "半導體",
+   "guest": "冠州",
+   "ts": "中 39:42",
+   "stance": "偏多",
+   "view": "AI 半導體先進製造相關標的。",
+   "level_desc": "AI 半導體",
+   "levels": []
+  },
+  {
+   "code": "5347",
+   "name": "世界",
+   "market": "TPEx",
+   "group": "半導體",
+   "guest": "冠州",
+   "ts": "中 39:42",
+   "stance": "偏多",
+   "view": "台積電周邊產業，有外溢效應。",
+   "level_desc": "台積電外溢",
+   "levels": []
+  },
+  {
+   "code": "6196",
+   "name": "帆宣",
+   "market": "TWSE",
+   "group": "半導體",
+   "guest": "冠州",
+   "ts": "中 39:42",
+   "stance": "拉回布局",
+   "view": "台積電資本支出可望上修，設備耗材在外資賣超、台幣貶值時可拉回找買點。",
+   "level_desc": "拉回找買點",
+   "levels": []
+  },
+  {
+   "code": "1560",
+   "name": "中砂",
+   "market": "TWSE",
+   "group": "半導體",
+   "guest": "冠州",
+   "ts": "中 39:42",
+   "stance": "拉回布局",
+   "view": "台積電資本支出可望上修，設備耗材拉回時可找買點。",
+   "level_desc": "拉回找買點",
+   "levels": []
+  },
+  {
+   "code": "2303",
+   "name": "聯電",
+   "market": "TWSE",
+   "group": "半導體",
+   "guest": "奎國",
+   "ts": "下 9:33",
+   "stance": "拉回布局",
+   "view": "未跌破向上趨勢線，回到長期均線支撐可布局，彈到第二高點則站賣方。",
+   "level_desc": "到支撐買、第二高點賣",
+   "levels": []
+  },
+  {
+   "code": "6182",
+   "name": "合晶",
+   "market": "TPEx",
+   "group": "半導體",
+   "guest": "奎國",
+   "ts": "下 11:46",
+   "stance": "觀察",
+   "view": "上櫃當沖熱門股，屬上升軌道或多方區間；拉回支撐才買。",
+   "level_desc": "支撐買、壓力不追",
+   "levels": []
+  },
+  {
+   "code": "3661",
+   "name": "世芯-KY",
+   "market": "TWSE",
+   "group": "IC 設計",
+   "guest": "冠州",
+   "ts": "中 41:54",
+   "stance": "拉回布局",
+   "view": "雲端業者自研晶片成長率高於 GPU，ASIC 相關股出現震盪，拉回到底部區可留意。",
+   "level_desc": "拉回底部區留意",
+   "levels": []
+  },
+  {
+   "code": "3529",
+   "name": "力旺",
+   "market": "TPEx",
+   "group": "IC 設計",
+   "guest": "冠州",
+   "ts": "中 41:54",
+   "stance": "拉回布局",
+   "view": "矽智財受惠自研晶片趨勢，股價震盪拉回時可留意。",
+   "level_desc": "拉回底部區留意",
+   "levels": []
+  },
+  {
+   "code": "2454",
+   "name": "聯發科",
+   "market": "TWSE",
+   "group": "IC 設計",
+   "guest": "冠州",
+   "ts": "中 41:54",
+   "stance": "拉回布局",
+   "view": "短線拉回，但雲端自研晶片趨勢明確。",
+   "level_desc": "拉回底部區留意",
+   "levels": []
+  },
+  {
+   "code": "3443",
+   "name": "創意",
+   "market": "TWSE",
+   "group": "IC 設計",
+   "guest": "冠州",
+   "ts": "中 41:54",
+   "stance": "不追高",
+   "view": "已漲非常多，漲高的先等待。",
+   "level_desc": "先等待",
+   "levels": []
+  },
+  {
+   "code": "3105",
+   "name": "穩懋",
+   "market": "TPEx",
+   "group": "IC 設計／化合物",
+   "guest": "奎國",
+   "ts": "下 11:46",
+   "stance": "觀察",
+   "view": "上櫃當沖熱門股，屬上升軌道；拉回支撐才買。",
+   "level_desc": "支撐買、壓力不追",
+   "levels": []
+  },
+  {
+   "code": "8086",
+   "name": "宏捷科",
+   "market": "TPEx",
+   "group": "IC 設計／化合物",
+   "guest": "奎國",
+   "ts": "下 11:46",
+   "stance": "觀察",
+   "view": "上櫃當沖熱門股，屬上升軌道；拉回支撐才買。",
+   "level_desc": "支撐買、壓力不追",
+   "levels": []
+  },
+  {
+   "code": "6147",
+   "name": "頎邦",
+   "market": "TPEx",
+   "group": "IC 設計／封測",
+   "guest": "奎國",
+   "ts": "下 10:36",
+   "stance": "觀察",
+   "view": "上櫃當沖熱門股，偏多操作，沿 5 日或 10 日線。",
+   "level_desc": "沿 5 日或 10 日線操作",
+   "levels": []
+  },
+  {
+   "code": "3264",
+   "name": "欣銓",
+   "market": "TPEx",
+   "group": "IC 設計／封測",
+   "guest": "奎國",
+   "ts": "下 0:00、11:46",
+   "stance": "觀察",
+   "view": "封測當沖熱門股，大跌日仍抗跌；屬上升軌道，拉回支撐才買。",
+   "level_desc": "支撐買、壓力不追",
+   "levels": []
+  },
+  {
+   "code": "2059",
+   "name": "川湖",
+   "market": "TWSE",
+   "group": "散熱與導軌",
+   "guest": "冠州",
+   "ts": "中 42:57",
+   "stance": "拉回布局",
+   "view": "8 月營收亮麗後 9 月回調，股價連續拉回，但 AI 機櫃越做越大越重，競爭力明確，拉回是機會。",
+   "level_desc": "拉回是機會",
+   "levels": []
+  },
+  {
+   "code": "3017",
+   "name": "奇鋐",
+   "market": "TWSE",
+   "group": "散熱與導軌",
+   "guest": "冠州",
+   "ts": "中 42:57",
+   "stance": "偏多",
+   "view": "耗能增加帶動液冷、水冷板產值隨 GPU、ASIC 跳升。",
+   "level_desc": "散熱指標",
+   "levels": []
+  },
+  {
+   "code": "3324",
+   "name": "雙鴻",
+   "market": "TPEx",
+   "group": "散熱與導軌",
+   "guest": "冠州",
+   "ts": "中 42:57",
+   "stance": "偏多",
+   "view": "受惠液冷與水冷板產值提升。",
+   "level_desc": "散熱",
+   "levels": []
+  },
+  {
+   "code": "3653",
+   "name": "健策",
+   "market": "TWSE",
+   "group": "散熱與導軌",
+   "guest": "冠州",
+   "ts": "中 42:57",
+   "stance": "偏多",
+   "view": "受惠液冷與水冷板產值提升。",
+   "level_desc": "散熱",
+   "levels": []
+  },
+  {
+   "code": "2382",
+   "name": "廣達",
+   "market": "TWSE",
+   "group": "權值股",
+   "guest": "奎國",
+   "ts": "下 4:15",
+   "stance": "拉回布局",
+   "view": "跌到長期移動平均線，似有頭肩底左肩，可利用拉回觀察權重股。",
+   "level_desc": "拉回觀察",
+   "levels": []
+  },
+  {
+   "code": "2317",
+   "name": "鴻海",
+   "market": "TWSE",
+   "group": "權值股",
+   "guest": "奎國",
+   "ts": "下 4:15",
+   "stance": "拉回布局",
+   "view": "權重股可利用這波拉回布局。",
+   "level_desc": "拉回觀察",
+   "levels": []
+  },
+  {
+   "code": "2383",
+   "name": "台光電",
+   "market": "TWSE",
+   "group": "CCL 與 PCB",
+   "guest": "冠州",
+   "ts": "中 43:57",
+   "stance": "偏多",
+   "view": "建滔第八度漲價，AI 晶片變大使 CCL 層數與面積增加，供需缺口擴大；盤中跌停是因漲多，尾盤打開。",
+   "level_desc": "漲多震盪",
+   "levels": []
+  },
+  {
+   "code": "6274",
+   "name": "台燿",
+   "market": "TPEx",
+   "group": "CCL 與 PCB",
+   "guest": "冠州",
+   "ts": "中 43:57",
+   "stance": "偏多",
+   "view": "CCL 指標股，受惠 AI 伺服器板層數提升。",
+   "level_desc": "CCL 漲價題材",
+   "levels": []
+  },
+  {
+   "code": "2368",
+   "name": "金像電",
+   "market": "TWSE",
+   "group": "CCL 與 PCB",
+   "guest": "冠州",
+   "ts": "中 43:57",
+   "stance": "偏多",
+   "view": "PCB 層數突破 50 層，受惠 AI 伺服器。",
+   "level_desc": "PCB 升級",
+   "levels": []
+  },
+  {
+   "code": "3037",
+   "name": "欣興",
+   "market": "TWSE",
+   "group": "CCL 與 PCB",
+   "guest": "冠州",
+   "ts": "中 43:57",
+   "stance": "偏多",
+   "view": "ABF 載板面積擴大，供需缺口擴大。",
+   "level_desc": "ABF 載板",
+   "levels": []
+  },
+  {
+   "code": "6672",
+   "name": "騰輝電子-KY",
+   "market": "TWSE",
+   "group": "CCL 與 PCB",
+   "guest": "冠州",
+   "ts": "中 45:05",
+   "stance": "觀察",
+   "view": "CCL 個股，盤中跌停因前幾天漲多。",
+   "level_desc": "漲多拉回",
+   "levels": []
+  },
+  {
+   "code": "1815",
+   "name": "富喬",
+   "market": "TPEx",
+   "group": "CCL 與 PCB",
+   "guest": "冠州、奎國",
+   "ts": "中 45:05／下 10:36",
+   "stance": "觀察",
+   "view": "CCL 指標股之一，也是上櫃當沖熱門股。",
+   "level_desc": "支撐買、壓力賣",
+   "levels": []
+  },
+  {
+   "code": "5309",
+   "name": "系統電",
+   "market": "TPEx",
+   "group": "CCL 與 PCB",
+   "guest": "奎國",
+   "ts": "下 11:46",
+   "stance": "觀察",
+   "view": "上櫃當沖熱門股，屬上升軌道；拉回支撐才買。",
+   "level_desc": "支撐買、壓力不追",
+   "levels": []
+  },
+  {
+   "code": "2409",
+   "name": "友達",
+   "market": "TWSE",
+   "group": "面板",
+   "guest": "奎國",
+   "ts": "下 7:28",
+   "stance": "拉回布局",
+   "view": "在 31.8–39.5 元區間來回，目前約 34 元，回到翻多點附近才買，到次高點站賣方。",
+   "level_desc": "翻多點 31.8、次高 39.5",
+   "levels": [
+    {
+     "label": "翻多點",
+     "value": 31.8,
+     "kind": "support"
+    },
+    {
+     "label": "次高點",
+     "value": 39.5,
+     "kind": "resistance"
+    }
+   ]
+  },
+  {
+   "code": "3481",
+   "name": "群創",
+   "market": "TWSE",
+   "group": "面板",
+   "guest": "奎國",
+   "ts": "下 6:24",
+   "stance": "觀察",
+   "view": "上市當沖熱門股之一；依支撐買、壓力賣操作。",
+   "level_desc": "支撐買、壓力賣",
+   "levels": []
+  },
+  {
+   "code": "009807",
+   "name": "台新標普科技精選",
+   "market": "TPEx",
+   "group": "美股 ETF",
+   "guest": "志源",
+   "ts": "下 19:21",
+   "stance": "觀察",
+   "view": "今年以來報酬約 40%，漲幅來自美光、英特爾、Palantir 等，而非美股七雄。",
+   "level_desc": "績效領先",
+   "levels": []
+  },
+  {
+   "code": "00770",
+   "name": "國泰北美科技",
+   "market": "TWSE",
+   "group": "美股 ETF",
+   "guest": "志源",
+   "ts": "下 20:26",
+   "stance": "觀察",
+   "view": "今年報酬約 36%，美光與英特爾加分。",
+   "level_desc": "績效領先",
+   "levels": []
+  },
+  {
+   "code": "00886",
+   "name": "永豐美國科技",
+   "market": "TPEx",
+   "group": "美股 ETF",
+   "guest": "志源",
+   "ts": "下 19:21",
+   "stance": "觀察",
+   "view": "今年報酬約 33%。",
+   "level_desc": "績效領先",
+   "levels": []
+  },
+  {
+   "code": "00757",
+   "name": "統一FANG+",
+   "market": "TWSE",
+   "group": "美股 ETF",
+   "guest": "志源",
+   "ts": "下 20:26",
+   "stance": "觀察",
+   "view": "近三個月漲約 10%，Palantir 等軟體股帶動。",
+   "level_desc": "近三個月最強",
+   "levels": []
+  },
+  {
+   "code": "00988A",
+   "name": "主動統一全球創新",
+   "market": "TWSE",
+   "group": "美股 ETF",
+   "guest": "志源",
+   "ts": "下 23:35",
+   "stance": "觀察",
+   "view": "全球型主動式 ETF，布局 AI 應用與能源，第四季至明年可留意。",
+   "level_desc": "AI 應用與能源",
+   "levels": []
+  },
+  {
+   "code": "00409A",
+   "name": "主動復華全球50",
+   "market": "TWSE",
+   "group": "美股 ETF",
+   "guest": "志源",
+   "ts": "下 23:35",
+   "stance": "觀察",
+   "view": "全球型主動式 ETF，可留意。",
+   "level_desc": "AI 應用與能源",
+   "levels": []
+  },
+  {
+   "code": "00411A",
+   "name": "主動統一前沿科技",
+   "market": "TPEx",
+   "group": "美股 ETF",
+   "guest": "志源",
+   "ts": "下 23:35",
+   "stance": "觀察",
+   "view": "全球型主動式 ETF，可留意。",
+   "level_desc": "AI 應用與能源",
+   "levels": []
+  },
+  {
+   "code": "2344",
+   "name": "華邦電",
+   "market": "TWSE",
+   "group": "記憶體",
+   "guest": "",
+   "ts": "",
+   "stance": "背景",
+   "view": "與南亞科一起下跌、碰到季線。",
+   "level_desc": "比較用",
+   "levels": []
+  },
+  {
+   "code": "6770",
+   "name": "力積電",
+   "market": "TWSE",
+   "group": "記憶體",
+   "guest": "",
+   "ts": "",
+   "stance": "背景",
+   "view": "記憶體股同步下跌，外資賣超。",
+   "level_desc": "比較用",
+   "levels": []
+  },
+  {
+   "code": "2337",
+   "name": "旺宏",
+   "market": "TWSE",
+   "group": "記憶體",
+   "guest": "",
+   "ts": "",
+   "stance": "背景",
+   "view": "記憶體股同步下跌。",
+   "level_desc": "比較用",
+   "levels": []
+  },
+  {
+   "code": "0050",
+   "name": "元大台灣50",
+   "market": "TWSE",
+   "group": "ETF",
+   "guest": "",
+   "ts": "",
+   "stance": "背景",
+   "view": "與 0052 比較：台積電比重約 57%。",
+   "level_desc": "比較用",
+   "levels": []
+  },
+  {
+   "code": "006208",
+   "name": "富邦台50",
+   "market": "TWSE",
+   "group": "ETF",
+   "guest": "",
+   "ts": "",
+   "stance": "背景",
+   "view": "與 0050 追蹤同一指數。",
+   "level_desc": "比較用",
+   "levels": []
+  },
+  {
+   "code": "00919",
+   "name": "群益台灣精選高息",
+   "market": "TWSE",
+   "group": "ETF",
+   "guest": "",
+   "ts": "",
+   "stance": "背景",
+   "view": "外資大賣日逆勢買超的高息 ETF。",
+   "level_desc": "比較用",
+   "levels": []
+  },
+  {
+   "code": "2887",
+   "name": "台新新光金",
+   "market": "TWSE",
+   "group": "金融",
+   "guest": "",
+   "ts": "",
+   "stance": "背景",
+   "view": "外資逆勢買超的金融股之一。",
+   "level_desc": "比較用",
+   "levels": []
+  },
+  {
+   "code": "2885",
+   "name": "元大金",
+   "market": "TWSE",
+   "group": "金融",
+   "guest": "",
+   "ts": "",
+   "stance": "背景",
+   "view": "外資逆勢買超的金融股之一。",
+   "level_desc": "比較用",
+   "levels": []
+  },
+  {
+   "code": "5880",
+   "name": "合庫金",
+   "market": "TWSE",
+   "group": "金融",
+   "guest": "",
+   "ts": "",
+   "stance": "背景",
+   "view": "外資逆勢買超的金融股之一。",
+   "level_desc": "比較用",
+   "levels": []
+  },
+  {
+   "code": "2892",
+   "name": "第一金",
+   "market": "TWSE",
+   "group": "金融",
+   "guest": "",
+   "ts": "",
+   "stance": "背景",
+   "view": "大跌日表現強勢的金融股之一。",
+   "level_desc": "比較用",
+   "levels": []
+  },
+  {
+   "code": "2610",
+   "name": "華航",
+   "market": "TWSE",
+   "group": "航運",
+   "guest": "",
+   "ts": "",
+   "stance": "背景",
+   "view": "投信買超個股之一。",
+   "level_desc": "比較用",
+   "levels": []
+  },
+  {
+   "code": "3231",
+   "name": "緯創",
+   "market": "TWSE",
+   "group": "電子",
+   "guest": "",
+   "ts": "",
+   "stance": "背景",
+   "view": "投信買超個股之一。",
+   "level_desc": "比較用",
+   "levels": []
+  },
+  {
+   "code": "2615",
+   "name": "萬海",
+   "market": "TWSE",
+   "group": "航運",
+   "guest": "",
+   "ts": "",
+   "stance": "背景",
+   "view": "10 月法人搶買的業績股之一。",
+   "level_desc": "比較用",
+   "levels": []
+  },
+  {
+   "code": "6834",
+   "name": "天二科技",
+   "market": "TWSE",
+   "group": "被動元件",
+   "guest": "",
+   "ts": "",
+   "stance": "背景",
+   "view": "挾業績走強的被動元件股。",
+   "level_desc": "比較用",
+   "levels": []
+  },
+  {
+   "code": "6209",
+   "name": "今國光",
+   "market": "TWSE",
+   "group": "光學",
+   "guest": "",
+   "ts": "",
+   "stance": "背景",
+   "view": "低價光學股近期走強。",
+   "level_desc": "比較用",
+   "levels": []
+  },
+  {
+   "code": "3702",
+   "name": "大聯大",
+   "market": "TWSE",
+   "group": "通路",
+   "guest": "",
+   "ts": "",
+   "stance": "背景",
+   "view": "10 月法人搶買的業績股之一。",
+   "level_desc": "比較用",
+   "levels": []
+  },
+  {
+   "code": "6278",
+   "name": "台表科",
+   "market": "TWSE",
+   "group": "光學",
+   "guest": "",
+   "ts": "",
+   "stance": "背景",
+   "view": "對比用：明年 EPS 估 17–18 元。",
+   "level_desc": "比較用",
+   "levels": []
+  },
+  {
+   "code": "00646",
+   "name": "元大S&P500",
+   "market": "TWSE",
+   "group": "美股 ETF",
+   "guest": "",
+   "ts": "",
+   "stance": "背景",
+   "view": "標普 500 型 ETF 今年約 15%，作為比較。",
+   "level_desc": "比較用",
+   "levels": []
+  },
+  {
+   "code": "009814",
+   "name": "富邦標普500",
+   "market": "TPEx",
+   "group": "美股 ETF",
+   "guest": "",
+   "ts": "",
+   "stance": "背景",
+   "view": "標普 500 型 ETF 今年約 15%，作為比較。",
+   "level_desc": "比較用",
+   "levels": []
+  }
+ ],
+ "note": "逐字稿：2026-10-18 以使用者電腦上的 Claude 內建瀏覽器讀取（上集 8FcW0xkqVdg 非凡電視上傳、中集 KcObjL3HMBQ、下集 jFYrUafOHiI），三集完整。名稱與代號已用證交所、櫃買中心名單核對。"
+}
