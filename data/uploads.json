@@ -1,1 +1,19 @@
-{}
+{
+ "20261016": {
+  "下": {
+   "video_id": "8sI29xHfg0U",
+   "published_vancouver": "2026-10-16 08:30",
+   "first_seen_vancouver": "2026-10-17 18:10"
+  },
+  "中": {
+   "video_id": "bUK_rZlnoHU",
+   "published_vancouver": "2026-10-16 08:00",
+   "first_seen_vancouver": "2026-10-17 18:10"
+  },
+  "上": {
+   "video_id": "0KZmIJtHPPk",
+   "published_vancouver": "2026-10-16 07:30",
+   "first_seen_vancouver": "2026-10-17 18:10"
+  }
+ }
+}
