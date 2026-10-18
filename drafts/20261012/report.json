@@ -93,7 +93,7 @@
   "d5": "10/19",
   "d20": "11/10"
  },
- "table_note": "本益比與殖利率為 10/16；法人為 10/16；營收為 9 月年增；52 週為 10/16 起。",
+ "table_note": "本益比與殖利率為 10/16；法人為 10/16；營收為 9 月年增；52 週為 2025/10/16 起。",
  "segments": [
   {
    "title": "光學與面板",
@@ -1205,7 +1205,7 @@
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
-   "verify": "方向一致",
+   "verify": "待觀察",
    "verify5_done": null,
    "verify20_done": null,
    "is_etf": false,
