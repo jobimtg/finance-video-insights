@@ -313,9 +313,9 @@
    "yield": null,
    "rev_yoy": null,
    "inst_total": -8918,
-   "hi52": 262.1,
-   "lo52": 35.2,
-   "off_hi52_pct": -75.8,
+   "hi52": 68.15,
+   "lo52": 34.74,
+   "off_hi52_pct": -7.1,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -682,7 +682,7 @@
    "view": "大跌日逆勢漲停、外資連續買超；蕙慈認為短線一氣呵成可續抱，轉弱就先減碼。",
    "level_desc": "防守在 10/13 紅 K 的二分之一",
    "level_checks": [
-    "防守點 10/13 紅K 二分之一"
+    "節目：防守點（10/13 紅K 二分之一） ≈ 16.73：目前在其下"
    ],
    "level_ref": "數據參考：5日▼17.16｜月▲15.35｜季▲13.74｜20日 14.2–19.1",
    "video_close": 17.65,
