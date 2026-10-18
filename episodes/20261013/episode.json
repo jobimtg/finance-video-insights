@@ -409,9 +409,9 @@
    "level_desc": "防守在 10/13 紅 K 的二分之一",
    "levels": [
     {
-     "label": "防守點",
-     "value": "10/13 紅K 二分之一",
-     "kind": "info"
+     "label": "防守點（10/13 紅K 二分之一）",
+     "derive": "kmid:2026-10-13",
+     "kind": "support"
     }
    ]
   },

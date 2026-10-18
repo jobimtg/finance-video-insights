@@ -66,6 +66,9 @@ def derive_level(lv, px, air, latest_closes):
     if d.startswith("month_high:"):
         ym = d.split(":", 1)[1]; w = [p for p in upto if p["date"].isoformat()[:7] == ym]
         return max(p["high"] for p in w) if w else None
+    if d.startswith("kmid:"):   # 某日 K 棒的二分之一（開盤與收盤的中間價）
+        day = dt.date.fromisoformat(d.split(":", 1)[1]); w = [p for p in px if p["date"] == day and p.get("open")]
+        return (w[0]["open"] + w[0]["close"]) / 2 if w else None
     if d.startswith("ma"):
         return ma(latest_closes, int(d[2:]))
     return None
@@ -290,6 +293,8 @@ def main(ep_date):
     }
     if alerts:
         R["alerts"] = alerts
+    if S.ADJUSTED:
+        log.append("偵測到分割／減資，已調整歷史價格：" + "、".join(sorted(set(S.ADJUSTED))))
     out = ROOT / "drafts" / ep_date
     out.mkdir(parents=True, exist_ok=True)
     (out / "report.json").write_text(json.dumps(R, ensure_ascii=False, indent=1), encoding="utf-8")

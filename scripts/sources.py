@@ -159,9 +159,24 @@ def _fm(dataset, start, data_id=None, end=None):
     return d.get("data", [])
 
 
+ADJUSTED = []   # 本次產出中偵測到分割／減資並調整過歷史價格的代號
+
+
 def fm_prices(code, start, end=None):
-    return [{"date": dt.date.fromisoformat(r["date"]), "close": r["close"], "high": r["max"], "low": r["min"],
-             "spread": r.get("spread")} for r in _fm("TaiwanStockPrice", start, code, end) if r.get("close")]
+    px = [{"date": dt.date.fromisoformat(r["date"]), "close": r["close"], "high": r["max"], "low": r["min"],
+           "open": r.get("open"), "spread": r.get("spread")} for r in _fm("TaiwanStockPrice", start, code, end) if r.get("close")]
+    # 台股單日漲跌幅上限 10%：隔日價格跳動超過 ±40% 視為股票分割、減資等，將之前的價格依比例調整，
+    # 避免 52 週高低、均線與區間被未調整的舊價格扭曲（2026-10-18 加入，例：0052 一拆七）。
+    for i in range(len(px) - 1, 0, -1):
+        prev = px[i]["close"] - (px[i]["spread"] or 0) if px[i].get("spread") is not None else px[i - 1]["close"]
+        ratio = prev / px[i - 1]["close"] if px[i - 1]["close"] else 1
+        if ratio < 0.6 or ratio > 1.67:
+            for p in px[:i]:
+                for k in ("close", "high", "low", "open"):
+                    if p.get(k) is not None:
+                        p[k] = round(p[k] * ratio, 4)
+            ADJUSTED.append(f"{code}（{px[i]['date']} 前價格乘以 {ratio:.4f}）")
+    return px
 
 
 def fm_institutional(code, start):
