@@ -301,4 +301,9 @@ def main(ep_date):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    try:
+        main(sys.argv[1])
+    except Exception:
+        import traceback
+        print("::error title=產出報告失敗::" + traceback.format_exc().replace("\n", "%0A"))
+        raise
