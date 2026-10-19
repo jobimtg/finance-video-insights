@@ -43,6 +43,11 @@ def main(ep):
     for s in core:
         if "／" in s.get("group", ""):
             issues.append(f"{s['code']} 族群使用全形斜線，族群平均會漏算：{s['group']}")
+    ld = [s.get("latest_date") for s in core if s.get("latest_date")]
+    if ld:
+        newest = max(ld); stale = [s["code"] for s in core if s.get("latest_date") and s["latest_date"] < newest]
+        if len(stale) > len(core) * 0.2:
+            issues.append(f"{len(stale)} 檔最新收盤仍停在較早日期（資料來源尚未更新到 {newest}），請稍後重產：{'、'.join(stale[:10])}")
     if R["episode"].get("video_date_short") == R["episode"].get("latest_date_short"):
         issues.append("最新收盤日與影片日相同，播出後漲跌全部為 0，請等下一個交易日收盤後再產出")
     for g in R["segments"]:
