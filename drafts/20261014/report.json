@@ -116,8 +116,7 @@
     "2492",
     "2478",
     "3090",
-    "6834",
-    "3026"
+    "6834"
    ]
   },
   {
@@ -127,10 +126,7 @@
     "1301",
     "1326",
     "6505",
-    "1727",
-    "2002",
-    "1802",
-    "1314"
+    "1727"
    ]
   },
   {
@@ -153,17 +149,12 @@
     "6664",
     "6658",
     "3455",
-    "3498",
-    "8027"
+    "3498"
    ]
   },
   {
    "title": "真假轉弱檢視",
    "codes": [
-    "2221",
-    "3055",
-    "2308",
-    "6488",
     "2337",
     "3406"
    ]
@@ -196,13 +187,12 @@
     "3023",
     "8103",
     "3003",
-    "3605",
     "5457",
     "3511"
    ]
   }
  ],
- "sources_text": "價格：臺灣證券交易所、證券櫃檯買賣中心 OpenAPI（政府資料開放授權條款－第1版）｜估值與營收：證交所 BWIBBU、t187ap05_L，櫃買本益比與月營收｜法人：上市個股與大盤為 FinMind，上櫃為櫃買三大法人｜近一年高低、影片當日收盤、均線與數據參考價位：FinMind｜主管機關名單：證交所異常推介、注意、處置股，櫃買注意、處置股｜總經：FRED（Federal Reserve Bank of St. Louis）DGS30、DGS10、DEXTAUS、DCOILBRENTEU。This product uses the FRED® API but is not endorsed or certified by the Federal Reserve Bank of St. Louis.",
+ "sources_text": "價格：臺灣證券交易所、證券櫃檯買賣中心 OpenAPI（政府資料開放授權條款－第1版）｜估值與營收：證交所 BWIBBU、t187ap05_L，櫃買本益比與月營收｜法人：上市個股與大盤為 FinMind，上櫃為櫃買三大法人｜近一年高低、影片當日收盤、均線與數據參考價位：FinMind｜主管機關名單：證交所異常推介、注意、處置股，櫃買注意、處置股｜總經：FRED（Federal Reserve Bank of St. Louis）DEXTAUS、DGS20、DCOILBRENTEU。This product uses the FRED® API but is not endorsed or certified by the Federal Reserve Bank of St. Louis.",
  "stocks": [
   {
    "code": "2330",
@@ -306,7 +296,7 @@
    "lo52": 175.5,
    "off_hi52_pct": -53.5,
    "target": 800,
-   "target_src": "券商（下緣）",
+   "target_src": "券商",
    "target_upside_pct": 41.1,
    "verify": "方向相反",
    "verify5_done": null,
