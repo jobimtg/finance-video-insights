@@ -1,4 +1,4 @@
-"""財經影片統整 PDF 定版產生器（版面定案 2026-10-14；2026-10-17 經使用者同意加入主管機關名單標記，2026-10-18 名單說明列納入附錄個股、加入灰字數據參考列，超過 9 頁時附錄改為每列 2 檔的精簡格式（compact_appendix）；不得任意更改樣式）
+"""財經影片統整 PDF 定版產生器（版面定案 2026-10-14；2026-10-17 經使用者同意加入主管機關名單標記，2026-10-18 名單說明列納入附錄個股、加入灰字數據參考列，超過 9 頁時附錄改為每列 2 檔的精簡格式（compact_appendix）；2026-10-18 經使用者同意，一般附錄表頭跨頁時重複；不得任意更改樣式）
 用法：python render_report.py report.json 輸出.pdf
 需要：playwright（Chromium）、Noto Sans CJK TC 字型
 """
@@ -138,7 +138,7 @@ def build_html(R):
     events = "".join(f'<tr><td>{e(x["date"])}</td><td>{e(x["event"])}</td><td>{e(x["note"])}</td></tr>' for x in R["events"])
     bg_rows = "".join(f'<tr><td>{e(s["name"])} {s["code"]}</td><td>{e(s["view"])}</td><td class="r">{n(s["latest"])}</td>'
                       f'<td class="r" style="color:{colr(s["since_video_pct"])}">{pct(s["since_video_pct"])}</td></tr>' for s in bg)
-    hd = '<tr><th>個股</th><th>影片中角色</th><th class="r">最新</th><th class="r">播出後</th></tr>'
+    hd = '<thead><tr><th>個股</th><th>影片中角色</th><th class="r">最新</th><th class="r">播出後</th></tr></thead>'
     if R.get("compact_appendix"):
         cell = lambda s: (f'<td>{e(s["name"])} {s["code"]}</td><td>{e(s["view"])}</td><td class="r">{n(s["latest"])}</td><td class="r" style="color:{colr(s["since_video_pct"])}">{pct(s["since_video_pct"])}</td>') if s else '<td></td><td></td><td></td><td></td>'
         h = (len(bg) + 1) // 2
