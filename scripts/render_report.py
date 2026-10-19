@@ -1,4 +1,4 @@
-"""財經影片統整 PDF 定版產生器（版面定案 2026-10-14；2026-10-17 經使用者同意加入主管機關名單標記，2026-10-18 名單說明列納入附錄個股、加入灰字數據參考列，超過 9 頁時附錄改為每列 2 檔的精簡格式（compact_appendix）；2026-10-18 經使用者同意，一般附錄表頭跨頁時重複；不得任意更改樣式）
+"""財經影片統整 PDF 定版產生器（版面定案 2026-10-14；2026-10-17 經使用者同意加入主管機關名單標記，2026-10-18 名單說明列納入附錄個股、加入灰字數據參考列，超過 9 頁時附錄改為每列 2 檔的精簡格式（compact_appendix）；2026-10-18 經使用者同意，一般附錄表頭跨頁時重複、分析師目標價加千分位；不得任意更改樣式）
 用法：python render_report.py report.json 輸出.pdf
 需要：playwright（Chromium）、Noto Sans CJK TC 字型
 """
@@ -62,7 +62,7 @@ def row(s, d5, d20, A=None):
     yl = "不適用" if etf else (f'{s["yield"]:.2f}%' if s["yield"] is not None else "查無")
     rv = "不適用" if etf else (f'{s["rev_yoy"]:+.1f}%' if s["rev_yoy"] is not None else "查無")
     inst = f'{s["inst_total"]:+,.0f}' if s["inst_total"] is not None else "查無"
-    tp = f'{e(s["target_src"])}<br>{s["target"]}<br>({pct(s["target_upside_pct"])})' if s["target"] else '<span class="mu">未提及</span>'
+    tp = f'{e(s["target_src"])}<br>{n(s["target"])}<br>({pct(s["target_upside_pct"])})' if s["target"] else '<span class="mu">未提及</span>'
     checks = "；".join(c for c in s["level_checks"] if not (s.get("level_ref") and c == "價位驗證：查無"))
     ref = s.get("level_ref")   # 數據參考列：灰色小字，與節目價位分開
     vt, vc = VS.get(s["verify"], (s["verify"], "na"))
