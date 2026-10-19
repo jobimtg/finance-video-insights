@@ -83,6 +83,8 @@ def level_checks(levels, latest, px=None, air=None, latest_closes=None):
         if derived and v is None:
             out.append(f"節目：{lv['label']}：查無"); continue
         lab = f"節目：{lv['label']} ≈ {fpx(v)}" if derived else (f"{lv['label']} {v:g}" if isinstance(v, (int, float)) else f"{lv['label']} {v}")
+        if derived and lv["derive"].startswith("ma"):
+            k = "support"   # 均線一律用「目前在其下／目前高於 x%」的寫法
         if isinstance(v, (int, float)) and latest:
             if k == "resistance":
                 out.append(f"{lab}：" + ("已站上" if latest >= v else f"未達（差 {(v / latest - 1) * 100:.1f}%）"))
@@ -217,7 +219,7 @@ def main(ep_date):
                 row["latest"], row["status"] = "查無", "—"
             else:
                 row["latest"] = f"{v:.2f}{m.get('unit', '')}（{md(d)}）"
-                if "threshold" in m:   # 沒設門檻的指標只列數值，狀態留「—」
+                if "threshold" in m:   # 沒設門檻的指標只列數值，狀態用 episode 的 status（例如「無警戒值」）
                     hit = (v >= m["threshold"]) if m.get("cmp", "above") == "above" else (v <= m["threshold"])
                     row["status"] = m.get("hit_label", "已達") if hit else m.get("miss_label", "未達")
         elif src == "inst_total" and tot:

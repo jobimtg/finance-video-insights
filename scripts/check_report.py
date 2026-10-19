@@ -33,6 +33,8 @@ def main(ep):
         for c in s["level_checks"]:
             if c.startswith("節目：") and "查無" in c:
                 notes.append(f"{s['code']}{s['name']} 節目價位換算查無：{c}")
+            if c.startswith("節目：") and any(w in c for w in ("線 ≈", "線（")) and ("未達" in c or "已站上" in c):
+                issues.append(f"{s['code']} 均線價位應寫「目前在其下／目前高於」：{c}")
     for s in R["stocks"]:
         if s["stance"] == "背景" and s.get("level_ref"):
             issues.append(f"附錄個股 {s['code']} 不應有數據參考列")
