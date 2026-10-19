@@ -92,7 +92,7 @@ def level_checks(levels, latest, px=None, air=None, latest_closes=None):
             if k == "support":
                 out.append(f"{lab}：" + ("目前在其下" if latest < v else f"目前高於 {(latest / v - 1) * 100:.1f}%"))
                 continue
-        out.append(lab if derived else f"{lv['label']} {v}")
+        out.append(lab)
     return out or ["價位驗證：查無"]   # 節目沒提到具體價位時標「查無」，不留白
 
 
