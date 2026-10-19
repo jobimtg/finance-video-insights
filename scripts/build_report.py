@@ -289,7 +289,7 @@ def main(ep_date):
                          "估值與營收：證交所 BWIBBU、t187ap05_L，櫃買本益比與月營收｜"
                          "法人：上市個股與大盤為 FinMind，上櫃為櫃買三大法人｜近一年高低、影片當日收盤、均線與數據參考價位：FinMind｜"
                          "主管機關名單：證交所異常推介、注意、處置股，櫃買注意、處置股｜"
-                         "總經：FRED（Federal Reserve Bank of St. Louis）DGS30、DGS10、DEXTAUS、DCOILBRENTEU。"
+                         "總經：FRED（Federal Reserve Bank of St. Louis）" + "、".join(dict.fromkeys([m["source"][5:] for m in E.get("macro", []) if m.get("source", "").startswith("FRED:")] + ["DCOILBRENTEU"])) + "。"
                          "This product uses the FRED® API but is not endorsed or certified by the Federal Reserve Bank of St. Louis."),
         "stocks": stocks,
     }
