@@ -217,8 +217,9 @@ def main(ep_date):
                 row["latest"], row["status"] = "查無", "—"
             else:
                 row["latest"] = f"{v:.2f}{m.get('unit', '')}（{md(d)}）"
-                hit = (v >= m["threshold"]) if m.get("cmp", "above") == "above" else (v <= m["threshold"])
-                row["status"] = m.get("hit_label", "已達") if hit else m.get("miss_label", "未達")
+                if "threshold" in m:   # 沒設門檻的指標只列數值，狀態留「—」
+                    hit = (v >= m["threshold"]) if m.get("cmp", "above") == "above" else (v <= m["threshold"])
+                    row["status"] = m.get("hit_label", "已達") if hit else m.get("miss_label", "未達")
         elif src == "inst_total" and tot:
             last = max(tot); t = tot[last]
             fi = t.get("Foreign_Investor", 0) + t.get("Foreign_Dealer_Self", 0); it = t.get("Investment_Trust", 0)
@@ -227,8 +228,9 @@ def main(ep_date):
         elif src == "taiex":
             v = tx[latest_day]["close"]
             row["latest"] = f"{v:,.0f}（{md(latest_day)}）"
-            hit = v >= m["threshold"]
-            row["status"] = m.get("hit_label", "已站上") if hit else m.get("miss_label", "未達")
+            if "threshold" in m:
+                hit = v >= m["threshold"]
+                row["status"] = m.get("hit_label", "已站上") if hit else m.get("miss_label", "未達")
         macro.append(row)
     brent, bd = S.fred_latest("DCOILBRENTEU")
     fred_dates = []
