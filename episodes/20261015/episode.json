@@ -253,7 +253,7 @@
   {
    "code": "6691",
    "name": "洋基工程",
-   "market": "TPEx",
+   "market": "TWSE",
    "group": "廠務工程",
    "guest": "建承",
    "ts": "中 9:06",
@@ -643,7 +643,7 @@
   {
    "code": "6515",
    "name": "穎崴",
-   "market": "TPEx",
+   "market": "TWSE",
    "group": "測試介面",
    "guest": "建承、明哲",
    "ts": "上 15:38、17:54／中 26:51",
@@ -655,7 +655,7 @@
   {
    "code": "7856",
    "name": "漢測",
-   "market": "TWSE",
+   "market": "TPEx",
    "group": "測試介面",
    "guest": "建承、明哲",
    "ts": "上 15:38／中 30:25",
@@ -726,7 +726,7 @@
   {
    "code": "6257",
    "name": "矽格",
-   "market": "TPEx",
+   "market": "TWSE",
    "group": "半導體測試",
    "guest": "建承",
    "ts": "上 18:59",
@@ -756,7 +756,7 @@
   {
    "code": "3583",
    "name": "辛耘",
-   "market": "TPEx",
+   "market": "TWSE",
    "group": "半導體設備",
    "guest": "明哲",
    "ts": "上 32:08",
@@ -888,7 +888,7 @@
   {
    "code": "8021",
    "name": "尖點",
-   "market": "TPEx",
+   "market": "TWSE",
    "group": "PCB 鑽針",
    "guest": "奇琛",
    "ts": "上 46:25",
@@ -942,7 +942,7 @@
   {
    "code": "6830",
    "name": "汎銓",
-   "market": "TPEx",
+   "market": "TWSE",
    "group": "檢測分析",
    "guest": "明哲",
    "ts": "中 34:04",
@@ -1038,7 +1038,7 @@
   {
    "code": "5347",
    "name": "世界",
-   "market": "TWSE",
+   "market": "TPEx",
    "group": "晶圓代工",
    "guest": "建承",
    "ts": "上 12:57",
