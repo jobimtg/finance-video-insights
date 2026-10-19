@@ -82,7 +82,7 @@ def level_checks(levels, latest, px=None, air=None, latest_closes=None):
         v = derive_level(lv, px or [], air, latest_closes or []) if derived else lv.get("value")
         if derived and v is None:
             out.append(f"節目：{lv['label']}：查無"); continue
-        lab = f"節目：{lv['label']} ≈ {fpx(v)}" if derived else (f"{lv['label']} {v:g}" if isinstance(v, (int, float)) else f"{lv['label']} {v}")
+        lab = f"節目：{lv['label']} ≈ {fpx(v)}" if derived else (f"{lv['label']} {fpx(v)}" if isinstance(v, (int, float)) else f"{lv['label']} {v}")
         if derived and lv["derive"].startswith("ma"):
             k = "support"   # 均線一律用「目前在其下／目前高於 x%」的寫法
         if isinstance(v, (int, float)) and latest:
@@ -193,6 +193,7 @@ def main(ep_date):
         })
 
     d5 = trading_days_after(air, 5, holidays); d20 = trading_days_after(air, 20, holidays)
+    d2_all = trading_days_after(air, 2, holidays)   # 2 日驗證未到期時，在表格說明註明判定日
 
     # ---- 主管機關名單 ----
     alerts = None
@@ -285,7 +286,7 @@ def main(ep_date):
         "macro": macro, "macro_note": note,
         "events": E.get("events", []),
         "verify_dates": {"d5": md(d5), "d20": md(d20)},
-        "table_note": f"本益比與殖利率為 {md(vd)}；法人為 {md(idt)}；營收為 {rm} 月年增；52 週為 {(lat - dt.timedelta(days=365)):%Y/%m/%d} 起；灰字「數據參考」為 {md(lat)} 收盤以公開股價計算，非節目觀點：▲站上、▼跌破均線，月＝20 日線、季＝60 日線，20 日為近 20 個交易日最低–最高價。",
+        "table_note": f"本益比與殖利率為 {md(vd)}；法人為 {md(idt)}；營收為 {rm} 月年增；52 週為 {(lat - dt.timedelta(days=365)):%Y/%m/%d} 起；灰字「數據參考」為 {md(lat)} 收盤以公開股價計算，非節目觀點：▲站上、▼跌破均線，月＝20 日線、季＝60 日線，20 日為近 20 個交易日最低–最高價。" + (f"2 日驗證於 {md(d2_all)} 收盤後判定，目前標「觀察」。" if d2_all > latest_day else ""),
         "segments": E["segments"],
         "sources_text": ("價格：臺灣證券交易所、證券櫃檯買賣中心 OpenAPI（政府資料開放授權條款－第1版）｜"
                          "估值與營收：證交所 BWIBBU、t187ap05_L，櫃買本益比與月營收｜"

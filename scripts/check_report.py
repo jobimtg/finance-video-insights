@@ -40,6 +40,9 @@ def main(ep):
             issues.append(f"附錄個股 {s['code']} 不應有數據參考列")
     if "非節目觀點" not in R["table_note"]:
         issues.append("表格說明沒有標示數據參考非節目觀點")
+    for g in R["segments"]:
+        if not 2 <= len(g["codes"]) <= 10:
+            issues.append(f"分段「{g['title']}」有 {len(g['codes'])} 檔，應為 2–10 檔")
     seg_codes = [c for g in R["segments"] for c in g["codes"]]
     lost = [s["code"] for s in core if s["code"] not in seg_codes]
     if lost:
