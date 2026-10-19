@@ -3,18 +3,11 @@
  "stocks": 60,
  "issues": [],
  "notes": [
-  "6691洋基工程 查無：pe、yield、rev_yoy、inst_total",
   "1711永光 查無：yield",
   "1312國喬 查無：pe、yield",
   "3055蔚華科 查無：pe",
-  "6515穎崴 查無：pe、yield、rev_yoy、inst_total",
-  "7856漢測 查無：pe、yield、rev_yoy",
-  "6257矽格 查無：pe、yield、rev_yoy、inst_total",
-  "3583辛耘 查無：pe、yield、rev_yoy、inst_total",
   "1802台玻 查無：yield",
   "6269台郡 查無：pe、yield",
-  "8021尖點 查無：pe、yield、rev_yoy、inst_total",
-  "6830汎銓 查無：pe、yield、rev_yoy、inst_total",
   "出現「持股」字樣，請人工確認不是個人資料"
  ],
  "pass": true
