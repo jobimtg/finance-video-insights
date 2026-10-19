@@ -40,6 +40,11 @@ def main(ep):
             issues.append(f"附錄個股 {s['code']} 不應有數據參考列")
     if "非節目觀點" not in R["table_note"]:
         issues.append("表格說明沒有標示數據參考非節目觀點")
+    for s in core:
+        if "／" in s.get("group", ""):
+            issues.append(f"{s['code']} 族群使用全形斜線，族群平均會漏算：{s['group']}")
+    if R["episode"].get("video_date_short") == R["episode"].get("latest_date_short"):
+        issues.append("最新收盤日與影片日相同，播出後漲跌全部為 0，請等下一個交易日收盤後再產出")
     for g in R["segments"]:
         if not 2 <= len(g["codes"]) <= 10:
             issues.append(f"分段「{g['title']}」有 {len(g['codes'])} 檔，應為 2–10 檔")
