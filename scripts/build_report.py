@@ -272,6 +272,9 @@ def main(ep_date):
             taiex_cards.append({"label": lab, "close": tx[d]["close"], "chg": tx[d]["spread"] or 0})
     vd = max(val_dates) if val_dates else None
     idt = max(inst_dates) if inst_dates else None
+    tot_d = dt.date.fromisoformat(max(tot)) if tot else None
+    # 2026-10-20 使用者同意：大盤法人（總經表）和個股法人日期不同時，資料說明列分別標出
+    inst_txt = f"個股法人為 {md(idt)}、大盤法人為 {md(tot_d)}" if tot_d and idt and tot_d != idt else f"法人為 {md(idt)}"
     rm = max(rev_months) if rev_months else None
     lat = max(dt.date.fromisoformat(x["latest_date"]) for x in stocks if x["latest_date"])
     air_dt = dt.datetime(air.year, air.month, air.day, 21, 0, tzinfo=TPE).astimezone(VAN)
@@ -281,14 +284,14 @@ def main(ep_date):
             "video_date_short": md(air), "latest_date_short": md(lat),
             "revenue_month_label": f"{rm}月" if rm else "",
             "air_line": f"台灣 {air.isoformat()}（週{WEEK[air.weekday()]}）21:00–23:30 播出｜溫哥華同日 {air_dt:%H:%M}–{(air_dt + dt.timedelta(minutes=150)):%H:%M}｜來賓：{'、'.join(E.get('guests', []))}",
-            "data_line": f"數據截至 {lat.isoformat()} 收盤（本益比與殖利率為 {md(vd)}，法人為 {md(idt)}，營收為 {rm} 月）",
+            "data_line": f"數據截至 {lat.isoformat()} 收盤（本益比與殖利率為 {md(vd)}，{inst_txt}，營收為 {rm} 月）",
         },
         "taiex": taiex_cards,
         "highlights": highlights,
         "macro": macro, "macro_note": note,
         "events": E.get("events", []),
         "verify_dates": {"d5": md(d5), "d20": md(d20)},
-        "table_note": f"本益比與殖利率為 {md(vd)}；法人為 {md(idt)}；營收為 {rm} 月年增；52 週為 {(lat - dt.timedelta(days=365)):%Y/%m/%d} 起；灰字「數據參考」為 {md(lat)} 收盤以公開股價計算，非節目觀點：▲站上、▼跌破均線，月＝20 日線、季＝60 日線，20 日為近 20 個交易日最低–最高價。" + (f"2 日驗證於 {md(d2_all)} 收盤後判定，目前標「觀察」。" if d2_all > latest_day else ""),
+        "table_note": f"本益比與殖利率為 {md(vd)}；{'個股法人' if inst_txt.startswith('個股') else '法人'}為 {md(idt)}；營收為 {rm} 月年增；52 週為 {(lat - dt.timedelta(days=365)):%Y/%m/%d} 起；灰字「數據參考」為 {md(lat)} 收盤以公開股價計算，非節目觀點：▲站上、▼跌破均線，月＝20 日線、季＝60 日線，20 日為近 20 個交易日最低–最高價。" + (f"2 日驗證於 {md(d2_all)} 收盤後判定，目前標「觀察」。" if d2_all > latest_day else ""),
         "segments": E["segments"],
         "sources_text": ("價格：臺灣證券交易所、證券櫃檯買賣中心 OpenAPI（政府資料開放授權條款－第1版）" + ("；OpenAPI 尚未更新時改用較新的 FinMind 收盤" if fm_latest else "") + "｜"
                          "估值與營收：證交所 BWIBBU、t187ap05_L，櫃買本益比與月營收｜"
