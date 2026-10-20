@@ -131,6 +131,7 @@ def main(ep_date):
     next_day = min((d for d in tx if d > air), default=None)
 
     stocks, val_dates, inst_dates, rev_months = [], set(), set(), set()
+    fm_latest = []   # 最新收盤改用 FinMind 的代號
     for s in E["stocks"]:
         c, mk = s["code"], s["market"]
         etf = c.startswith("00")
@@ -139,8 +140,9 @@ def main(ep_date):
         video_close = by[air]["close"] if air in by else None
         cl = (tw_close if mk == "TWSE" else tp_close).get(c, {})
         latest, ldate = cl.get("close"), cl.get("date")
-        if latest is None and px:
-            latest, ldate = px[-1]["close"], px[-1]["date"]; log.append(f"{c} 最新收盤改用 FinMind")
+        if px and (latest is None or not ldate or px[-1]["date"] > ldate):
+            # 2026-10-20 使用者同意（方案 C）：證交所／櫃買 OpenAPI 查無或比 FinMind 舊時，最新收盤改用較新的 FinMind
+            latest, ldate = px[-1]["close"], px[-1]["date"]; fm_latest.append(c); log.append(f"{c} 最新收盤改用 FinMind（較新）")
         yr = [p for p in px if p["date"] >= (ldate or latest_day) - dt.timedelta(days=365)]   # 含起日，與表格說明一致
         hi52 = max(p["high"] for p in yr) if yr else None
         lo52 = min(p["low"] for p in yr) if yr else None
@@ -288,7 +290,7 @@ def main(ep_date):
         "verify_dates": {"d5": md(d5), "d20": md(d20)},
         "table_note": f"本益比與殖利率為 {md(vd)}；法人為 {md(idt)}；營收為 {rm} 月年增；52 週為 {(lat - dt.timedelta(days=365)):%Y/%m/%d} 起；灰字「數據參考」為 {md(lat)} 收盤以公開股價計算，非節目觀點：▲站上、▼跌破均線，月＝20 日線、季＝60 日線，20 日為近 20 個交易日最低–最高價。" + (f"2 日驗證於 {md(d2_all)} 收盤後判定，目前標「觀察」。" if d2_all > latest_day else ""),
         "segments": E["segments"],
-        "sources_text": ("價格：臺灣證券交易所、證券櫃檯買賣中心 OpenAPI（政府資料開放授權條款－第1版）｜"
+        "sources_text": ("價格：臺灣證券交易所、證券櫃檯買賣中心 OpenAPI（政府資料開放授權條款－第1版）" + ("；OpenAPI 尚未更新時改用較新的 FinMind 收盤" if fm_latest else "") + "｜"
                          "估值與營收：證交所 BWIBBU、t187ap05_L，櫃買本益比與月營收｜"
                          "法人：上市個股與大盤為 FinMind，上櫃為櫃買三大法人｜近一年高低、影片當日收盤、均線與數據參考價位：FinMind｜"
                          "主管機關名單：證交所異常推介、注意、處置股，櫃買注意、處置股｜"
