@@ -1,4 +1,4 @@
-"""財經影片統整 PDF 定版產生器（版面定案 2026-10-14；2026-10-17 經使用者同意加入主管機關名單標記，2026-10-18 名單說明列納入附錄個股、加入灰字數據參考列，超過 9 頁時附錄改為每列 2 檔的精簡格式（compact_appendix）；2026-10-18 經使用者同意，一般附錄表頭跨頁時重複、分析師目標價加千分位；不得任意更改樣式）
+"""財經影片統整 PDF 定版產生器（版面定案 2026-10-14；2026-10-17 經使用者同意加入主管機關名單標記，2026-10-18 名單說明列納入附錄個股、加入灰字數據參考列，超過 9 頁時附錄改為每列 2 檔的精簡格式（compact_appendix）；2026-10-18 經使用者同意，一般附錄表頭跨頁時重複、分析師目標價加千分位；2026-10-21 經使用者同意，漲跌橫條圖名稱過長時只縮小該列字級；不得任意更改樣式）
 用法：python render_report.py report.json 輸出.pdf
 需要：playwright（Chromium）、Noto Sans CJK TC 字型
 """
@@ -29,7 +29,9 @@ def movers_svg(top, bot, base_label, w=560, rowh=16):
             o.append(f'<text x="0" y="{y+11}" font-weight="700" fill="#1f3a5f">{e(s)}</text>')
         elif kind == "s":
             p = s["since_video_pct"]; bw = abs(p) / mx * half; x = mid if p >= 0 else mid - bw
-            o.append(f'<text x="{lab-4}" y="{y+11}" text-anchor="end" fill="#333">{e(s["name"])} {s["code"]}</text>')
+            t = f'{s["name"]} {s["code"]}'; tw = sum(10 if ord(c) > 127 else 5.8 for c in t)
+            fs = f' font-size="{max(7, 10 * (lab - 6) / tw):.1f}"' if tw > lab - 6 else ''   # 2026-10-21 經使用者同意：名稱放不下時只縮小該列字級
+            o.append(f'<text x="{lab-4}" y="{y+11}" text-anchor="end" fill="#333"{fs}>{e(t)}</text>')
             o.append(f'<rect x="{x:.1f}" y="{y+3}" width="{max(bw,1):.1f}" height="{rowh-6}" rx="2" fill="{colr(p)}"/>')
             o.append(f'<text x="{w-2}" y="{y+11}" text-anchor="end" font-weight="700" fill="#333">{p:+.1f}%</text>')
         y += rowh

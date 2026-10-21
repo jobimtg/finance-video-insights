@@ -87,10 +87,10 @@ def level_checks(levels, latest, px=None, air=None, latest_closes=None):
             k = "support"   # 均線一律用「目前在其下／目前高於 x%」的寫法
         if isinstance(v, (int, float)) and latest:
             if k == "resistance":
-                out.append(f"{lab}：" + ("已站上" if latest >= v else f"未達（差 {(v / latest - 1) * 100:.1f}%）"))
+                out.append(f"{lab}：" + ("已站上" if latest >= v else f"未達（差 {pct_txt((v / latest - 1) * 100)}%）"))
                 continue
             if k == "support":
-                out.append(f"{lab}：" + ("目前在其下" if latest < v else f"目前高於 {(latest / v - 1) * 100:.1f}%"))
+                out.append(f"{lab}：" + ("目前在其下" if latest < v else f"目前高於 {pct_txt((latest / v - 1) * 100)}%"))
                 continue
         out.append(lab)
     return out or ["價位驗證：查無"]   # 節目沒提到具體價位時標「查無」，不留白
@@ -109,6 +109,11 @@ def ref_line(px, latest):
     w = px[-20:]
     parts.append(f"20日 {fpx(min(p['low'] for p in w))}–{fpx(max(p['high'] for p in w))}" if len(w) == 20 else "20日查無")
     return "數據參考：" + "｜".join(parts)
+
+
+def pct_txt(x):
+    """2026-10-21 經使用者同意：差距小於 0.1% 時顯示兩位小數，避免出現 0.0%"""
+    return f"{x:.2f}" if abs(x) < 0.1 else f"{x:.1f}"
 
 
 def main(ep_date):
