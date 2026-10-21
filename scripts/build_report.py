@@ -237,7 +237,9 @@ def main(ep_date):
                 hit = v >= m["threshold"]
                 row["status"] = m.get("hit_label", "已站上") if hit else m.get("miss_label", "未達")
         macro.append(row)
-    brent, bd = S.fred_latest("DCOILBRENTEU")
+    # 2026-10-21：只有該集總經有原油項目時，才加布蘭特說明與 DCOILBRENTEU 來源（Agent 5）
+    has_oil = any("油" in m.get("name", "") or m.get("source") == "FRED:DCOILBRENTEU" for m in E.get("macro", []))
+    brent, bd = S.fred_latest("DCOILBRENTEU") if has_oil else (None, None)
     fred_dates = []
     for m in E.get("macro", []):
         if m.get("source", "").startswith("FRED:"):
@@ -297,7 +299,7 @@ def main(ep_date):
                          "估值與營收：證交所 BWIBBU、t187ap05_L，櫃買本益比與月營收｜"
                          "法人：上市個股與大盤為 FinMind，上櫃為櫃買三大法人｜近一年高低、影片當日收盤、均線與數據參考價位：FinMind｜"
                          "主管機關名單：證交所異常推介、注意、處置股，櫃買注意、處置股｜"
-                         "總經：FRED（Federal Reserve Bank of St. Louis）" + "、".join(dict.fromkeys([m["source"][5:] for m in E.get("macro", []) if m.get("source", "").startswith("FRED:")] + ["DCOILBRENTEU"])) + "。"
+                         "總經：FRED（Federal Reserve Bank of St. Louis）" + "、".join(dict.fromkeys([m["source"][5:] for m in E.get("macro", []) if m.get("source", "").startswith("FRED:")] + (["DCOILBRENTEU"] if has_oil else []))) + "。"
                          "This product uses the FRED® API but is not endorsed or certified by the Federal Reserve Bank of St. Louis."),
         "stocks": stocks,
     }
