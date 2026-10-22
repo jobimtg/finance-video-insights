@@ -197,14 +197,51 @@ def fm_total_institutional(start):
 
 
 # ---------- FRED ----------
+TREASURY_COL = {"DGS10": "10 Yr", "DGS20": "20 Yr", "DGS30": "30 Yr"}
+_FRED_CACHE = {}
+
+
+def treasury_latest(series):
+    """美債備援：美國財政部每日公債殖利率 CSV（skill 已定案的備援來源）"""
+    import csv, io
+    y = dt.date.today().year
+    url = (f"https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/{y}/all"
+           f"?type=daily_treasury_yield_curve&field_tdr_date_value={y}&page&_format=csv")
+    r = requests.get(url, headers=UA, timeout=60); r.raise_for_status()
+    rows = list(csv.DictReader(io.StringIO(r.text)))
+    col = TREASURY_COL[series]
+    best = None
+    for row in rows:
+        v = num(row.get(col)); d = dt.datetime.strptime(row["Date"], "%m/%d/%Y").date()
+        if v is not None and (best is None or d > best[1]):
+            best = (v, d)
+    return best or (None, None)
+
+
 def fred_latest(series):
+    """2026-10-21：FRED 讀取失敗時不讓整份報告失敗；美債改用財政部備援，其餘回傳查無並記錄。"""
+    if series in _FRED_CACHE:
+        return _FRED_CACHE[series]
     key = os.environ.get("FRED_API_KEY", "").strip()
-    if not key:
-        return None, None
-    d = get_json("https://api.stlouisfed.org/fred/series/observations",
-                 params={"series_id": series, "api_key": key, "file_type": "json", "sort_order": "desc", "limit": 10})
-    for o in d.get("observations", []):
-        v = num(o.get("value"))
-        if v is not None:
-            return v, dt.date.fromisoformat(o["date"])
-    return None, None
+    res = (None, None)
+    try:
+        if not key:
+            raise RuntimeError("沒有 FRED_API_KEY")
+        d = get_json("https://api.stlouisfed.org/fred/series/observations",
+                     params={"series_id": series, "api_key": key, "file_type": "json", "sort_order": "desc", "limit": 10})
+        for o in d.get("observations", []):
+            v = num(o.get("value"))
+            if v is not None:
+                res = (v, dt.date.fromisoformat(o["date"])); break
+    except Exception as e:
+        FRED_FAIL.append(f"{series}（{type(e).__name__}）")
+        if series in TREASURY_COL:
+            try:
+                res = treasury_latest(series); FRED_FALLBACK.append(series)
+            except Exception as e2:
+                FRED_FAIL.append(f"{series} 財政部備援（{type(e2).__name__}）")
+    _FRED_CACHE[series] = res
+    return res
+
+
+FRED_FAIL, FRED_FALLBACK = [], []

@@ -254,6 +254,10 @@ def main(ep_date):
     if brent is not None:
         note += f"FRED 布蘭特為 Dated 現貨（{md(bd)} 為 {brent:.2f}），與節目引用的期貨不同。"
     note = note or "美債與匯率來源 FRED，比台股晚 1–2 個交易日。"
+    if S.FRED_FALLBACK:   # 2026-10-21：FRED 失敗時美債改用財政部資料，並在說明列註明
+        note += f"FRED 暫時無法讀取，{'、'.join(S.FRED_FALLBACK)} 改用美國財政部每日公債殖利率。"
+    if S.FRED_FAIL:
+        log.append("FRED 讀取失敗：" + "、".join(S.FRED_FAIL))
 
     # ---- 三個重點 ----
     core = [x for x in stocks if x["stance"] != "背景" and x["since_video_pct"] is not None]
