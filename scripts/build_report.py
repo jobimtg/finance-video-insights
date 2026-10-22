@@ -258,6 +258,10 @@ def main(ep_date):
         note += f"FRED 暫時無法讀取，{'、'.join(S.FRED_FALLBACK)} 改用美國財政部每日公債殖利率。"
     if S.FRED_FAIL:
         log.append("FRED 讀取失敗：" + "、".join(S.FRED_FAIL))
+    if S.FRED_FALLBACK:   # 2026-10-21：FRED 失敗時美債改用財政部資料，並在說明列註明
+        note += f"FRED 暫時無法讀取，{'、'.join(S.FRED_FALLBACK)} 改用美國財政部每日公債殖利率。"
+    if S.FRED_FAIL:
+        log.append("FRED 讀取失敗：" + "、".join(S.FRED_FAIL))
 
     # ---- 三個重點 ----
     core = [x for x in stocks if x["stance"] != "背景" and x["since_video_pct"] is not None]
