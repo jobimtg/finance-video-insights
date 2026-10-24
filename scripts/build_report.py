@@ -250,7 +250,7 @@ def main(ep_date):
         if m.get("source", "").startswith("FRED:"):
             v, d = S.fred_latest(m["source"][5:])
             if d and m["source"][5:] not in S.FRED_FALLBACK: fred_dates.append(f"{m['name']}至 {md(d)}")
-    note = (f"FRED 數據有發布時差（{'、'.join(fred_dates)}）；" if fred_dates else "") + E.get("macro_note", "")
+    note = "；".join(x for x in ((f"FRED 數據有發布時差（{'、'.join(fred_dates)}）" if fred_dates else ""), E.get("macro_note", "")) if x) + ("。" if fred_dates or E.get("macro_note") else "")
     if brent is not None:
         note += f"FRED 布蘭特為 Dated 現貨（{md(bd)} 為 {brent:.2f}），與節目引用的期貨不同。"
     if S.FRED_FALLBACK:   # 2026-10-21：FRED 失敗時美債改用財政部資料，並在說明列註明
