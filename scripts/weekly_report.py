@@ -116,7 +116,7 @@ def build(fri, out_dir):
         hl.append("、".join(md(x["date"]) for x in pend) + " 那集尚無播出後交易日，播出後漲跌與驗證於下週更新。")
     miss = [md(x["date"]) for x in eps if x.get("missing")]
     if miss:
-        hl.append("本週缺集：" + "、".join(miss) + "（未播出或未取得逐字稿）。")
+        hl.append("本週缺集：" + "、".join(miss) + "（當天沒有完整版影片，例如停播或休市）。")
     data_line = (f"數據截至 {latest_R['episode']['latest_date_short']} 收盤（沿用各集每日報告的計算結果）" if latest_R else "本週尚無已產出的每日報告")
     # ---- HTML ----
     ep_rows = ""

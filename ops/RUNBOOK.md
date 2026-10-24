@@ -20,6 +20,7 @@ mkdir -p ~/tools && cp ops/ghrun.sh ~/tools/ghrun.sh && chmod +x ~/tools/ghrun.s
 2. 內建瀏覽器：ToolSearch 載入 `mcp__remote-devices__Claude_Browser__navigate`、`mcp__remote-devices__Claude_Browser__javascript_tool`。只讀取，影片靜音、讀完暫停，不改動使用者電腦任何檔案。
    - 方法一（字幕檔，較穩）：見本檔附錄 A 程式。
    - 方法二（逐字稿面板）：附錄 B 程式。
+   - 當天頻道沒有「YYYYMMDD完整版」影片（停播、颱風假或休市）：在 Notion 記錄「當天無完整版影片」，不通知、不重試，直接結束。
    - 電腦連不上或兩種方法都失敗：不要重試超過 1 次；用 PushNotification 通知使用者，請他打開電腦上的 Claude 桌面 app 或貼上逐字稿，然後停下。
 3. 依 skill 步驟 2 寫 `episodes/YYYYMMDD/episode.json`（參考前幾集格式）：
    - guests 為來賓名單；背景股不放 segments；每段 2–10 檔；族群用半形斜線。
@@ -39,9 +40,10 @@ mkdir -p ~/tools && cp ops/ghrun.sh ~/tools/ghrun.sh && chmod +x ~/tools/ghrun.s
 3. 全部通過才發布（388081676，send_line "false"）。**每日報告不推 LINE**（2026-10-21 定案）。
 4. 更新 Notion「財經影片統整」頁（id 3f95a561-5413-8182-9778-ce7f5d893622）：做了什麼、檢查結果、未完成事項。
 
-## 3. 週五 21:00：週報摘要（待使用者核准樣本後啟用）
+## 3. 週五 21:00：週報摘要（2026-10-23 版面定案）
 - 範圍：本週一～週五各集；週五那集的播出後漲跌與驗證標「下週更新」。
-- 內容：本週重點、多集重複點名個股、播出後漲跌排行、驗證統計、下週事件、各集完整版連結；5–9 頁；只推這一則 LINE。
+- 內容：本週重點、各集一覽與完整版連結、加權指數、驗證統計、下週事件、播出後漲跌排行、族群表現、多集重複點名個股；5–9 頁（當週少於 5 集時可 3–9 頁）；只推這一則 LINE。
+- 步驟：確認週五那集已有 episode.json（20:00 作業完成）；對週五那集執行「產出報告草稿」（初檢會因尚無播出後交易日而不通過，屬正常，只用來提供週報資料）；執行 workflow「週報摘要」（weekly-report.yml，inputs：week_end=週五 YYYYMMDD、send_line=true）；看 PDF；更新 Notion。
 
 ## 附錄 A：字幕檔讀取
 ```
