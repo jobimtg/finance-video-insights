@@ -50,6 +50,8 @@ def main(ep):
             issues.append(f"{len(stale)} 檔最新收盤仍停在較早日期（資料來源尚未更新到 {newest}），請稍後重產：{'、'.join(stale[:10])}")
     if R["episode"].get("video_date_short") == R["episode"].get("latest_date_short"):
         issues.append("最新收盤日與影片日相同，播出後漲跌全部為 0，請等下一個交易日收盤後再產出")
+    elif core and all(s.get("since_video_pct") == 0 for s in core):   # 2026-10-26：播出日休市改用前一交易日收盤時，影片日標籤與實際基準日不同
+        issues.append("播出後漲跌全部為 0（播出日休市、基準為前一交易日，尚無播出後交易日），請等下一個交易日收盤後再產出")
     for g in R["segments"]:
         if not 2 <= len(g["codes"]) <= 10:
             issues.append(f"分段「{g['title']}」有 {len(g['codes'])} 檔，應為 2–10 檔")
