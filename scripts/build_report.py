@@ -134,6 +134,10 @@ def main(ep_date):
     tx = {p["date"]: p for p in taiex}
     latest_day = max(tx)
     next_day = min((d for d in tx if d > air), default=None)
+    # 2026-10-26 經使用者同意（選項 A）：播出日休市時，影片當日收盤改用播出日前最後一個交易日收盤
+    base = air if air in tx else max((d for d in tx if d < air), default=air)
+    if base != air:
+        log.append(f"播出日 {air} 休市，影片當日收盤改用 {base} 收盤")
 
     stocks, val_dates, inst_dates, rev_months = [], set(), set(), set()
     fm_latest = []   # 最新收盤改用 FinMind 的代號
@@ -142,7 +146,7 @@ def main(ep_date):
         etf = c.startswith("00")
         px = S.fm_prices(c, hist_start)
         by = {p["date"]: p for p in px}
-        video_close = by[air]["close"] if air in by else None
+        video_close = by[base]["close"] if base in by else None
         cl = (tw_close if mk == "TWSE" else tp_close).get(c, {})
         latest, ldate = cl.get("close"), cl.get("date")
         if px and (latest is None or not ldate or px[-1]["date"] > ldate):
@@ -264,7 +268,7 @@ def main(ep_date):
     if E.get("highlights"):
         highlights = E["highlights"]
     else:
-        a0, a1 = tx[air]["close"] if air in tx else None, tx[latest_day]["close"]
+        a0, a1 = tx[base]["close"] if base in tx else None, tx[latest_day]["close"]
         groups = {}
         for x in core:
             groups.setdefault(x["group"].split("/")[0], []).append(x["since_video_pct"])
@@ -278,7 +282,7 @@ def main(ep_date):
             f"事件：{ev}。" if ev else "事件：本集未提及。"]
 
     taiex_cards = []
-    for lab, d in ((f"{md(air)} 影片當日", air), (md(next_day), next_day), (md(latest_day), latest_day)):
+    for lab, d in ((f"{md(air)} 影片當日" + (f"（{md(base)} 收）" if base != air else ""), base), (md(next_day), next_day), (md(latest_day), latest_day)):
         if d in tx:
             taiex_cards.append({"label": lab, "close": tx[d]["close"], "chg": tx[d]["spread"] or 0})
     vd = max(val_dates) if val_dates else None
@@ -302,7 +306,7 @@ def main(ep_date):
         "macro": macro, "macro_note": note,
         "events": E.get("events", []),
         "verify_dates": {"d5": md(d5), "d20": md(d20)},
-        "table_note": f"本益比與殖利率為 {md(vd)}；{'個股法人' if inst_txt.startswith('個股') else '法人'}為 {md(idt)}；營收為 {rm} 月年增；52 週為 {(lat - dt.timedelta(days=365)):%Y/%m/%d} 起；灰字「數據參考」為 {md(lat)} 收盤以公開股價計算，非節目觀點：▲站上、▼跌破均線，月＝20 日線、季＝60 日線，20 日為近 20 個交易日最低–最高價。" + (f"2 日驗證於 {md(d2_all)} 收盤後判定，目前標「觀察」。" if d2_all > latest_day else ""),
+        "table_note": f"本益比與殖利率為 {md(vd)}；{'個股法人' if inst_txt.startswith('個股') else '法人'}為 {md(idt)}；營收為 {rm} 月年增；52 週為 {(lat - dt.timedelta(days=365)):%Y/%m/%d} 起；灰字「數據參考」為 {md(lat)} 收盤以公開股價計算，非節目觀點：▲站上、▼跌破均線，月＝20 日線、季＝60 日線，20 日為近 20 個交易日最低–最高價。" + (f"播出日 {md(air)} 休市，影片當日收盤採前一交易日 {md(base)} 收盤。" if base != air else "") + (f"2 日驗證於 {md(d2_all)} 收盤後判定，目前標「觀察」。" if d2_all > latest_day else ""),
         "segments": E["segments"],
         "sources_text": ("價格：臺灣證券交易所、證券櫃檯買賣中心 OpenAPI（政府資料開放授權條款－第1版）" + ("；OpenAPI 尚未更新時改用較新的 FinMind 收盤" if fm_latest else "") + "｜"
                          "估值與營收：證交所 BWIBBU、t187ap05_L，櫃買本益比與月營收｜"

@@ -17,6 +17,7 @@ mkdir -p ~/tools && cp ops/ghrun.sh ~/tools/ghrun.sh && chmod +x ~/tools/ghrun.s
 
 ## 1. 每日 20:00：讀逐字稿與整理觀點（週一至週五）
 1. 從 `data/uploads.json` 取當天（YYYYMMDD）上、中、下集影片 ID；沒有就用內建瀏覽器開頻道 RSS（channel_id=UC_ObC9O0ZQ2FhW6u9_iFlZA）找「YYYYMMDD完整版(上/中/下集)」。
+   - 2026-10-26 經使用者同意：當天只有「YYYYMMDD完整版(全集)」一支時，視為完整一集（uploads.json 記為「全」），Agent 1 確認全集結尾完整即可；ts 用「全 mm:ss」。RSS 回 404 時改用 YouTube 搜尋或頻道影片頁。
 2. 內建瀏覽器：ToolSearch 載入 `mcp__remote-devices__Claude_Browser__navigate`、`mcp__remote-devices__Claude_Browser__javascript_tool`。只讀取，影片靜音、讀完暫停，不改動使用者電腦任何檔案。
    - 方法一（字幕檔，較穩）：見本檔附錄 A 程式。
    - 方法二（逐字稿面板）：附錄 B 程式。
@@ -31,6 +32,8 @@ mkdir -p ~/tools && cp ops/ghrun.sh ~/tools/ghrun.sh && chmod +x ~/tools/ghrun.s
 4. 名稱核對（388301182），market 依結果設定。推上 repo。
 5. 用新的 subagent 跑 Agent 1、3（自行用內建瀏覽器重讀逐字稿），依結果修正後推上 repo。
 6. 週五：完成後接著做第 3 節週報。
+
+- 2026-10-26 經使用者同意：播出日休市（例如補假）時，影片當日收盤改用播出日前最後一個交易日收盤（build_report.py 自動處理，表格說明列註明），驗證日仍從播出日起算。
 
 ## 2. 每日 03:30：產出與發布前一集（週一至週五）
 - 對象：已有 episode.json、但 `docs/reports/` 還沒有該集 PDF、且播出日之後已有至少 1 個交易日收盤的集數（週一處理上週五那集）。
