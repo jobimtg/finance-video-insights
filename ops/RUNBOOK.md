@@ -40,6 +40,7 @@ mkdir -p ~/tools && cp ops/ghrun.sh ~/tools/ghrun.sh && chmod +x ~/tools/ghrun.s
 1. 產出報告草稿（388081674）。確認絕大多數個股 latest_date 為最新交易日、初檢通過、頁數 5–9。
    - FinMind 每小時 600 次上限：若 HTTPError，1 小時後再試。資料停在舊日期：2 小時後再試。同一問題 2 次仍失敗就通知使用者並停下。
 2. 看 PDF 第 1–3 頁；跑 Agent 4（388310888）；用新 subagent 跑 Agent 5–7（skill 檔＋repo scripts/render_report.py 為準）。
+- 2026-10-27 經使用者同意（選項 A）：臨時休市（平日但加權指數沒有資料，例如 10/23 颱風假）也算休市，2／5／20 日驗證日一併扣除（build_report.py 自動處理，產出紀錄會列出）。
 3. 全部通過才發布（388081676，send_line "false"）。**每日報告不推 LINE**（2026-10-21 定案）。
 4. 更新 Notion「財經影片統整」頁（id 3f95a561-5413-8182-9778-ce7f5d893622）：做了什麼、檢查結果、未完成事項。
 

@@ -133,6 +133,12 @@ def main(ep_date):
     taiex = S.fm_prices("TAIEX", (air - dt.timedelta(days=10)).isoformat())
     tx = {p["date"]: p for p in taiex}
     latest_day = max(tx)
+    # 2026-10-27 經使用者同意（選項 A）：臨時休市（平日但加權指數沒有資料，例如颱風假）也算休市，驗證日一併扣除
+    d = min(tx)
+    while d < latest_day:
+        if d.weekday() < 5 and d not in tx and d not in holidays:
+            holidays.add(d); log.append(f"{d} 加權指數無資料，視為臨時休市")
+        d += dt.timedelta(days=1)
     next_day = min((d for d in tx if d > air), default=None)
     # 2026-10-26 經使用者同意（選項 A）：播出日休市時，影片當日收盤改用播出日前最後一個交易日收盤
     base = air if air in tx else max((d for d in tx if d < air), default=air)
