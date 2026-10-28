@@ -51,7 +51,7 @@
   {
    "name": "美國 10 年期公債殖利率",
    "alert": "陳龍：由 5.36% 回落至約 5.09%；回到 5.6% 以上才要擔心 12 月升 2 碼",
-   "latest": "5.00%（10/23）",
+   "latest": "5.00%（10/26）",
    "status": "低於 5.6%"
   },
   {
@@ -73,7 +73,7 @@
    "status": "節目口述"
   }
  ],
- "macro_note": "FRED 數據有發布時差（新台幣兌美元至 10/23、美國 10 年期公債殖利率至 10/23）。",
+ "macro_note": "FRED 數據有發布時差（新台幣兌美元至 10/23、美國 10 年期公債殖利率至 10/26）。",
  "events": [
   {
    "date": "10/20",
@@ -102,8 +102,8 @@
   }
  ],
  "verify_dates": {
-  "d5": "10/23",
-  "d20": "11/16"
+  "d5": "10/27",
+  "d20": "11/17"
  },
  "table_note": "本益比與殖利率為 10/27；法人為 10/27；營收為 9 月年增；52 週為 2025/10/27 起；灰字「數據參考」為 10/27 收盤以公開股價計算，非節目觀點：▲站上、▼跌破均線，月＝20 日線、季＝60 日線，20 日為近 20 個交易日最低–最高價。",
  "segments": [
@@ -173,7 +173,7 @@
    ]
   }
  ],
- "sources_text": "價格：臺灣證券交易所、證券櫃檯買賣中心 OpenAPI（政府資料開放授權條款－第1版）；OpenAPI 尚未更新時改用較新的 FinMind 收盤｜估值與營收：證交所 BWIBBU、t187ap05_L，櫃買本益比與月營收｜法人：上市個股與大盤為 FinMind，上櫃為櫃買三大法人｜近一年高低、影片當日收盤、均線與數據參考價位：FinMind｜主管機關名單：證交所異常推介、注意、處置股，櫃買注意、處置股｜總經：FRED（Federal Reserve Bank of St. Louis）DEXTAUS、DGS10。This product uses the FRED® API but is not endorsed or certified by the Federal Reserve Bank of St. Louis.",
+ "sources_text": "價格：臺灣證券交易所、證券櫃檯買賣中心 OpenAPI（政府資料開放授權條款－第1版）｜估值與營收：證交所 BWIBBU、t187ap05_L，櫃買本益比與月營收｜法人：上市個股與大盤為 FinMind，上櫃為櫃買三大法人｜近一年高低、影片當日收盤、均線與數據參考價位：FinMind｜主管機關名單：證交所異常推介、注意、處置股，櫃買注意、處置股｜總經：FRED（Federal Reserve Bank of St. Louis）DEXTAUS、DGS10。This product uses the FRED® API but is not endorsed or certified by the Federal Reserve Bank of St. Louis.",
  "stocks": [
   {
    "code": "2330",
@@ -193,7 +193,7 @@
    "latest": 2400.0,
    "latest_date": "2026-10-27",
    "since_video_pct": -0.83,
-   "pe": 27.65,
+   "pe": 27.82,
    "yield": 0.92,
    "rev_yoy": 54.64861207105231,
    "inst_total": 2709,
@@ -204,13 +204,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "方向相反",
-   "verify5_done": null,
+   "verify5_done": "方向相反",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -231,8 +231,8 @@
    "latest": 3960.0,
    "latest_date": "2026-10-27",
    "since_video_pct": -6.82,
-   "pe": 66.23,
-   "yield": 1.33,
+   "pe": 65.4,
+   "yield": 1.35,
    "rev_yoy": 1.9684131750496783,
    "inst_total": -1492,
    "hi52": 5480.0,
@@ -242,13 +242,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "方向相反",
-   "verify5_done": null,
+   "verify5_done": "方向相反",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -269,8 +269,8 @@
    "latest": 247.5,
    "latest_date": "2026-10-27",
    "since_video_pct": 1.43,
-   "pe": 16.15,
-   "yield": 2.93,
+   "pe": 16.32,
+   "yield": 2.9,
    "rev_yoy": 38.41573533086287,
    "inst_total": 7124,
    "hi52": 314.0,
@@ -280,13 +280,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "方向相反",
-   "verify5_done": null,
+   "verify5_done": "方向一致",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -319,13 +319,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "出現拉回",
-   "verify5_done": null,
+   "verify5_done": "出現拉回",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -357,13 +357,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "出現拉回",
-   "verify5_done": null,
+   "verify5_done": "出現拉回",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -395,13 +395,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "出現拉回",
-   "verify5_done": null,
+   "verify5_done": "出現拉回",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -434,13 +434,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "方向相反",
-   "verify5_done": null,
+   "verify5_done": "方向相反",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -472,13 +472,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "待觀察",
-   "verify5_done": null,
+   "verify5_done": "待觀察",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -499,7 +499,7 @@
    "latest": 68.6,
    "latest_date": "2026-10-27",
    "since_video_pct": -5.64,
-   "pe": 36.05,
+   "pe": 36.11,
    "yield": 1.46,
    "rev_yoy": 29.365867921175347,
    "inst_total": 186,
@@ -510,13 +510,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "待觀察",
-   "verify5_done": null,
+   "verify5_done": "待觀察",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -548,13 +548,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "待觀察",
-   "verify5_done": null,
+   "verify5_done": "待觀察",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -575,8 +575,8 @@
    "latest": 122.5,
    "latest_date": "2026-10-27",
    "since_video_pct": 1.24,
-   "pe": 22.29,
-   "yield": 2.34,
+   "pe": 22.85,
+   "yield": 2.29,
    "rev_yoy": 59.150827678561384,
    "inst_total": 11,
    "hi52": 129.0,
@@ -586,13 +586,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "方向相反",
-   "verify5_done": null,
+   "verify5_done": "方向一致",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -613,7 +613,7 @@
    "latest": 651.0,
    "latest_date": "2026-10-27",
    "since_video_pct": -2.98,
-   "pe": 47.32,
+   "pe": 47.11,
    "yield": 1.01,
    "rev_yoy": 45.52228936841058,
    "inst_total": -849,
@@ -624,13 +624,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "出現拉回",
-   "verify5_done": null,
+   "verify5_done": "出現拉回",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -662,13 +662,13 @@
    "target_src": "法人",
    "target_upside_pct": 35.8,
    "verify": "出現拉回",
-   "verify5_done": null,
+   "verify5_done": "出現拉回",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -691,8 +691,8 @@
    "latest": 520.0,
    "latest_date": "2026-10-27",
    "since_video_pct": -6.64,
-   "pe": 67.1,
-   "yield": 0.6,
+   "pe": 61.54,
+   "yield": 0.66,
    "rev_yoy": 36.12871611479015,
    "inst_total": -8340,
    "hi52": 659.0,
@@ -702,13 +702,13 @@
    "target_src": "外資",
    "target_upside_pct": 97.1,
    "verify": "方向相反",
-   "verify5_done": null,
+   "verify5_done": "方向相反",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -729,7 +729,7 @@
    "latest": 65.2,
    "latest_date": "2026-10-27",
    "since_video_pct": -2.54,
-   "pe": 78.02,
+   "pe": 75.81,
    "yield": null,
    "rev_yoy": 34.10637421967269,
    "inst_total": -15580,
@@ -740,13 +740,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "方向一致",
-   "verify5_done": null,
+   "verify5_done": "方向相反",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -768,8 +768,8 @@
    "latest": 216.0,
    "latest_date": "2026-10-27",
    "since_video_pct": -12.9,
-   "pe": 36.15,
-   "yield": 1.25,
+   "pe": 34.78,
+   "yield": 1.3,
    "rev_yoy": 15.018893793137691,
    "inst_total": -5249,
    "hi52": 305.5,
@@ -779,13 +779,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "出現拉回",
-   "verify5_done": null,
+   "verify5_done": "出現拉回",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -817,13 +817,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "方向相反",
-   "verify5_done": null,
+   "verify5_done": "方向相反",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -844,8 +844,8 @@
    "latest": 261.5,
    "latest_date": "2026-10-27",
    "since_video_pct": -1.51,
-   "pe": 10.31,
-   "yield": 6.15,
+   "pe": 10.37,
+   "yield": 6.12,
    "rev_yoy": 63.74746109181468,
    "inst_total": 1414,
    "hi52": 270.5,
@@ -855,13 +855,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "待觀察",
-   "verify5_done": null,
+   "verify5_done": "待觀察",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -882,8 +882,8 @@
    "latest": 63.0,
    "latest_date": "2026-10-27",
    "since_video_pct": -2.63,
-   "pe": 13.94,
-   "yield": 3.23,
+   "pe": 14.19,
+   "yield": 3.17,
    "rev_yoy": 69.93539181535685,
    "inst_total": 5876,
    "hi52": 69.9,
@@ -893,13 +893,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "待觀察",
-   "verify5_done": null,
+   "verify5_done": "待觀察",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -920,8 +920,8 @@
    "latest": 1080.0,
    "latest_date": "2026-10-27",
    "since_video_pct": -13.25,
-   "pe": 40.02,
-   "yield": 0.88,
+   "pe": 38.77,
+   "yield": 0.91,
    "rev_yoy": 55.462822673426,
    "inst_total": 290,
    "hi52": 1580.0,
@@ -931,13 +931,13 @@
    "target_src": "法人",
    "target_upside_pct": 38.9,
    "verify": "方向相反",
-   "verify5_done": null,
+   "verify5_done": "方向相反",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -958,8 +958,8 @@
    "latest": 33.45,
    "latest_date": "2026-10-27",
    "since_video_pct": -6.82,
-   "pe": 147.5,
-   "yield": 1.13,
+   "pe": 139.38,
+   "yield": 1.2,
    "rev_yoy": -4.261365704978919,
    "inst_total": -95215,
    "hi52": 43.55,
@@ -969,13 +969,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "方向相反",
-   "verify5_done": null,
+   "verify5_done": "方向相反",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -996,7 +996,7 @@
    "latest": 1255.0,
    "latest_date": "2026-10-27",
    "since_video_pct": -7.38,
-   "pe": 148.65,
+   "pe": 147.47,
    "yield": 0.16,
    "rev_yoy": 57.81553056554688,
    "inst_total": 55,
@@ -1007,13 +1007,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "出現拉回",
-   "verify5_done": null,
+   "verify5_done": "出現拉回",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -1034,8 +1034,8 @@
    "latest": 1060.0,
    "latest_date": "2026-10-27",
    "since_video_pct": -2.75,
-   "pe": 72.24,
-   "yield": 0.18,
+   "pe": 70.57,
+   "yield": 0.19,
    "rev_yoy": 64.66643811385126,
    "inst_total": -486,
    "hi52": 1420.0,
@@ -1045,13 +1045,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "待觀察",
-   "verify5_done": null,
+   "verify5_done": "待觀察",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -1072,8 +1072,8 @@
    "latest": 941.0,
    "latest_date": "2026-10-27",
    "since_video_pct": -5.9,
-   "pe": 182.93,
-   "yield": 0.15,
+   "pe": 174.58,
+   "yield": 0.16,
    "rev_yoy": 44.468538291045796,
    "inst_total": -1971,
    "hi52": 1150.0,
@@ -1083,13 +1083,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "待觀察",
-   "verify5_done": null,
+   "verify5_done": "待觀察",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -1121,13 +1121,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "方向一致",
-   "verify5_done": null,
+   "verify5_done": "方向相反",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -1148,8 +1148,8 @@
    "latest": 585.0,
    "latest_date": "2026-10-27",
    "since_video_pct": -10.82,
-   "pe": 40.25,
-   "yield": 1.95,
+   "pe": 38.29,
+   "yield": 2.05,
    "rev_yoy": 7.188148611574929,
    "inst_total": -393,
    "hi52": 1115.0,
@@ -1159,13 +1159,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "方向相反",
-   "verify5_done": null,
+   "verify5_done": "方向相反",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -1186,8 +1186,8 @@
    "latest": 159.0,
    "latest_date": "2026-10-27",
    "since_video_pct": -3.64,
-   "pe": 18.0,
-   "yield": 3.75,
+   "pe": 17.89,
+   "yield": 3.77,
    "rev_yoy": 11.27184768176553,
    "inst_total": -69,
    "hi52": 201.0,
@@ -1197,13 +1197,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "方向相反",
-   "verify5_done": null,
+   "verify5_done": "方向相反",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -1224,8 +1224,8 @@
    "latest": 98.0,
    "latest_date": "2026-10-27",
    "since_video_pct": -2.97,
-   "pe": 27.01,
-   "yield": 2.23,
+   "pe": 26.85,
+   "yield": 2.24,
    "rev_yoy": 10.400310614927523,
    "inst_total": -215,
    "hi52": 149.5,
@@ -1235,13 +1235,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "待觀察",
-   "verify5_done": null,
+   "verify5_done": "待觀察",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -1262,8 +1262,8 @@
    "latest": 191.5,
    "latest_date": "2026-10-27",
    "since_video_pct": -3.53,
-   "pe": 26.45,
-   "yield": 2.6,
+   "pe": 26.38,
+   "yield": 2.61,
    "rev_yoy": 8.244608592876185,
    "inst_total": -18,
    "hi52": 269.5,
@@ -1273,13 +1273,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "待觀察",
-   "verify5_done": null,
+   "verify5_done": "待觀察",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -1300,8 +1300,8 @@
    "latest": 69.0,
    "latest_date": "2026-10-27",
    "since_video_pct": -1.0,
-   "pe": 25.25,
-   "yield": 2.87,
+   "pe": 25.0,
+   "yield": 2.9,
    "rev_yoy": 13.677652299744741,
    "inst_total": -1254,
    "hi52": 121.5,
@@ -1311,13 +1311,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "方向相反",
-   "verify5_done": null,
+   "verify5_done": "方向相反",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -1338,8 +1338,8 @@
    "latest": 533.0,
    "latest_date": "2026-10-27",
    "since_video_pct": -9.81,
-   "pe": 87.76,
-   "yield": 0.58,
+   "pe": 80.51,
+   "yield": 0.63,
    "rev_yoy": 201.68440214066825,
    "inst_total": -77,
    "hi52": 677.0,
@@ -1349,13 +1349,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "待觀察",
-   "verify5_done": null,
+   "verify5_done": "待觀察",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -1376,8 +1376,8 @@
    "latest": 746.0,
    "latest_date": "2026-10-27",
    "since_video_pct": -3.62,
-   "pe": 120.47,
-   "yield": 0.39,
+   "pe": 115.66,
+   "yield": 0.4,
    "rev_yoy": 110.7353905337519,
    "inst_total": -2174,
    "hi52": 885.0,
@@ -1387,13 +1387,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "待觀察",
-   "verify5_done": null,
+   "verify5_done": "待觀察",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -1414,8 +1414,8 @@
    "latest": 522.0,
    "latest_date": "2026-10-27",
    "since_video_pct": -10.62,
-   "pe": 23.82,
-   "yield": 2.28,
+   "pe": 22.37,
+   "yield": 2.43,
    "rev_yoy": 53.500059681732026,
    "inst_total": -303,
    "hi52": 604.0,
@@ -1425,13 +1425,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "待觀察",
-   "verify5_done": null,
+   "verify5_done": "待觀察",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -1452,8 +1452,8 @@
    "latest": 433.0,
    "latest_date": "2026-10-27",
    "since_video_pct": -12.35,
-   "pe": 96.57,
-   "yield": 0.41,
+   "pe": 87.3,
+   "yield": 0.45,
    "rev_yoy": 98.33236118149915,
    "inst_total": -442,
    "hi52": 627.0,
@@ -1463,13 +1463,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "待觀察",
-   "verify5_done": null,
+   "verify5_done": "待觀察",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -1490,8 +1490,8 @@
    "latest": 97.0,
    "latest_date": "2026-10-27",
    "since_video_pct": -8.06,
-   "pe": 29.88,
-   "yield": 1.28,
+   "pe": 30.22,
+   "yield": 1.27,
    "rev_yoy": 33.759389238958434,
    "inst_total": 156,
    "hi52": 133.0,
@@ -1501,13 +1501,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "待觀察",
-   "verify5_done": null,
+   "verify5_done": "待觀察",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -1528,8 +1528,8 @@
    "latest": 687.0,
    "latest_date": "2026-10-27",
    "since_video_pct": 0.29,
-   "pe": 42.43,
-   "yield": 1.67,
+   "pe": 43.51,
+   "yield": 1.62,
    "rev_yoy": 73.13984715432697,
    "inst_total": 115,
    "hi52": 754.0,
@@ -1539,13 +1539,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "待觀察",
-   "verify5_done": null,
+   "verify5_done": "待觀察",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -1566,7 +1566,7 @@
    "latest": 297.5,
    "latest_date": "2026-10-27",
    "since_video_pct": -3.09,
-   "pe": 48.55,
+   "pe": 47.98,
    "yield": 0.27,
    "rev_yoy": 55.25857165202359,
    "inst_total": -9282,
@@ -1577,13 +1577,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "待觀察",
-   "verify5_done": null,
+   "verify5_done": "待觀察",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -1615,13 +1615,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "待觀察",
-   "verify5_done": null,
+   "verify5_done": "待觀察",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -1653,13 +1653,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "待觀察",
-   "verify5_done": null,
+   "verify5_done": "待觀察",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -1691,13 +1691,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "待觀察",
-   "verify5_done": null,
+   "verify5_done": "待觀察",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -1718,8 +1718,8 @@
    "latest": 255.5,
    "latest_date": "2026-10-27",
    "since_video_pct": -17.98,
-   "pe": 84.44,
-   "yield": 0.75,
+   "pe": 81.11,
+   "yield": 0.78,
    "rev_yoy": -19.005391121526873,
    "inst_total": -284,
    "hi52": 364.0,
@@ -1729,13 +1729,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "待觀察",
-   "verify5_done": null,
+   "verify5_done": "待觀察",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -1767,13 +1767,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "待觀察",
-   "verify5_done": null,
+   "verify5_done": "待觀察",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -1794,8 +1794,8 @@
    "latest": 960.0,
    "latest_date": "2026-10-27",
    "since_video_pct": -9.0,
-   "pe": 64.8,
-   "yield": 0.42,
+   "pe": 67.32,
+   "yield": 0.41,
    "rev_yoy": 172.33254972044645,
    "inst_total": 112,
    "hi52": 1090.0,
@@ -1805,13 +1805,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "待觀察",
-   "verify5_done": null,
+   "verify5_done": "待觀察",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -1843,13 +1843,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "待觀察",
-   "verify5_done": null,
+   "verify5_done": "待觀察",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -1871,7 +1871,7 @@
    "latest_date": "2026-10-27",
    "since_video_pct": -20.88,
    "pe": null,
-   "yield": 0.37,
+   "yield": 0.38,
    "rev_yoy": 49.31828901926765,
    "inst_total": 265,
    "hi52": 79.8,
@@ -1881,13 +1881,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "待觀察",
-   "verify5_done": null,
+   "verify5_done": "待觀察",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -1919,13 +1919,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "待觀察",
-   "verify5_done": null,
+   "verify5_done": "待觀察",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -1946,8 +1946,8 @@
    "latest": 103.5,
    "latest_date": "2026-10-27",
    "since_video_pct": -8.41,
-   "pe": 19.02,
-   "yield": 2.17,
+   "pe": 18.75,
+   "yield": 2.2,
    "rev_yoy": 46.33055240912154,
    "inst_total": -95,
    "hi52": 169.5,
@@ -1957,13 +1957,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "待觀察",
-   "verify5_done": null,
+   "verify5_done": "待觀察",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -1984,8 +1984,8 @@
    "latest": 228.0,
    "latest_date": "2026-10-27",
    "since_video_pct": -10.59,
-   "pe": 25.19,
-   "yield": 1.87,
+   "pe": 24.97,
+   "yield": 1.89,
    "rev_yoy": 64.04751148579548,
    "inst_total": -651,
    "hi52": 336.5,
@@ -1995,13 +1995,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "待觀察",
-   "verify5_done": null,
+   "verify5_done": "待觀察",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -2022,8 +2022,8 @@
    "latest": 40.6,
    "latest_date": "2026-10-27",
    "since_video_pct": -9.48,
-   "pe": 340.42,
-   "yield": 1.15,
+   "pe": 338.33,
+   "yield": 1.16,
    "rev_yoy": 23.77756421167748,
    "inst_total": -78,
    "hi52": 55.8,
@@ -2033,13 +2033,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "待觀察",
-   "verify5_done": null,
+   "verify5_done": "待觀察",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -2060,8 +2060,8 @@
    "latest": 1510.0,
    "latest_date": "2026-10-27",
    "since_video_pct": -7.65,
-   "pe": 49.65,
-   "yield": 0.74,
+   "pe": 48.06,
+   "yield": 0.77,
    "rev_yoy": 14.613858860431652,
    "inst_total": -2662,
    "hi52": 2585.0,
@@ -2071,13 +2071,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "待觀察",
-   "verify5_done": null,
+   "verify5_done": "待觀察",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -2098,8 +2098,8 @@
    "latest": 441.0,
    "latest_date": "2026-10-27",
    "since_video_pct": -1.45,
-   "pe": 16.07,
-   "yield": 0.33,
+   "pe": 17.11,
+   "yield": 0.31,
    "rev_yoy": 576.622775031737,
    "inst_total": 12923,
    "hi52": 569.0,
@@ -2109,13 +2109,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "待觀察",
-   "verify5_done": null,
+   "verify5_done": "待觀察",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -2136,8 +2136,8 @@
    "latest": 122.5,
    "latest_date": "2026-10-27",
    "since_video_pct": -7.89,
-   "pe": 18.87,
-   "yield": 2.08,
+   "pe": 18.42,
+   "yield": 2.13,
    "rev_yoy": 27.215377995124747,
    "inst_total": -83,
    "hi52": 185.5,
@@ -2147,13 +2147,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "待觀察",
-   "verify5_done": null,
+   "verify5_done": "待觀察",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   },
   {
@@ -2174,8 +2174,8 @@
    "latest": 6000.0,
    "latest_date": "2026-10-27",
    "since_video_pct": -6.25,
-   "pe": 32.84,
-   "yield": 1.3,
+   "pe": 31.91,
+   "yield": 1.33,
    "rev_yoy": -7.314368249667054,
    "inst_total": 119,
    "hi52": 7995.0,
@@ -2185,13 +2185,13 @@
    "target_src": null,
    "target_upside_pct": null,
    "verify": "待觀察",
-   "verify5_done": null,
+   "verify5_done": "待觀察",
    "verify20_done": null,
    "is_etf": false,
    "_dates": {
     "d2": "2026-10-20",
-    "d5": "2026-10-23",
-    "d20": "2026-11-16"
+    "d5": "2026-10-27",
+    "d20": "2026-11-17"
    }
   }
  ],
@@ -2233,9 +2233,7 @@
     "8437"
    ],
    "處置股": [
-    "053040",
     "2424",
-    "3167",
     "3287",
     "3354",
     "4542",
