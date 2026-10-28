@@ -2,10 +2,10 @@
  "episode": {
   "show": "錢線百分百",
   "video_date_short": "10/14",
-  "latest_date_short": "10/22",
+  "latest_date_short": "10/27",
   "revenue_month_label": "9月",
   "air_line": "台灣 2026-10-14（週三）21:00–23:30 播出｜溫哥華同日 06:00–08:30｜來賓：蜀芳、其展、俊洲、紫東",
-  "data_line": "數據截至 2026-10-22 收盤（本益比與殖利率為 10/22，法人為 10/22，營收為 9 月）"
+  "data_line": "數據截至 2026-10-27 收盤（本益比與殖利率為 10/27，法人為 10/27，營收為 9 月）"
  },
  "taiex": [
   {
@@ -19,39 +19,39 @@
    "chg": -1655.96
   },
   {
-   "label": "10/22",
-   "close": 46041.43,
-   "chg": -846.34
+   "label": "10/27",
+   "close": 46096.23,
+   "chg": 54.8
   }
  ],
  "highlights": [
-  "大盤：影片當日收 48,626，10/22 收 46,041（-2,584 點）。",
-  "族群：光學平均 -0.7% 最強、被動元件平均 -16.3% 最弱；個股漲幅最大 玉晶光 +8.9%、跌幅最大 天二科技 -20.0%。",
+  "大盤：影片當日收 48,626，10/27 收 46,096（-2,530 點）。",
+  "族群：光學平均 +0.4% 最強、被動元件平均 -17.4% 最弱；個股漲幅最大 玉晶光 +13.6%、跌幅最大 天二科技 -24.0%。",
   "事件：台積電法說會（10/15）、TPCA 台灣電路板展（南港展覽館）（10/20–10/22）、聯準會會議（10 月底、12 月）。"
  ],
  "macro": [
   {
    "name": "外資現貨／投信",
    "alert": "外資前一天大賣後當天續賣約 200 億，投信買超 161 億",
-   "latest": "-815.8 億／+94.9 億（10/22）",
+   "latest": "-80.4 億／+236.0 億（10/27）",
    "status": "外資賣超"
   },
   {
    "name": "加權指數",
    "alert": "蜀芳：法說優於預期、KD 50 附近金叉可攻前高 49,968；再破月線恐回測季線",
-   "latest": "46,041（10/22）",
+   "latest": "46,096（10/27）",
    "status": "未過前高"
   },
   {
    "name": "新台幣兌美元",
    "alert": "盤中摸 32.2 元後收小升；蜀芳：不可再續貶",
-   "latest": "32.40（10/16）",
+   "latest": "32.54（10/23）",
    "status": "已貶破 32.2"
   },
   {
    "name": "美國 20 年期公債殖利率",
    "alert": "傳財政部 11/4 可能停發或少發 20 年期公債（發債成本最高）；其展認為停發機率不高",
-   "latest": "5.47%（10/20）",
+   "latest": "5.35%（10/26）",
    "status": "無警戒值"
   },
   {
@@ -73,7 +73,7 @@
    "status": "節目口述"
   }
  ],
- "macro_note": "FRED 數據有發布時差（新台幣兌美元至 10/16、美國 20 年期公債殖利率至 10/20）；",
+ "macro_note": "FRED 數據有發布時差（新台幣兌美元至 10/23、美國 20 年期公債殖利率至 10/26）。",
  "events": [
   {
    "date": "10/15",
@@ -98,9 +98,9 @@
  ],
  "verify_dates": {
   "d5": "10/21",
-  "d20": "11/12"
+  "d20": "11/13"
  },
- "table_note": "本益比與殖利率為 10/22；法人為 10/22；營收為 9 月年增；52 週為 2025/10/22 起；灰字「數據參考」為 10/22 收盤以公開股價計算，非節目觀點：▲站上、▼跌破均線，月＝20 日線、季＝60 日線，20 日為近 20 個交易日最低–最高價。",
+ "table_note": "本益比與殖利率為 10/27；法人為 10/27；營收為 9 月年增；52 週為 2025/10/27 起；灰字「數據參考」為 10/27 收盤以公開股價計算，非節目觀點：▲站上、▼跌破均線，月＝20 日線、季＝60 日線，20 日為近 20 個交易日最低–最高價。",
  "segments": [
   {
    "title": "台積電、測試與被動元件",
@@ -187,7 +187,7 @@
    ]
   }
  ],
- "sources_text": "價格：臺灣證券交易所、證券櫃檯買賣中心 OpenAPI（政府資料開放授權條款－第1版）；OpenAPI 尚未更新時改用較新的 FinMind 收盤｜估值與營收：證交所 BWIBBU、t187ap05_L，櫃買本益比與月營收｜法人：上市個股與大盤為 FinMind，上櫃為櫃買三大法人｜近一年高低、影片當日收盤、均線與數據參考價位：FinMind｜主管機關名單：證交所異常推介、注意、處置股，櫃買注意、處置股｜總經：FRED（Federal Reserve Bank of St. Louis）DEXTAUS、DGS20。This product uses the FRED® API but is not endorsed or certified by the Federal Reserve Bank of St. Louis.",
+ "sources_text": "價格：臺灣證券交易所、證券櫃檯買賣中心 OpenAPI（政府資料開放授權條款－第1版）｜估值與營收：證交所 BWIBBU、t187ap05_L，櫃買本益比與月營收｜法人：上市個股與大盤為 FinMind，上櫃為櫃買三大法人｜近一年高低、影片當日收盤、均線與數據參考價位：FinMind｜主管機關名單：證交所異常推介、注意、處置股，櫃買注意、處置股｜總經：FRED（Federal Reserve Bank of St. Louis）DEXTAUS、DGS20。This product uses the FRED® API but is not endorsed or certified by the Federal Reserve Bank of St. Louis.",
  "stocks": [
   {
    "code": "2330",
@@ -202,18 +202,18 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▼2,410｜月▼2,485｜季▼2,423｜20日 2,385–2,590",
+   "level_ref": "數據參考：5日▼2,406｜月▼2,482｜季▼2,425｜20日 2,380–2,590",
    "video_close": 2490.0,
-   "latest": 2385.0,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -4.22,
-   "pe": 28.05,
-   "yield": 0.91,
+   "latest": 2400.0,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -3.61,
+   "pe": 27.82,
+   "yield": 0.92,
    "rev_yoy": 54.64861207105231,
-   "inst_total": -10149,
+   "inst_total": 2709,
    "hi52": 2590.0,
    "lo52": 1375.0,
-   "off_hi52_pct": -7.9,
+   "off_hi52_pct": -7.3,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -224,7 +224,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -240,18 +240,18 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▼267.7｜月▼291｜季▼265.1｜20日 255–330",
+   "level_ref": "數據參考：5日▲266.5｜月▼288.6｜季▲265.7｜20日 255–321.5",
    "video_close": 296.5,
-   "latest": 262.5,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -11.47,
-   "pe": 36.44,
-   "yield": 0.54,
+   "latest": 269.0,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -9.27,
+   "pe": 35.26,
+   "yield": 0.56,
    "rev_yoy": 24.459970702814534,
-   "inst_total": -11872,
+   "inst_total": 6023,
    "hi52": 367.5,
-   "lo52": 173.0,
-   "off_hi52_pct": -28.6,
+   "lo52": 179.0,
+   "off_hi52_pct": -26.8,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -262,7 +262,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -278,21 +278,21 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▼534.6｜月▼584.5｜季▼567.9｜20日 506–686",
+   "level_ref": "數據參考：5日▼525.4｜月▼582｜季▼567.2｜20日 506–686",
    "video_close": 627.0,
-   "latest": 507.0,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -19.14,
-   "pe": 36.5,
-   "yield": 1.11,
+   "latest": 521.0,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -16.91,
+   "pe": 35.08,
+   "yield": 1.15,
    "rev_yoy": 46.12057544691238,
-   "inst_total": -16585,
+   "inst_total": 6299,
    "hi52": 1220.0,
-   "lo52": 203.0,
-   "off_hi52_pct": -58.4,
+   "lo52": 218.0,
+   "off_hi52_pct": -57.3,
    "target": 800,
    "target_src": "券商",
-   "target_upside_pct": 57.8,
+   "target_upside_pct": 53.6,
    "verify": "方向相反",
    "verify5_done": "方向相反",
    "verify20_done": null,
@@ -300,7 +300,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -316,18 +316,18 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▼380.3｜月▼368.5｜季▲311.7｜20日 298.5–431.5",
+   "level_ref": "數據參考：5日▼375.8｜月▲371.6｜季▲313.9｜20日 298.5–431.5",
    "video_close": 426.0,
-   "latest": 368.0,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -13.62,
-   "pe": 45.56,
-   "yield": 0.62,
+   "latest": 372.5,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -12.56,
+   "pe": 41.85,
+   "yield": 0.67,
    "rev_yoy": 53.92880329001265,
-   "inst_total": -9020,
+   "inst_total": 1418,
    "hi52": 645.0,
    "lo52": 111.0,
-   "off_hi52_pct": -42.9,
+   "off_hi52_pct": -42.2,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -338,7 +338,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -354,18 +354,18 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▼124｜月▼126.3｜季▼122.8｜20日 116.5–150",
+   "level_ref": "數據參考：5日▼120.3｜月▼126｜季▼122.8｜20日 114–150",
    "video_close": 137.5,
-   "latest": 118.5,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -13.82,
-   "pe": 26.03,
-   "yield": 1.58,
+   "latest": 114.5,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -16.73,
+   "pe": 23.56,
+   "yield": 1.75,
    "rev_yoy": 29.823554758261665,
-   "inst_total": -1925,
+   "inst_total": -117,
    "hi52": 256.5,
    "lo52": 54.2,
-   "off_hi52_pct": -53.8,
+   "off_hi52_pct": -55.4,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -376,7 +376,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -392,18 +392,18 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▼162.1｜月▼167.8｜季▼163.4｜20日 155–192.5",
+   "level_ref": "數據參考：5日▼158.6｜月▼167.3｜季▼163.6｜20日 153–192.5",
    "video_close": 183.5,
-   "latest": 156.5,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -14.71,
-   "pe": 21.72,
-   "yield": 2.93,
+   "latest": 153.0,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -16.62,
+   "pe": 20.26,
+   "yield": 3.14,
    "rev_yoy": 31.27121568205119,
-   "inst_total": -1094,
+   "inst_total": -294,
    "hi52": 365.0,
    "lo52": 80.0,
-   "off_hi52_pct": -57.1,
+   "off_hi52_pct": -58.1,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -414,7 +414,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -430,18 +430,18 @@
    "level_checks": [
     "爆量低點（停利） 150.5：目前在其下"
    ],
-   "level_ref": "數據參考：5日▼136.2｜月▼130.7｜季▲106.8｜20日 109–168",
+   "level_ref": "數據參考：5日▼132.4｜月▼131.2｜季▲107.5｜20日 109–168",
    "video_close": 162.5,
-   "latest": 130.0,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -20.0,
-   "pe": 62.61,
-   "yield": 0.28,
+   "latest": 123.5,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -24.0,
+   "pe": 53.7,
+   "yield": 0.32,
    "rev_yoy": 132.39865556541324,
-   "inst_total": -2258,
+   "inst_total": 1076,
    "hi52": 168.0,
    "lo52": 26.1,
-   "off_hi52_pct": -22.6,
+   "off_hi52_pct": -26.5,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -452,7 +452,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -468,21 +468,21 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▼305.6｜月▲286.5｜季▲231.6｜20日 223–350.5",
+   "level_ref": "數據參考：5日▼303.7｜月▲289.8｜季▲233.9｜20日 223–350.5",
    "video_close": 349.0,
-   "latest": 301.0,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -13.75,
-   "pe": 51.69,
-   "yield": 0.25,
+   "latest": 297.5,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -14.76,
+   "pe": 47.98,
+   "yield": 0.27,
    "rev_yoy": 55.25857165202359,
-   "inst_total": -20713,
+   "inst_total": -9282,
    "hi52": 350.5,
    "lo52": 39.7,
-   "off_hi52_pct": -14.1,
+   "off_hi52_pct": -15.1,
    "target": 415,
    "target_src": "摩根大通",
-   "target_upside_pct": 37.9,
+   "target_upside_pct": 39.5,
    "verify": "方向一致",
    "verify5_done": "方向一致",
    "verify20_done": null,
@@ -490,7 +490,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -506,21 +506,21 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▼77.2｜月▲73.58｜季▲64.85｜20日 62–89.4",
+   "level_ref": "數據參考：5日▼75.66｜月▲74.07｜季▲65.13｜20日 62–89.4",
    "video_close": 88.9,
-   "latest": 73.8,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -16.99,
-   "pe": 46.95,
-   "yield": 0.65,
+   "latest": 74.4,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -16.31,
+   "pe": 45.37,
+   "yield": 0.67,
    "rev_yoy": 7.138175311609297,
-   "inst_total": -16261,
+   "inst_total": 4997,
    "hi52": 89.4,
    "lo52": 36.5,
-   "off_hi52_pct": -17.4,
+   "off_hi52_pct": -16.8,
    "target": 90,
    "target_src": "摩根大通",
-   "target_upside_pct": 22.0,
+   "target_upside_pct": 21.0,
    "verify": "方向一致",
    "verify5_done": "方向一致",
    "verify20_done": null,
@@ -528,7 +528,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -544,21 +544,21 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▼75.44｜月▼73.39｜季▲66.61｜20日 63.8–86.1",
+   "level_ref": "數據參考：5日▼74.58｜月▲73.78｜季▲66.84｜20日 63.8–86.1",
    "video_close": 85.5,
-   "latest": 73.0,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -14.62,
-   "pe": 32.29,
-   "yield": 0.79,
+   "latest": 74.4,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -12.98,
+   "pe": 31.53,
+   "yield": 0.81,
    "rev_yoy": 44.779005503307886,
-   "inst_total": -8423,
+   "inst_total": 11257,
    "hi52": 86.1,
    "lo52": 27.5,
-   "off_hi52_pct": -15.2,
+   "off_hi52_pct": -13.6,
    "target": 90,
    "target_src": "摩根大通",
-   "target_upside_pct": 23.3,
+   "target_upside_pct": 21.0,
    "verify": "方向一致",
    "verify5_done": "方向一致",
    "verify20_done": null,
@@ -566,7 +566,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -582,18 +582,18 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▼112.2｜月▲104.2｜季▲84.9｜20日 86.3–129",
+   "level_ref": "數據參考：5日▼108.9｜月▲105.2｜季▲85.42｜20日 86.5–129",
    "video_close": 119.5,
-   "latest": 106.5,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -10.88,
-   "pe": 19.01,
-   "yield": 1.1,
+   "latest": 106.0,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -11.3,
+   "pe": 18.4,
+   "yield": 1.13,
    "rev_yoy": 65.59234118196173,
-   "inst_total": 4398,
+   "inst_total": 1123,
    "hi52": 129.0,
-   "lo52": 43.35,
-   "off_hi52_pct": -17.4,
+   "lo52": 43.55,
+   "off_hi52_pct": -17.8,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -604,7 +604,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -620,18 +620,18 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▼96.82｜月▼106.1｜季▲92.8｜20日 93.2–130",
+   "level_ref": "數據參考：5日▼95.38｜月▼105.4｜季▼93.14｜20日 91–130",
    "video_close": 102.0,
-   "latest": 93.2,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -8.63,
-   "pe": 143.62,
-   "yield": 0.15,
+   "latest": 91.4,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -10.39,
+   "pe": 132.46,
+   "yield": 0.16,
    "rev_yoy": 40.3786119782698,
-   "inst_total": -924,
+   "inst_total": 107,
    "hi52": 130.0,
    "lo52": 33.2,
-   "off_hi52_pct": -28.3,
+   "off_hi52_pct": -29.7,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -642,7 +642,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -660,16 +660,16 @@
    ],
    "level_ref": null,
    "video_close": 19.5,
-   "latest": 19.55,
-   "latest_date": "2026-10-22",
-   "since_video_pct": 0.26,
+   "latest": 19.75,
+   "latest_date": "2026-10-27",
+   "since_video_pct": 1.28,
    "pe": null,
-   "yield": 0.77,
+   "yield": 0.76,
    "rev_yoy": 27.132806903847683,
-   "inst_total": 24928,
+   "inst_total": 30084,
    "hi52": 21.6,
    "lo52": 17.6,
-   "off_hi52_pct": -9.5,
+   "off_hi52_pct": -8.6,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -680,7 +680,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -698,16 +698,16 @@
    ],
    "level_ref": null,
    "video_close": 67.0,
-   "latest": 67.1,
-   "latest_date": "2026-10-22",
-   "since_video_pct": 0.15,
-   "pe": 78.14,
+   "latest": 65.2,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -2.69,
+   "pe": 75.81,
    "yield": null,
    "rev_yoy": 34.10637421967269,
-   "inst_total": 28524,
+   "inst_total": -15580,
    "hi52": 81.2,
    "lo52": 27.15,
-   "off_hi52_pct": -17.4,
+   "off_hi52_pct": -19.7,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -718,7 +718,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -736,16 +736,16 @@
    ],
    "level_ref": null,
    "video_close": 9.32,
-   "latest": 8.51,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -8.69,
+   "latest": 8.36,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -10.3,
    "pe": null,
    "yield": null,
    "rev_yoy": -45.03320350238475,
-   "inst_total": -9434,
+   "inst_total": 1028,
    "hi52": 10.7,
    "lo52": 6.69,
-   "off_hi52_pct": -20.5,
+   "off_hi52_pct": -21.9,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -756,7 +756,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -772,18 +772,18 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▼293.1｜月▼288.4｜季▼271.5｜20日 253–331.5",
+   "level_ref": "數據參考：5日▼281.9｜月▼288.1｜季▼272.5｜20日 253–331.5",
    "video_close": 303.0,
-   "latest": 266.0,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -12.21,
-   "pe": 93.02,
-   "yield": 0.68,
+   "latest": 255.5,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -15.68,
+   "pe": 81.11,
+   "yield": 0.78,
    "rev_yoy": -19.005391121526873,
-   "inst_total": 160,
+   "inst_total": -284,
    "hi52": 364.0,
    "lo52": 60.2,
-   "off_hi52_pct": -26.9,
+   "off_hi52_pct": -29.8,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -794,7 +794,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -808,21 +808,21 @@
    "view": "節目在百多元時介紹，已大漲、與 5 日線乖離大；沿 5 日線操作，破 10 日線代表短線轉弱，破月線當出場參考，或以 10/13 爆量低點作強弱關鍵。",
    "level_desc": "沿 5 日線；破 10 日轉弱；破月線出場",
    "level_checks": [
-    "節目：10 日線（轉弱） ≈ 286.1：目前高於 1.6%",
-    "節目：月線（出場參考） ≈ 253.3：目前高於 14.7%"
+    "節目：10 日線（轉弱） ≈ 289.1：目前在其下",
+    "節目：月線（出場參考） ≈ 256.6：目前高於 8.5%"
    ],
-   "level_ref": "數據參考：5日▼296.6｜月▲253.3｜季▲203｜20日 200–316.5",
+   "level_ref": "數據參考：5日▼292.6｜月▲256.6｜季▲205.2｜20日 204.5–316.5",
    "video_close": 290.0,
-   "latest": 290.5,
-   "latest_date": "2026-10-22",
-   "since_video_pct": 0.17,
-   "pe": 32.07,
-   "yield": 1.76,
+   "latest": 278.5,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -3.97,
+   "pe": 28.22,
+   "yield": 2.0,
    "rev_yoy": 15.93801552194825,
-   "inst_total": 2016,
+   "inst_total": 2353,
    "hi52": 316.5,
    "lo52": 91.4,
-   "off_hi52_pct": -8.2,
+   "off_hi52_pct": -12.0,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -833,7 +833,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -849,18 +849,18 @@
    "level_checks": [
     "爆量低點 268.5：目前在其下"
    ],
-   "level_ref": "數據參考：5日▼254.3｜月▼272.2｜季▼248.8｜20日 240–292.5",
+   "level_ref": "數據參考：5日▼249｜月▼270.4｜季▼249.2｜20日 234.5–292.5",
    "video_close": 292.0,
-   "latest": 241.0,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -17.47,
-   "pe": 25.67,
-   "yield": 2.57,
+   "latest": 238.5,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -18.32,
+   "pe": 25.4,
+   "yield": 2.6,
    "rev_yoy": 15.680113831338153,
-   "inst_total": -859,
+   "inst_total": -134,
    "hi52": 375.0,
-   "lo52": 148.0,
-   "off_hi52_pct": -35.7,
+   "lo52": 152.0,
+   "off_hi52_pct": -36.4,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -871,7 +871,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -885,21 +885,21 @@
    "view": "嘉澤太貴，資金轉往嘉基，也受惠高速傳輸介面；股性震盪大，建議收盤跌破 10 日線就預備減碼，也可用月線當強弱關鍵。",
    "level_desc": "破 10 日線減碼；月線為強弱關鍵",
    "level_checks": [
-    "節目：10 日線（減碼） ≈ 496.8：目前在其下",
-    "節目：月線 ≈ 479.6：目前高於 0.2%"
+    "節目：10 日線（減碼） ≈ 494.1：目前在其下",
+    "節目：月線 ≈ 478.8：目前在其下"
    ],
-   "level_ref": "數據參考：5日▼481.1｜月▲479.6｜季▲404.2｜20日 430–565",
+   "level_ref": "數據參考：5日▼468.5｜月▼478.8｜季▲405.5｜20日 430–565",
    "video_close": 557.0,
-   "latest": 480.5,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -13.73,
-   "pe": 315.79,
-   "yield": 0.4,
+   "latest": 437.0,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -21.54,
+   "pe": 287.5,
+   "yield": 0.44,
    "rev_yoy": 40.94293514576452,
-   "inst_total": 309,
+   "inst_total": 90,
    "hi52": 569.0,
    "lo52": 82.9,
-   "off_hi52_pct": -15.6,
+   "off_hi52_pct": -23.2,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -910,7 +910,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -926,18 +926,18 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▲559.2｜月▲543.3｜季▲494.5｜20日 470–614",
+   "level_ref": "數據參考：5日▼551.8｜月▼544.9｜季▲496｜20日 470–614",
    "video_close": 567.0,
-   "latest": 567.0,
-   "latest_date": "2026-10-22",
-   "since_video_pct": 0.0,
-   "pe": 68.4,
-   "yield": 0.59,
+   "latest": 520.0,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -8.29,
+   "pe": 61.54,
+   "yield": 0.66,
    "rev_yoy": 36.12871611479015,
-   "inst_total": -2801,
+   "inst_total": -8340,
    "hi52": 659.0,
    "lo52": 135.0,
-   "off_hi52_pct": -14.0,
+   "off_hi52_pct": -21.1,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -948,7 +948,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -964,18 +964,18 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▲187.3｜月▲186｜季▲184.8｜20日 173.5–199.5",
+   "level_ref": "數據參考：5日▲188.9｜月▲186.5｜季▲185.2｜20日 173.5–199.5",
    "video_close": 187.0,
-   "latest": 190.0,
-   "latest_date": "2026-10-22",
-   "since_video_pct": 1.6,
-   "pe": 15.49,
-   "yield": 2.82,
+   "latest": 190.5,
+   "latest_date": "2026-10-27",
+   "since_video_pct": 1.87,
+   "pe": 15.13,
+   "yield": 2.89,
    "rev_yoy": 87.1863428539576,
-   "inst_total": 573,
+   "inst_total": -451,
    "hi52": 206.0,
    "lo52": 122.5,
-   "off_hi52_pct": -7.8,
+   "off_hi52_pct": -7.5,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -986,7 +986,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -1000,20 +1000,20 @@
    "view": "過去股價溫吞，近期撐在高檔；不必急，帶量突破並站穩 260 元才算正式轉強。",
    "level_desc": "站穩 260 轉強",
    "level_checks": [
-    "帶量站穩 260：未達（差 15.8%）"
+    "帶量站穩 260：未達（差 20.4%）"
    ],
-   "level_ref": "數據參考：5日▼240.9｜月▼237.2｜季▲223.8｜20日 219–266",
+   "level_ref": "數據參考：5日▼234.5｜月▼236.9｜季▼224.3｜20日 215–266",
    "video_close": 250.5,
-   "latest": 224.5,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -10.38,
-   "pe": 38.73,
-   "yield": 1.16,
+   "latest": 216.0,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -13.77,
+   "pe": 34.78,
+   "yield": 1.3,
    "rev_yoy": 15.018893793137691,
-   "inst_total": -5575,
+   "inst_total": -5249,
    "hi52": 305.5,
    "lo52": 76.1,
-   "off_hi52_pct": -26.5,
+   "off_hi52_pct": -29.3,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -1024,7 +1024,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -1038,21 +1038,21 @@
    "view": "PCB 自動化搬運設備，9 月營收 6.95 億元創單月新高；股價離 2025 年前高 251 元仍遠，長線打出 W 底。當天碰近期前高、爆量收十字線，紫東認為若主力要出貨不會選這裡，TPCA 展前一兩週是上車機會，支撐須守住。",
    "level_desc": "近期前高附近換手；2025 前高 251",
    "level_checks": [
-    "節目：近期前高 ≈ 187：未達（差 14.0%）",
-    "2025 前高 251：未達（差 53.0%）"
+    "節目：近期前高 ≈ 187：未達（差 15.4%）",
+    "2025 前高 251：未達（差 54.9%）"
    ],
-   "level_ref": "數據參考：5日▼168.1｜月▼167｜季▲153.1｜20日 152–187",
+   "level_ref": "數據參考：5日▼166.4｜月▼167.4｜季▲153.5｜20日 152–187",
    "video_close": 182.0,
-   "latest": 164.0,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -9.89,
-   "pe": 29.81,
-   "yield": 2.91,
+   "latest": 162.0,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -10.99,
+   "pe": 28.08,
+   "yield": 3.09,
    "rev_yoy": 30.84183193467053,
-   "inst_total": 123,
+   "inst_total": 5,
    "hi52": 193.0,
    "lo52": 116.5,
-   "off_hi52_pct": -15.0,
+   "off_hi52_pct": -16.1,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -1063,7 +1063,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -1079,18 +1079,18 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▼482.8｜月▼532.2｜季▼542.8｜20日 451–597",
+   "level_ref": "數據參考：5日▼472｜月▼528.5｜季▼541.9｜20日 448.5–597",
    "video_close": 547.0,
-   "latest": 452.0,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -17.37,
-   "pe": 47.9,
-   "yield": 1.15,
+   "latest": 454.0,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -17.0,
+   "pe": 45.31,
+   "yield": 1.21,
    "rev_yoy": 90.64998093808812,
-   "inst_total": -288,
+   "inst_total": -32,
    "hi52": 692.0,
    "lo52": 168.0,
-   "off_hi52_pct": -34.7,
+   "off_hi52_pct": -34.4,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -1101,7 +1101,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -1117,18 +1117,18 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▼341｜月▼361.3｜季▼350.4｜20日 330–395",
+   "level_ref": "數據參考：5日▼337｜月▼360.2｜季▼350.3｜20日 324–395",
    "video_close": 365.0,
-   "latest": 330.0,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -9.59,
-   "pe": 19.84,
-   "yield": 3.07,
+   "latest": 325.5,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -10.82,
+   "pe": 19.57,
+   "yield": 3.12,
    "rev_yoy": 24.023866519630257,
-   "inst_total": -192,
+   "inst_total": -67,
    "hi52": 497.5,
    "lo52": 235.0,
-   "off_hi52_pct": -33.7,
+   "off_hi52_pct": -34.6,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -1139,7 +1139,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -1153,20 +1153,20 @@
    "view": "做玻璃矽中介層的自動光學檢測，AI 檢測取代人工目視；當天收 199 元，打出底部型態，紫東提到 260 元；產業輪動到檢測時可留意。",
    "level_desc": "底部型態；260",
    "level_checks": [
-    "紫東提到價位 260：未達（差 36.8%）"
+    "紫東提到價位 260：未達（差 42.1%）"
    ],
-   "level_ref": "數據參考：5日▼197.5｜月▼193.4｜季▲172.9｜20日 175.5–226.5",
+   "level_ref": "數據參考：5日▼194｜月▼193.8｜季▲173.6｜20日 177–226.5",
    "video_close": 199.0,
-   "latest": 190.0,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -4.52,
-   "pe": 47.94,
-   "yield": 0.61,
+   "latest": 183.0,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -8.04,
+   "pe": 44.42,
+   "yield": 0.66,
    "rev_yoy": 5.43576764063983,
-   "inst_total": -54,
+   "inst_total": 49,
    "hi52": 260.0,
    "lo52": 46.0,
-   "off_hi52_pct": -26.9,
+   "off_hi52_pct": -29.6,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -1177,7 +1177,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -1193,18 +1193,18 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▼260.1｜月▼270.9｜季▲239.6｜20日 242–308",
+   "level_ref": "數據參考：5日▼253.8｜月▼270.8｜季▲240.9｜20日 241–308",
    "video_close": 288.5,
-   "latest": 248.5,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -13.86,
-   "pe": 69.61,
-   "yield": 1.41,
+   "latest": 245.5,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -14.9,
+   "pe": 68.77,
+   "yield": 1.43,
    "rev_yoy": 23.40783717502869,
-   "inst_total": -198,
+   "inst_total": 13,
    "hi52": 322.5,
    "lo52": 82.4,
-   "off_hi52_pct": -22.9,
+   "off_hi52_pct": -23.9,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -1215,7 +1215,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -1231,18 +1231,18 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▼239.2｜月▲229.5｜季▲185.8｜20日 196.5–257",
+   "level_ref": "數據參考：5日▲242.1｜月▲231.8｜季▲188.3｜20日 197–260.5",
    "video_close": 238.0,
-   "latest": 238.5,
-   "latest_date": "2026-10-22",
-   "since_video_pct": 0.21,
-   "pe": 54.33,
+   "latest": 252.0,
+   "latest_date": "2026-10-27",
+   "since_video_pct": 5.88,
+   "pe": 57.4,
    "yield": 0.0,
    "rev_yoy": 283.61847645258683,
-   "inst_total": -142,
-   "hi52": 257.0,
+   "inst_total": 289,
+   "hi52": 260.5,
    "lo52": 44.0,
-   "off_hi52_pct": -7.2,
+   "off_hi52_pct": -3.3,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -1253,7 +1253,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -1271,16 +1271,16 @@
    ],
    "level_ref": null,
    "video_close": 200.0,
-   "latest": 176.0,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -12.0,
-   "pe": 586.67,
+   "latest": 171.5,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -14.25,
+   "pe": 571.67,
    "yield": 0.0,
    "rev_yoy": 30.940003633657042,
-   "inst_total": -606,
+   "inst_total": 110,
    "hi52": 297.0,
    "lo52": 83.2,
-   "off_hi52_pct": -40.7,
+   "off_hi52_pct": -42.3,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -1291,7 +1291,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -1309,16 +1309,16 @@
    ],
    "level_ref": null,
    "video_close": 140.5,
-   "latest": 129.0,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -8.19,
-   "pe": 42.57,
-   "yield": 1.16,
+   "latest": 132.0,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -6.05,
+   "pe": 43.56,
+   "yield": 1.14,
    "rev_yoy": 44.457459926017265,
-   "inst_total": -27,
+   "inst_total": 4,
    "hi52": 198.0,
    "lo52": 27.5,
-   "off_hi52_pct": -34.8,
+   "off_hi52_pct": -33.3,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -1329,7 +1329,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -1347,16 +1347,16 @@
    ],
    "level_ref": null,
    "video_close": 163.0,
-   "latest": 143.0,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -12.27,
+   "latest": 146.5,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -10.12,
    "pe": null,
-   "yield": 0.33,
+   "yield": 0.34,
    "rev_yoy": -57.27550072953973,
-   "inst_total": -45,
+   "inst_total": 41,
    "hi52": 227.5,
    "lo52": 53.8,
-   "off_hi52_pct": -37.1,
+   "off_hi52_pct": -35.6,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -1367,7 +1367,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -1385,16 +1385,16 @@
    ],
    "level_ref": null,
    "video_close": 1785.0,
-   "latest": 1560.0,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -12.61,
-   "pe": 51.72,
-   "yield": 0.71,
+   "latest": 1510.0,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -15.41,
+   "pe": 48.06,
+   "yield": 0.77,
    "rev_yoy": 14.613858860431652,
-   "inst_total": -3210,
+   "inst_total": -2662,
    "hi52": 2585.0,
    "lo52": 886.0,
-   "off_hi52_pct": -39.7,
+   "off_hi52_pct": -41.6,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -1405,7 +1405,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -1423,16 +1423,16 @@
    ],
    "level_ref": null,
    "video_close": 1020.0,
-   "latest": 826.0,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -19.02,
-   "pe": 40.1,
-   "yield": 0.93,
+   "latest": 814.0,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -20.2,
+   "pe": 39.51,
+   "yield": 0.95,
    "rev_yoy": -13.126055194406469,
-   "inst_total": -2588,
+   "inst_total": -56,
    "hi52": 1600.0,
    "lo52": 333.0,
-   "off_hi52_pct": -48.4,
+   "off_hi52_pct": -49.1,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -1443,7 +1443,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -1457,20 +1457,20 @@
    "view": "大盤漲它不漲且持續破底，已跌破頸線與大量區，均線只剩年線向上，屬中空格局；第一次碰年線可能反彈，反彈到下彎均線時找賣點換股。",
    "level_desc": "反彈找賣點",
    "level_checks": [
-    "節目：年線 ≈ 107.3：目前在其下"
+    "節目：年線 ≈ 107.6：目前在其下"
    ],
-   "level_ref": "數據參考：5日▼102.3｜月▼113｜季▼118.6｜20日 99.2–123.5",
+   "level_ref": "數據參考：5日▲101.5｜月▼112.3｜季▼118.5｜20日 99.2–123.5",
    "video_close": 110.0,
-   "latest": 99.5,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -9.55,
+   "latest": 103.0,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -6.36,
    "pe": 24.41,
    "yield": null,
    "rev_yoy": 188.23580475843863,
-   "inst_total": -2814,
+   "inst_total": 4439,
    "hi52": 192.0,
-   "lo52": 27.4,
-   "off_hi52_pct": -48.2,
+   "lo52": 28.5,
+   "off_hi52_pct": -46.4,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -1481,7 +1481,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -1495,20 +1495,20 @@
    "view": "前一天漲停、當天盤中幾度跌停；蜀芳以它示範移動停利：大盤轉弱時改以 10 日線或 10/13 爆量低點為出場點。紫東認為大立光法說後只是回到原結構，不必太擔心。",
    "level_desc": "移動停利：10 日線",
    "level_checks": [
-    "節目：10 日線（出場） ≈ 1,096：目前高於 5.9%"
+    "節目：10 日線（出場） ≈ 1,110：目前高於 9.0%"
    ],
-   "level_ref": "數據參考：5日▲1,094｜月▲1,028｜季▲853.9｜20日 869–1,220",
+   "level_ref": "數據參考：5日▲1,119｜月▲1,042｜季▲866｜20日 869–1,245",
    "video_close": 1065.0,
-   "latest": 1160.0,
-   "latest_date": "2026-10-22",
-   "since_video_pct": 8.92,
-   "pe": 30.84,
-   "yield": 1.49,
+   "latest": 1210.0,
+   "latest_date": "2026-10-27",
+   "since_video_pct": 13.62,
+   "pe": 32.74,
+   "yield": 1.4,
    "rev_yoy": 0.5416796811789455,
-   "inst_total": 535,
-   "hi52": 1220.0,
+   "inst_total": -932,
+   "hi52": 1245.0,
    "lo52": 386.0,
-   "off_hi52_pct": -4.9,
+   "off_hi52_pct": -2.8,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -1519,7 +1519,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -1535,18 +1535,18 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▼6,193｜月▼6,472｜季▲5,933｜20日 5,740–7,460",
+   "level_ref": "數據參考：5日▼6,113｜月▼6,452｜季▲5,968｜20日 5,740–7,460",
    "video_close": 6880.0,
-   "latest": 6175.0,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -10.25,
-   "pe": 32.82,
-   "yield": 1.3,
+   "latest": 6000.0,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -12.79,
+   "pe": 31.91,
+   "yield": 1.33,
    "rev_yoy": -7.314368249667054,
-   "inst_total": -188,
+   "inst_total": 119,
    "hi52": 7995.0,
    "lo52": 2020.0,
-   "off_hi52_pct": -22.8,
+   "off_hi52_pct": -25.0,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -1557,7 +1557,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -1573,18 +1573,18 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▼117.5｜月▼115｜季▲111｜20日 108–123",
+   "level_ref": "數據參考：5日▼115.4｜月▼115.1｜季▼111.2｜20日 108.5–123",
    "video_close": 120.0,
-   "latest": 112.5,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -6.25,
-   "pe": 13.92,
-   "yield": 3.24,
+   "latest": 111.0,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -7.5,
+   "pe": 13.74,
+   "yield": 3.29,
    "rev_yoy": 62.077189939288814,
-   "inst_total": 248,
+   "inst_total": 73,
    "hi52": 146.0,
    "lo52": 95.0,
-   "off_hi52_pct": -22.9,
+   "off_hi52_pct": -24.0,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -1595,7 +1595,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -1609,20 +1609,20 @@
    "view": "友達集團旗下，做光接收端模組，不論未來光源用雷射或 Micro LED 都不受影響。當天收 98.5 元，月線尚未站回；本週回到區間底部並出現止跌小紅 K，多頭型態未被破壞。",
    "level_desc": "區間底部止跌；月線未站回",
    "level_checks": [
-    "節目：月線 ≈ 98.5：目前在其下"
+    "節目：月線 ≈ 97.88：目前在其下"
    ],
-   "level_ref": "數據參考：5日▼91.06｜月▼98.5｜季▼87.2｜20日 86.7–118",
+   "level_ref": "數據參考：5日▼89.46｜月▼97.88｜季▼87.71｜20日 86.2–118",
    "video_close": 98.5,
-   "latest": 86.7,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -11.98,
-   "pe": 919.0,
-   "yield": 0.11,
+   "latest": 86.3,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -12.39,
+   "pe": 863.0,
+   "yield": 0.12,
    "rev_yoy": 40.85553450005573,
-   "inst_total": -1973,
+   "inst_total": 791,
    "hi52": 118.0,
    "lo52": 14.8,
-   "off_hi52_pct": -26.5,
+   "off_hi52_pct": -26.9,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -1633,7 +1633,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -1649,18 +1649,18 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▼142｜月▼148｜季▲130.6｜20日 137–168",
+   "level_ref": "數據參考：5日▼140.8｜月▼147.4｜季▲131.2｜20日 137–160.5",
    "video_close": 153.5,
-   "latest": 137.5,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -10.42,
+   "latest": 138.0,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -10.1,
    "pe": null,
    "yield": null,
    "rev_yoy": 131.66082210562396,
-   "inst_total": -456,
+   "inst_total": 101,
    "hi52": 225.0,
    "lo52": 65.0,
-   "off_hi52_pct": -38.9,
+   "off_hi52_pct": -38.7,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -1671,7 +1671,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -1687,18 +1687,18 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▼60.24｜月▼55.5｜季▲45.4｜20日 40.9–69.4",
+   "level_ref": "數據參考：5日▼57.48｜月▼56.04｜季▲45.63｜20日 40.9–69.4",
    "video_close": 64.0,
-   "latest": 54.5,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -14.84,
+   "latest": 52.3,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -18.28,
    "pe": null,
-   "yield": 0.34,
+   "yield": 0.38,
    "rev_yoy": 49.31828901926765,
-   "inst_total": 1149,
+   "inst_total": 265,
    "hi52": 79.8,
    "lo52": 29.25,
-   "off_hi52_pct": -31.7,
+   "off_hi52_pct": -34.5,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -1709,7 +1709,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -1725,18 +1725,18 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▼36.2｜月▼36.54｜季▲29.98｜20日 33.4–43.55",
+   "level_ref": "數據參考：5日▼35.71｜月▼36.38｜季▲30.14｜20日 33.4–43.55",
    "video_close": 36.25,
-   "latest": 35.4,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -2.34,
-   "pe": 155.21,
-   "yield": 1.07,
+   "latest": 33.45,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -7.72,
+   "pe": 139.38,
+   "yield": 1.2,
    "rev_yoy": -4.261365704978919,
-   "inst_total": -46603,
+   "inst_total": -95215,
    "hi52": 43.55,
    "lo52": 10.8,
-   "off_hi52_pct": -18.7,
+   "off_hi52_pct": -23.2,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -1747,7 +1747,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -1763,18 +1763,18 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▼47.45｜月▼50.19｜季▼48.71｜20日 45.65–56.2",
+   "level_ref": "數據參考：5日▼47.05｜月▼49.98｜季▼48.73｜20日 45.65–56.2",
    "video_close": 50.9,
-   "latest": 46.75,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -8.15,
-   "pe": 62.18,
-   "yield": 2.06,
+   "latest": 46.25,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -9.14,
+   "pe": 59.29,
+   "yield": 2.16,
    "rev_yoy": 0.6716666351143477,
-   "inst_total": 9344,
+   "inst_total": -583,
    "hi52": 72.6,
    "lo52": 12.1,
-   "off_hi52_pct": -35.6,
+   "off_hi52_pct": -36.3,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -1785,7 +1785,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -1801,18 +1801,18 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▲90.62｜月▼91.91｜季▼91.99｜20日 89.2–98",
+   "level_ref": "數據參考：5日▼89.96｜月▼91.57｜季▼91.93｜20日 86.3–98",
    "video_close": 90.5,
-   "latest": 90.8,
-   "latest_date": "2026-10-22",
-   "since_video_pct": 0.33,
+   "latest": 87.0,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -3.87,
    "pe": null,
    "yield": null,
    "rev_yoy": -46.08528014113764,
-   "inst_total": 72,
+   "inst_total": -135,
    "hi52": 197.5,
    "lo52": 82.0,
-   "off_hi52_pct": -54.0,
+   "off_hi52_pct": -55.9,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -1823,7 +1823,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -1839,18 +1839,18 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▼332.1｜月▼343.2｜季▲315.8｜20日 314–397.5",
+   "level_ref": "數據參考：5日▼324.9｜月▼343｜季▼316.1｜20日 311.5–397.5",
    "video_close": 367.0,
-   "latest": 317.0,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -13.62,
-   "pe": 28.49,
-   "yield": 2.05,
+   "latest": 313.0,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -14.71,
+   "pe": 26.46,
+   "yield": 2.21,
    "rev_yoy": 26.107930611666117,
-   "inst_total": -661,
+   "inst_total": 95,
    "hi52": 405.0,
    "lo52": 127.0,
-   "off_hi52_pct": -21.7,
+   "off_hi52_pct": -22.7,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -1861,7 +1861,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -1877,18 +1877,18 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▼262.5｜月▼270.1｜季▼278.7｜20日 257–285.5",
+   "level_ref": "數據參考：5日▼260.5｜月▼269.4｜季▼278｜20日 251.5–285.5",
    "video_close": 273.0,
-   "latest": 257.5,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -5.68,
-   "pe": 14.5,
-   "yield": 6.54,
+   "latest": 257.0,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -5.86,
+   "pe": 14.47,
+   "yield": 6.55,
    "rev_yoy": 16.415087390695863,
-   "inst_total": -117,
+   "inst_total": -26,
    "hi52": 403.0,
    "lo52": 229.0,
-   "off_hi52_pct": -36.1,
+   "off_hi52_pct": -36.2,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -1899,7 +1899,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -1915,18 +1915,18 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▼1,808｜月▼1,816｜季▲1,751｜20日 1,660–2,035",
+   "level_ref": "數據參考：5日▲1,832｜月▲1,825｜季▲1,752｜20日 1,660–2,035",
    "video_close": 1935.0,
-   "latest": 1795.0,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -7.24,
-   "pe": 22.19,
-   "yield": 1.92,
+   "latest": 1925.0,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -0.52,
+   "pe": 23.47,
+   "yield": 1.81,
    "rev_yoy": 16.1263226648345,
-   "inst_total": -63,
+   "inst_total": 543,
    "hi52": 2955.0,
    "lo52": 1140.0,
-   "off_hi52_pct": -39.3,
+   "off_hi52_pct": -34.9,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -1937,7 +1937,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -1953,18 +1953,18 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▼1,948｜月▼2,258｜季▼2,174｜20日 1,875–2,685",
+   "level_ref": "數據參考：5日▼1,892｜月▼2,232｜季▼2,166｜20日 1,715–2,685",
    "video_close": 2235.0,
-   "latest": 1875.0,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -16.11,
-   "pe": 35.81,
-   "yield": 0.78,
+   "latest": 1735.0,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -22.37,
+   "pe": 31.86,
+   "yield": 0.87,
    "rev_yoy": 39.160349895962284,
-   "inst_total": -69,
+   "inst_total": 471,
    "hi52": 3010.0,
    "lo52": 1245.0,
-   "off_hi52_pct": -37.7,
+   "off_hi52_pct": -42.4,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -1975,7 +1975,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -1991,18 +1991,18 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▼307.2｜月▼314.4｜季▼315.1｜20日 298–333.5",
+   "level_ref": "數據參考：5日▼300.6｜月▼312.4｜季▼315.1｜20日 270–333.5",
    "video_close": 318.5,
-   "latest": 298.0,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -6.44,
-   "pe": 23.04,
-   "yield": 3.25,
+   "latest": 282.5,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -11.3,
+   "pe": 20.02,
+   "yield": 3.54,
    "rev_yoy": 25.50859974986498,
-   "inst_total": -61,
+   "inst_total": -1411,
    "hi52": 353.5,
    "lo52": 185.0,
-   "off_hi52_pct": -15.7,
+   "off_hi52_pct": -20.1,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -2013,7 +2013,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -2029,18 +2029,18 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▼105.1｜月▼114.5｜季▲104.3｜20日 101–130.5",
+   "level_ref": "數據參考：5日▼104.6｜月▼113.5｜季▼104.8｜20日 101–129",
    "video_close": 112.0,
-   "latest": 105.0,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -6.25,
-   "pe": 18.88,
-   "yield": 2.59,
+   "latest": 103.0,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -8.04,
+   "pe": 18.01,
+   "yield": 2.72,
    "rev_yoy": 28.444982170147732,
-   "inst_total": -124,
+   "inst_total": -38,
    "hi52": 136.5,
    "lo52": 66.3,
-   "off_hi52_pct": -23.1,
+   "off_hi52_pct": -24.5,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -2051,7 +2051,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -2067,18 +2067,18 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▼55.68｜月▼57.88｜季▼61｜20日 54.2–60.9",
+   "level_ref": "數據參考：5日▼55.16｜月▼57.66｜季▼60.94｜20日 53.3–60.9",
    "video_close": 57.1,
-   "latest": 54.3,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -4.9,
-   "pe": 22.5,
-   "yield": 1.79,
+   "latest": 54.0,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -5.43,
+   "pe": 21.77,
+   "yield": 1.85,
    "rev_yoy": 54.79190368647162,
-   "inst_total": -160,
+   "inst_total": -21,
    "hi52": 74.0,
    "lo52": 45.3,
-   "off_hi52_pct": -26.6,
+   "off_hi52_pct": -27.0,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -2089,7 +2089,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -2107,16 +2107,16 @@
    ],
    "level_ref": null,
    "video_close": 187.0,
-   "latest": 171.5,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -8.29,
-   "pe": 46.84,
-   "yield": 0.88,
+   "latest": 156.0,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -16.58,
+   "pe": 41.05,
+   "yield": 1.01,
    "rev_yoy": 22.65825833807461,
-   "inst_total": -181,
+   "inst_total": 1009,
    "hi52": 194.0,
    "lo52": 54.5,
-   "off_hi52_pct": -11.6,
+   "off_hi52_pct": -19.6,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -2127,7 +2127,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -2145,16 +2145,16 @@
    ],
    "level_ref": null,
    "video_close": 854.0,
-   "latest": 756.0,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -11.48,
-   "pe": 79.51,
-   "yield": 0.71,
+   "latest": 706.0,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -17.33,
+   "pe": 68.88,
+   "yield": 0.82,
    "rev_yoy": 27.11088978004695,
-   "inst_total": -160,
+   "inst_total": -1107,
    "hi52": 1045.0,
    "lo52": 99.1,
-   "off_hi52_pct": -27.7,
+   "off_hi52_pct": -32.4,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -2165,7 +2165,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -2181,18 +2181,18 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▼22.96｜月▼23.55｜季▼25.89｜20日 21.85–24.8",
+   "level_ref": "數據參考：5日▼22.86｜月▼23.5｜季▼25.78｜20日 21.85–24.8",
    "video_close": 23.5,
-   "latest": 22.65,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -3.62,
-   "pe": 30.2,
-   "yield": 6.62,
+   "latest": 22.8,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -2.98,
+   "pe": 30.4,
+   "yield": 6.58,
    "rev_yoy": -37.585148895341696,
-   "inst_total": -178,
+   "inst_total": 9,
    "hi52": 49.5,
    "lo52": 21.85,
-   "off_hi52_pct": -54.2,
+   "off_hi52_pct": -53.9,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -2203,7 +2203,7 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   },
   {
@@ -2219,18 +2219,18 @@
    "level_checks": [
     "價位驗證：查無"
    ],
-   "level_ref": "數據參考：5日▼18.97｜月▼19.46｜季▼19.47｜20日 18.65–20.5",
+   "level_ref": "數據參考：5日▼18.8｜月▼19.4｜季▼19.46｜20日 18.3–20.5",
    "video_close": 19.45,
-   "latest": 18.65,
-   "latest_date": "2026-10-22",
-   "since_video_pct": -4.11,
+   "latest": 18.5,
+   "latest_date": "2026-10-27",
+   "since_video_pct": -4.88,
    "pe": null,
    "yield": 0.0,
    "rev_yoy": -1.894110064848032,
-   "inst_total": -36,
+   "inst_total": -17,
    "hi52": 30.85,
    "lo52": 17.55,
-   "off_hi52_pct": -39.5,
+   "off_hi52_pct": -40.0,
    "target": null,
    "target_src": null,
    "target_upside_pct": null,
@@ -2241,66 +2241,56 @@
    "_dates": {
     "d2": "2026-10-16",
     "d5": "2026-10-21",
-    "d20": "2026-11-12"
+    "d20": "2026-11-13"
    }
   }
  ],
  "alerts": {
-  "checked_date": "10/22",
+  "checked_date": "10/27",
   "lists": {
    "異常推介": [],
    "注意股": [
+    "1569",
     "1815",
-    "3234",
-    "3287",
+    "3324",
     "3354",
     "3374",
     "3441",
     "3498",
-    "3624",
+    "4188",
     "4542",
     "4577",
     "4741",
     "4903",
     "49793",
     "5205",
-    "5340",
+    "54642",
     "5475",
-    "5498",
     "6127",
-    "6207",
-    "6234",
+    "6148",
+    "6261",
     "6274",
     "6418",
     "6510",
-    "6517",
+    "6697",
     "6751",
     "6925",
     "705235",
-    "712737",
-    "8042",
+    "735855",
     "8089",
+    "8091",
     "8358",
     "8437"
    ],
    "處置股": [
-    "053040",
-    "2221",
-    "22211",
     "2424",
-    "3055",
-    "3167",
-    "3230",
     "3287",
     "3354",
-    "3597",
-    "4979",
-    "49793",
-    "49794",
+    "4542",
+    "5205",
     "6716",
-    "8111",
-    "81114",
-    "911608"
+    "8358",
+    "8437"
    ]
   }
  }
