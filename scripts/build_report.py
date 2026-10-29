@@ -303,6 +303,7 @@ def main(ep_date):
         "episode": {
             "show": E.get("show", "錢線百分百"),
             "video_date_short": md(air), "latest_date_short": md(lat),
+            "base_date_short": md(base),   # 2026-10-28 經使用者同意：橫條圖基準文字用實際基準日（播出日休市時為前一交易日）
             "revenue_month_label": f"{rm}月" if rm else "",
             "air_line": f"台灣 {air.isoformat()}（週{WEEK[air.weekday()]}）21:00–23:30 播出｜溫哥華同日 {air_dt:%H:%M}–{(air_dt + dt.timedelta(minutes=150)):%H:%M}｜來賓：{'、'.join(E.get('guests', []))}",
             "data_line": f"數據截至 {lat.isoformat()} 收盤（本益比與殖利率為 {md(vd)}，{inst_txt}，營收為 {rm} 月）",
