@@ -151,6 +151,11 @@ def main(ep_date):
         c, mk = s["code"], s["market"]
         etf = c.startswith("00")
         px = S.fm_prices(c, hist_start)
+        jumps = S.LEV_JUMPS.get(c, [])
+        if jumps:
+            # 2026-10-28 經使用者同意：槓桿／反向 ETF 價格跳動（研判為分割）後，只用跳動後的價格計算，跳動前的價格不混用
+            px = [p for p in px if p["date"] >= max(jumps)]
+            log.append(f"{c} 槓桿／反向 ETF 於 {'、'.join(d.isoformat() for d in jumps)} 價格跳動超過 ±40%，不調整；52 週高低標查無，均線只用 {max(jumps)} 起的價格")
         by = {p["date"]: p for p in px}
         video_close = by[base]["close"] if base in by else None
         cl = (tw_close if mk == "TWSE" else tp_close).get(c, {})
@@ -163,6 +168,8 @@ def main(ep_date):
         lo52 = min(p["low"] for p in yr) if yr else None
         if latest and hi52 and latest > hi52:
             hi52 = latest
+        if jumps and max(jumps) > (ldate or latest_day) - dt.timedelta(days=365):
+            hi52 = lo52 = None   # 52 週區間內有未調整的跳動，標「查無」
         val = (tw_val if mk == "TWSE" else tp_val).get(c, {})
         rev = (tw_rev if mk == "TWSE" else tp_rev).get(c, {})
         if mk == "TWSE":

@@ -160,6 +160,11 @@ def _fm(dataset, start, data_id=None, end=None):
 
 
 ADJUSTED = []   # 本次產出中偵測到分割／減資並調整過歷史價格的代號
+LEV_JUMPS = {}   # 槓桿／反向 ETF：價格跳動超過 ±40% 的日期（不調整，只記錄）
+
+
+def is_leveraged_etf(code):
+    return bool(re.fullmatch(r"00\d{3,4}[LR]", code))
 
 
 def fm_prices(code, start, end=None):
@@ -168,8 +173,11 @@ def fm_prices(code, start, end=None):
     # 台股單日漲跌幅上限 10%：隔日價格跳動超過 ±40% 視為股票分割、減資等，將之前的價格依比例調整，
     # 避免 52 週高低、均線與區間被未調整的舊價格扭曲（2026-10-18 加入，例：0052 一拆七）。
     # 2026-10-28 經使用者同意（選項 A）：槓桿／反向 ETF（代號 00 開頭、L 或 R 結尾，例 00631L、00632R）
-    # 沒有單日漲跌幅限制且淨值會大幅變動，不做分割偵測，避免誤判成多次分割、出現負倍數。
-    if re.fullmatch(r"00\d{3,4}[LR]", code):
+    # 不做分割調整，避免誤判成多次分割、出現負倍數。另經使用者同意：只用收盤對收盤記錄跳動超過 ±40% 的日期，
+    # 由產出程式把 52 週高低與距高標「查無」，均線與數據參考只用最後一次跳動後的價格，不混用跳動前後的價格。
+    if is_leveraged_etf(code):
+        LEV_JUMPS[code] = [px[i]["date"] for i in range(1, len(px))
+                           if px[i - 1]["close"] and not 0.6 <= px[i]["close"] / px[i - 1]["close"] <= 1.67]
         return px
     for i in range(len(px) - 1, 0, -1):
         prev = px[i]["close"] - (px[i]["spread"] or 0) if px[i].get("spread") is not None else px[i - 1]["close"]
