@@ -237,7 +237,7 @@ def main(ep_date):
     tot = S.fm_total_institutional((latest_day - dt.timedelta(days=10)).isoformat())
     for m in E.get("macro", []):
         src = m.get("source", "text")
-        row = {"name": m["name"], "alert": m.get("alert", ""), "latest": m.get("latest", "—"), "status": m.get("status", "—")}
+        row = {"name": m["name"], "alert": m.get("alert", ""), "latest": m.get("latest", "查無"), "status": m.get("status", "無警戒值" if "threshold" not in m else "—")}
         if src.startswith("FRED:"):
             v, d = S.fred_latest(src[5:])
             if v is None:
