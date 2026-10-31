@@ -355,7 +355,7 @@
    "lo52": 1130.0,
    "off_hi52_pct": -28.6,
    "target": 5840,
-   "target_src": "法人（最低）",
+   "target_src": "法人最低",
    "target_upside_pct": 49.2,
    "verify": "出現拉回",
    "verify5_done": null,
