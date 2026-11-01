@@ -52,7 +52,7 @@ def main(fri, send_line):
     pages = len(PdfReader(str(pdf)).pages)
     text = (d / W["pdf"].replace(".pdf", ".html")).read_text(encoding="utf-8")
     bad = [w for w in BANNED if w in text]
-    lo = 5 if W["episodes"] >= 5 else 3   # 2026-10-23 經使用者同意：當週少於 5 集時可 3–9 頁
+    lo = 3   # 2026-10-31 經使用者同意：週報頁數下限一律 3 頁、上限 9 頁，不分集數（內容完整即可，頁數下限不另設限）
     if not lo <= pages <= 9 or bad:
         print(f"::error title=週報未發布::頁數 {pages}（需 {lo}–9）；疑似個資字樣 {bad}"); return 1
     dst = ROOT / "docs" / "weekly"; dst.mkdir(parents=True, exist_ok=True)
