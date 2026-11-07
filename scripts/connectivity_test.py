@@ -123,7 +123,11 @@ line_token = os.environ.get("LINE_CHANNEL_ACCESS_TOKEN", "").strip()
 if line_token:
     r = probe("LINE", "金鑰驗證（不發訊息）", "https://api.line.me/v2/bot/info",
               headers={"Authorization": f"Bearer {line_token}"}, count=lambda d: None)
-    r["detail"] = "金鑰有效" if r["ok"] else "金鑰無效或無法連線"
+    if r["ok"]:   # 2026-11-06：顯示官方帳號名稱與 basicId（公開的帳號識別，非個人資料），用來核對用的是哪個官方帳號
+        b = json.loads(r["_body"])
+        r["detail"] = f"金鑰有效｜官方帳號 {b.get('displayName')}（{b.get('basicId')}）"
+    else:
+        r["detail"] = "金鑰無效或無法連線"
     q = probe("LINE", "本月已用訊息數", "https://api.line.me/v2/bot/message/quota/consumption",
               headers={"Authorization": f"Bearer {line_token}"}, count=lambda d: d.get("totalUsage"))
     q2 = probe("LINE", "每月訊息上限", "https://api.line.me/v2/bot/message/quota",
